@@ -10,7 +10,8 @@ class user extends Controller
 {
     public function index()
     {
-    	$users = usersModels::all();
+    	$users = usersModels::with('users_type')->get();
+        dd($users);
     	return view('users/index')->with('users',  $users);
     }
 
