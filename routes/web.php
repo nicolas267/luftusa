@@ -11,17 +11,17 @@
 |
 */
 
-Route::get('/userstype', 'user@index');
+Route::get('/users', 'user@index');
 
-Route::get('userstype/create', 'user@create')->name('userCreate');
+Route::get('users/create', 'user@create')->name('userCreate');
 
-Route::get('userstype/edit/{data}', 'user@edit')->name('userEdit');
+Route::get('users/edit/{data}', 'user@edit')->name('userEdit');
 
-Route::get('userstype/destroy/{data}', 'user@destroy')->name('userDestroy');
+Route::get('users/destroy/{data}', 'user@destroy')->name('userDestroy');
 
-Route::post('userstype/store', 'user@store');
+Route::post('users/store', 'user@store');
 
-Route::post('userstype/upgrade', 'user@upgrade');
+Route::post('users/upgrade', 'user@upgrade');
 
 Route::get('/userstype', 'usertype@index');
 

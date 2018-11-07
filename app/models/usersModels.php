@@ -17,4 +17,9 @@ class usersModels extends Model
     	return 'user_id'; // db column name
 
 	}
+
+	public function userstype()
+	{
+		return $this->belongto(usertypeModel::class);
+	}
 }
