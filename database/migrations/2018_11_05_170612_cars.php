@@ -15,7 +15,7 @@ class Cars extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->increments('car_id');
-             $table->unsignedInteger('car_model_id');
+            $table->unsignedInteger('car_model_id');
             $table->foreign('car_model_id')->references('car_model_id')->on('car_models');
             $table->unsignedInteger('car_version_id');
             $table->foreign('car_version_id')->references('car_versions_id')->on('car_versions');

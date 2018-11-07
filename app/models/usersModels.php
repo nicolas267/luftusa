@@ -20,6 +20,6 @@ class usersModels extends Model
 
 	public function userstype()
 	{
-		return $this->belongto(usertypeModel::class, 'user_type_id', 'users_type_id');
+		return $this->belongto(usertypeModel::class);
 	}
 }
