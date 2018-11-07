@@ -54,12 +54,20 @@
                 <div class="form-group">
                   <label for="title">password</label>
                   <input type="password" class="form-control" id="password" name="password" placeholder="password" value="{{ $data->password }}">
-
+              </div>
+              <div class="form-group">
+                    <label for="title">user type</label>
+                      <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
+                        @foreach($userstypes as $usertype)
+                          <option value="{{$usertype->users_type_id}}">{{$usertype->users_type}}</option>
+                        @endforeach
+                      </select>
+                </div>
                   <input type="hidden" name="userid" value="{{ $data->user_id }}">
                 </div>
               </div>
-            <button type="submit" class="btn btn-primary">Editar usuario</button>
            </div>
+          <button type="submit" class="btn btn-primary">Editar usuario</button>
           </form>
           </div>
         <!--/.col (right) -->

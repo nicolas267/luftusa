@@ -18,8 +18,8 @@ class usersModels extends Model
 
 	}
 
-	public function userstype()
+	public function users_type()
 	{
-		return $this->belongto(usertypeModel::class);
+		return $this->belongsToMany('App\models\usertypeModel');
 	}
 }

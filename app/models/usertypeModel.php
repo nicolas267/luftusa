@@ -10,8 +10,6 @@ class usertypeModel extends Model
 
     protected $fillable = ['users_type'];
 
-    protected $guarded = ['users_type_id'];
-
     public function getRouteKeyName()
 	{
     	return 'users_type_id'; // db column name
