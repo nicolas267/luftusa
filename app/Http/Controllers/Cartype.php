@@ -24,7 +24,7 @@ class Cartype extends Controller
 
     	cartypeModel::create([
 
-    			'car_type' => $data['cartype']
+    			'car_type' => $data['CarType']
     	]);
 
     	return redirect('carstype/');
@@ -39,8 +39,8 @@ class Cartype extends Controller
     {
     	$data = Request()->all();
 
-       	cartypeModel::where('car_type_id', $data['cartypeid'])
-    				->update(['car_type' => $data['cartype']
+       	cartypeModel::where('car_type_id', $data['CarTypeid'])
+    				->update(['car_type' => $data['CarType']
 							]);   
 		return redirect('/carstype'); 
     }

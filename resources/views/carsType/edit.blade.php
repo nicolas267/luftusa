@@ -3,10 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Dashboard
-        <small>
-            Control panel
-        </small>
+        Edit Car Type
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -17,7 +14,10 @@
             </a>
         </li>
         <li class="active">
-            Dashboard
+            Car Type
+        </li>
+        <li class="active">
+            Edit Car Type
         </li>
     </ol>
 </section>
@@ -27,22 +27,20 @@
         <div class="col-md-12">
           <!-- general form elements -->
           <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Editar usuario</h3>
-            </div>
-            <!-- /.box-header -->
             <!-- form start -->
-            <form action="{{action('Cartype@upgrade')}}" method="post"  id="formulario_ajax" enctype= multipart/form-data>
+            <form role="form" action="{{action('Cartype@upgrade')}}" method="post">
               @csrf
+              <div class="box-body">
                 <div class="form-group">
-                  <label for="title">name</label>
-                  <input type="text" class="form-control" name="cartype" placeholder="nombre" value="{{ $data->car_type }}">
-                  <input type="hidden" name="cartypeid" value="{{ $data->car_type_id }}">
+                  <label >Car Type</label>
+                  <input type="text" class="form-control" name="CarType" placeholder="Car Type" value="{{$data->car_type}}">
                 </div>
               </div>
-            <button type="submit" class="btn btn-primary">Editar categoria</button>
-           </div>
-          </form>
+              <input type="hidden" class="form-control" name="CarTypeid"  value="{{$data->car_type_id}}">
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Create</button>
+              </div>
+            </form>
           </div>
         <!--/.col (right) -->
       </div>

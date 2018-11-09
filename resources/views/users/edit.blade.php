@@ -3,10 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Dashboard
-        <small>
-            Control panel
-        </small>
+        Edit user
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -17,60 +14,60 @@
             </a>
         </li>
         <li class="active">
-            Dashboard
+            Users
+        </li>
+        <li class="active">
+            Edit User
         </li>
     </ol>
 </section>
 <section class="content">
-    <div class="row">
+      <div class="row">
         <!-- left column -->
         <div class="col-md-12">
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Editar usuario</h3>
+              <h3 class="box-title">Edit User</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="{{action('User@upgrade')}}" method="post"  id="formulario_ajax" enctype= multipart/form-data>
+            <form role="form" action="{{action('User@upgrade')}}" method="post">
               @csrf
-                <div class="form-group">
-                  <label for="title">name</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="nombre" value="{{ $data->names }}">
-                </div>
-            <div class="box-body">
-                <div class="form-group">
-                  <label for="title">lastname</label>
-                  <input type="text" class="form-control" id="lastname" name="lastname" placeholder="lastname" value="{{ $data->lastnames }}">
-                </div>
-              </div>
-            <div class="box-body">
-                <div class="form-group">
-                  <label for="title">email</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="email" value="{{ $data->email }}">
-                </div>
-              </div>
               <div class="box-body">
                 <div class="form-group">
-                  <label for="title">password</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="password" value="{{ $data->password }}">
-              </div>
-              <div class="form-group">
-                    <label for="title">user type</label>
-                      <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
+                  <label >Name</label>
+                  <input type="Name" class="form-control" name="Name" placeholder="Name" value="{{$data->names}}">
+                </div>
+                <div class="form-group">
+                  <label >Lastname</label>
+                  <input type="Name" class="form-control" name="Lastname" placeholder="Lastname" value="{{$data->lastnames}}">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="Email" placeholder="Enter email" value="{{$data->email}}">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="Password" placeholder="Password" value="{{$data->password}}">
+                </div>
+                <div class="form-group">
+                    <label for="title">User Type</label>
+                      <select class="form-control " style="width: 100%;" name="Usertype" tabindex="-1" aria-hidden="true">
                         @foreach($userstypes as $usertype)
                           <option value="{{$usertype->users_type_id}}">{{$usertype->users_type}}</option>
                         @endforeach
                       </select>
                 </div>
-                  <input type="hidden" name="userid" value="{{ $data->user_id }}">
-                </div>
               </div>
-           </div>
-          <button type="submit" class="btn btn-primary">Editar usuario</button>
-          </form>
+              <input type="hidden" name="userid" value="{{$data->user_id}}">
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Edit</button>
+              </div>
+            </form>
           </div>
         <!--/.col (right) -->
       </div>
+      <!-- /.row -->
 </section>
 @endsection

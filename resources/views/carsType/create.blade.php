@@ -3,10 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Dashboard
-        <small>
-            Control panel
-        </small>
+        Create Car Types
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -17,7 +14,10 @@
             </a>
         </li>
         <li class="active">
-            Dashboard
+            Car Types
+        </li>
+        <li class="active">
+           Create Car Types
         </li>
     </ol>
 </section>
@@ -27,29 +27,19 @@
         <div class="col-md-12">
           <!-- general form elements -->
           <div class="box box-primary">
-            <div class="loader" style="display: none;">
-              <div class="alert alert-success alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="icon fa fa-check"></i> Felicidades!</h4>
-                El usuario fue creado exitosamente
-              </div>
-            </div>
-            <div class="box-header with-border">
-              <h3 class="box-title">Agregar Usuario</h3>
-            </div>
-            <!-- /.box-header -->
             <!-- form start -->
-            <form action="{{action('Cartype@store')}}" method="post"  id="formulario_ajax">
+            <form role="form" action="{{action('Cartype@store')}}" method="post">
               @csrf
               <div class="box-body">
                 <div class="form-group">
-                  <label for="title">car type</label>
-                  <input type="text" class="form-control" id="cartype" name="cartype" placeholder="car type">
+                  <label >Car Type</label>
+                  <input type="text" class="form-control" name="CarType" placeholder="Car Type">
                 </div>
               </div>
-            <button type="submit" class="btn btn-primary">Crear</button>
-           </div>
-          </form>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Create</button>
+              </div>
+            </form>
           </div>
         <!--/.col (right) -->
       </div>

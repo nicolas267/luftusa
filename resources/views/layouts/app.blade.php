@@ -22,7 +22,7 @@
         </meta>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
-        <div class="wrapper">
+        <div class="wrapper" style="overflow-y: hidden;">
             <header class="main-header">
                 <!-- Logo -->
                 <a class="logo" href="{{Request::root()}}/index2.html">
@@ -844,16 +844,32 @@
         <!-- Bootstrap 3.3.7 -->
         <script src="{{Request::root()}}/bower_components/bootstrap/dist/js/bootstrap.min.js">
         </script>
+        <!-- SlimScroll -->
+        <script src="{{Request::root()}}/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
         <!-- FastClick -->
         <script src="{{Request::root()}}/bower_components/fastclick/lib/fastclick.js">
         </script>
+        <!--Data Tables -->
+        <script src="{{Request::root()}}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="{{Request::root()}}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
         <!-- AdminLTE App -->
         <script src="{{Request::root()}}/dist/js/adminlte.min.js">
         </script>
         <!-- AdminLTE for demo purposes -->
         <script src="{{Request::root()}}/dist/js/demo.js">
         </script>
-        <script src="{{Request::root()}}/http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript">
-        </script>
+        <script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
     </body>
 </html>

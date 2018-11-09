@@ -3,10 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Dashboard
-        <small>
-            Control panel
-        </small>
+        Edit User Type
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -17,7 +14,10 @@
             </a>
         </li>
         <li class="active">
-            Dashboard
+            User Type
+        </li>
+        <li class="active">
+            Edit User Type
         </li>
     </ol>
 </section>
@@ -27,22 +27,20 @@
         <div class="col-md-12">
           <!-- general form elements -->
           <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Editar usuario</h3>
-            </div>
-            <!-- /.box-header -->
             <!-- form start -->
-            <form action="{{action('Usertype@upgrade')}}" method="post"  id="formulario_ajax" enctype= multipart/form-data>
+            <form role="form" action="{{action('Usertype@upgrade')}}" method="post">
               @csrf
+              <div class="box-body">
                 <div class="form-group">
-                  <label for="title">name</label>
-                  <input type="text" class="form-control" name="userstype" placeholder="nombre" value="{{ $data->users_type }}">
-                  <input type="hidden" name="usertypeid" value="{{ $data->users_type_id }}">
+                  <label >User Type</label>
+                  <input type="User Type" class="form-control" name="UserType" placeholder="User Type" value="{{$data->users_type}}">
                 </div>
               </div>
-            <button type="submit" class="btn btn-primary">Editar usuario</button>
-           </div>
-          </form>
+              <input type="hidden" name="Usertypeid" value="{{$data->users_type_id}}">
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Edit</button>
+              </div>
+            </form>
           </div>
         <!--/.col (right) -->
       </div>

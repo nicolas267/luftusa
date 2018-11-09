@@ -24,7 +24,7 @@ class Usertype extends Controller
 
     	usertypeModel::create([
 
-    			'users_type' => $data['usertype']
+    			'users_type' => $data['UserType']
     	]);
 
     	return redirect('userstype/');
@@ -39,9 +39,8 @@ class Usertype extends Controller
     {
     	$data = Request()->all();
 
-       	usertypeModel::where('users_type_id', $data['usertypeid'])
-    				->update(['users_type' => $data['userstype']
-							]);   
+       	usertypeModel::where('users_type_id', $data['Usertypeid'])
+    				->update(['users_type' => $data['UserType']]);   
 		return redirect('/userstype'); 
     }
 

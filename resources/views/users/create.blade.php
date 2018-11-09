@@ -3,10 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Dashboard
-        <small>
-            Control panel
-        </small>
+        Create User
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -17,65 +14,54 @@
             </a>
         </li>
         <li class="active">
-            Dashboard
+            Users
+        </li>
+        <li class="active">
+            Create User
         </li>
     </ol>
 </section>
 <section class="content">
-    <div class="row">
+      <div class="row">
         <!-- left column -->
         <div class="col-md-12">
           <!-- general form elements -->
           <div class="box box-primary">
-            <div class="loader" style="display: none;">
-              <div class="alert alert-success alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="icon fa fa-check"></i> Felicidades!</h4>
-                El usuario fue creado exitosamente
-              </div>
-            </div>
-            <div class="box-header with-border">
-              <h3 class="box-title">Agregar Usuario</h3>
-            </div>
-            <!-- /.box-header -->
             <!-- form start -->
-            <form action="{{action('User@store')}}" method="post"  id="formulario_ajax">
+            <form role="form" action="{{action('User@store')}}" method="post">
               @csrf
               <div class="box-body">
                 <div class="form-group">
-                  <label for="title">name</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="nombre">
+                  <label >Name</label>
+                  <input type="Name" class="form-control" name="Name" placeholder="Name">
                 </div>
-              </div>
-            <div class="box-body">
                 <div class="form-group">
-                  <label for="title">lastname</label>
-                  <input type="text" class="form-control" id="lastname" name="lastname" placeholder="lastname">
+                  <label >Lastname</label>
+                  <input type="Name" class="form-control" name="Lastname" placeholder="Lastname">
                 </div>
-              </div>
-            <div class="box-body">
                 <div class="form-group">
-                  <label for="title">email</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="email">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="Email" placeholder="Enter email">
                 </div>
-              </div>
-              <div class="box-body">
                 <div class="form-group">
-                  <label for="title">password</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="Password" placeholder="Password">
                 </div>
-              </div>
-              <div class="box-body">
                 <div class="form-group">
-                  <select name="usertype">
-                    <option value="1">administrador</option>
-                    <option value="2">usuario</option>
-                  </select>
+                    <label for="title">User Type</label>
+                      <select class="form-control " style="width: 100%;" name="Usertype" tabindex="-1" aria-hidden="true">
+                        @foreach($userstypes as $usertype)
+                          <option value="{{$usertype->users_type_id}}">{{$usertype->users_type}}</option>
+                        @endforeach
+                      </select>
                 </div>
               </div>
-            <button type="submit" class="btn btn-primary">Crear usuario</button>
-           </div>
-          </form>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Create</button>
+              </div>
+            </form>
           </div>
         <!--/.col (right) -->
       </div>

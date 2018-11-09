@@ -3,10 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Dashboard
-        <small>
-            Control panel
-        </small>
+         Users
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -17,18 +14,15 @@
             </a>
         </li>
         <li class="active">
-            Dashboard
+            Users
         </li>
     </ol>
 </section>
 <section class="content">
     <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div>
-            <!-- /.box-header -->
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <a href="{{url('users/create')}}" id="btnadd" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create User</a>
+              <table id="example2" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>User Type</th>
@@ -51,8 +45,10 @@
                   <td>{{ $user->created_at }}</td>
                   <td>{{ $user->updated_at }}</td>
                   <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('userEdit',[$user->user_id])}}">editar</a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('userDestroy',[$user->user_id])}}">borrar</aS>
+                    <a id="editar" class="btn btn-primary editar" href="{{route('userEdit',[$user->user_id])}}"><i class="fa fa-edit">
+                </i></a>
+                    <a id="borrar" class="btn btn-danger borrar" href="{{route('userDestroy',[$user->user_id])}}"><i class="fa fa-remove">
+                </i></a>
                   </td>
                 </tr>
               @endforeach
@@ -69,13 +65,13 @@
                 </tr>
                 </tfoot>
               </table>
-              <a href="{{ url('users/create') }}" class="btn btn-primary">Agregar usuario</a>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-        </div>
-        <!-- /.col -->
       </div>
-</section>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
 @endsection

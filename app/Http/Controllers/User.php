@@ -21,7 +21,8 @@ class User extends Controller
 
     public function create()
     {
-    	return view('users/create');
+        $userstypes =   UsertypeModel::all();
+    	return view('users/create', compact('userstypes'));
     }
 
     public function store()
@@ -29,11 +30,11 @@ class User extends Controller
     	$data = Request()->all();
     	usersModels::create([
 
-    			'names' => $data['name'],
-    			'lastnames' => $data['lastname'],
-    			'email' => $data['email'],
-    			'password' => $data['password'],
-    			'user_type_id' => $data['usertype']
+    			'names' => $data['Name'],
+    			'lastnames' => $data['Lastname'],
+    			'email' => $data['Email'],
+    			'password' => $data['Password'],
+    			'user_type_id' => $data['Usertype']
     	]);
 
     	return redirect('users/');
@@ -48,14 +49,14 @@ class User extends Controller
     public function upgrade(usersModels $data)
     {
     	$data = Request()->all();
-    
        	usersModels::where('user_id', $data['userid'])
-    				->update(['names' => $data['name'],
-    						  'lastnames' => $data['lastname'],
-    						  'email' => $data['email'],
-    						  'password' => $data['password'],
-                              'user_type_id' => $data['usertype']
-							]);   
+    				->update([ 
+                            'names' => $data['Name'],
+                            'lastnames' => $data['Lastname'],
+                            'email' => $data['Email'],
+                            'password' => $data['Password'],
+                            'user_type_id' => $data['Usertype']
+					]);   
 		return redirect('/users'); 
     }
 
