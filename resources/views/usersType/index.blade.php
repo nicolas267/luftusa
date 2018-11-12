@@ -32,11 +32,11 @@
                 <tbody>
               @foreach($userstype as $usertype)
                 <tr>
-                  <td>{{ $usertype->users_type }}</td>
+                  <td>{{ $usertype->user_type }}</td>
                   <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('usertypeEdit',[$usertype->users_type_id])}}"><i class="fa fa-edit">
+                    <a id="editar" class="btn btn-primary editar" href="{{route('usertypeEdit',[$usertype->user_types_id])}}"><i class="fa fa-edit">
                 </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('usertypeDestroy',[$usertype->users_type_id])}}"><i class="fa fa-remove">
+                    <a id="borrar" class="btn btn-danger borrar" href="{{route('usertypeDestroy',[$usertype->user_types_id])}}"><i class="fa fa-remove">
                 </i></a>
                   </td>
                 </tr>
