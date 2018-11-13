@@ -15,8 +15,8 @@ class CarYears extends Migration
     {
         Schema::create('car_years', function (Blueprint $table) {
             $table->increments('car_years_id');
-            $table->integer('start_years');
-            $table->integer('end_years');
+            $table->dateTime('start_years');
+            $table->dateTime('end_years');
             $table->timestamps();
         });
     }

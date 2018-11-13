@@ -49,3 +49,63 @@ Route::get('carstype/destroy/{data}', 'Cartype@destroy')->name('cartypeDestroy')
 Route::post('carstype/store', 'Cartype@store');
 
 Route::post('carstype/upgrade', 'Cartype@upgrade');
+
+Route::get('/carversions', 'Carversion@index');
+
+Route::get('carversions/create', 'Carversion@create')->name('carversionsCreate');
+
+Route::get('carversions/edit/{data}', 'Carversion@edit')->name('carversionsEdit');
+
+Route::get('carversions/destroy/{data}', 'Carversion@destroy')->name('carversionsDestroy');
+
+Route::post('carversions/store', 'Carversion@store');
+
+Route::post('carversions/upgrade', 'Carversion@upgrade');
+
+Route::get('/carparts', 'Carpart@index');
+
+Route::get('carparts/create', 'Carpart@create')->name('carpartsCreate');
+
+Route::get('carparts/edit/{data}', 'Carpart@edit')->name('carpartsEdit');
+
+Route::get('carparts/destroy/{data}', 'Carpart@destroy')->name('carpartsDestroy');
+
+Route::post('carparts/store', 'Carpart@store');
+
+Route::post('carparts/upgrade', 'Carpart@upgrade');
+
+Route::get('/caryears', 'Caryear@index');
+
+Route::get('caryears/create', 'Caryear@create')->name('caryearsCreate');
+
+Route::get('caryears/edit/{data}', 'Caryear@edit')->name('caryearsEdit');
+
+Route::get('caryears/destroy/{data}', 'Caryear@destroy')->name('caryearsDestroy');
+
+Route::post('caryears/store', 'Caryear@store');
+
+Route::post('caryears/upgrade', 'Caryear@upgrade');
+
+Route::get('/parts', 'Part@index');
+
+Route::get('parts/create', 'Part@create')->name('partsCreate');
+
+Route::get('parts/edit/{data}', 'Part@edit')->name('partsEdit');
+
+Route::get('parts/destroy/{data}', 'Part@destroy')->name('partsDestroy');
+
+Route::post('parts/store', 'Part@store');
+
+Route::post('parts/upgrade', 'Part@upgrade');
+
+Route::get('/blogs', 'Blog@index');
+
+Route::get('blogs/create', 'Blog@create')->name('blogsCreate');
+
+Route::get('blogs/edit/{data}', 'Blog@edit')->name('blogsEdit');
+
+Route::get('blogs/destroy/{data}', 'Blog@destroy')->name('blogsDestroy');
+
+Route::post('blogs/store', 'Blog@store');
+
+Route::post('blogs/upgrade', 'Blog@upgrade');

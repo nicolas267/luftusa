@@ -10,6 +10,8 @@
                 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
                 <!-- Bootstrap 3.3.7 -->
                 <link href="{{Request::root()}}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+                <!-- daterange picker -->
+                <link rel="stylesheet" href="{{Request::root()}}/bower_components/bootstrap-daterangepicker/daterangepicker.css">
                 <!-- Font Awesome -->
                 <link href="{{Request::root()}}/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
                 <!-- Ionicons -->
@@ -57,291 +59,6 @@
                     </a>
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
-                            <!-- Messages: style can be found in dropdown.less-->
-                            <li class="dropdown messages-menu">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/#">
-                                    <i class="fa fa-envelope-o">
-                                    </i>
-                                    <span class="label label-success">
-                                        4
-                                    </span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="header">
-                                        You have 4 messages
-                                    </li>
-                                    <li>
-                                        <!-- inner menu: contains the actual data -->
-                                        <ul class="menu">
-                                            <li>
-                                                <!-- start message -->
-                                                <a href="{{Request::root()}}/#">
-                                                    <div class="pull-left">
-                                                        <img alt="User Image" class="img-circle" src="{{Request::root()}}/dist/img/user2-160x160.jpg">
-                                                        </img>
-                                                    </div>
-                                                    <h4>
-                                                        Support Team
-                                                        <small>
-                                                            <i class="fa fa-clock-o">
-                                                            </i>
-                                                            5 mins
-                                                        </small>
-                                                    </h4>
-                                                    <p>
-                                                        Why not buy a new awesome theme?
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <!-- end message -->
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <div class="pull-left">
-                                                        <img alt="User Image" class="img-circle" src="{{Request::root()}}/dist/img/user3-128x128.jpg">
-                                                        </img>
-                                                    </div>
-                                                    <h4>
-                                                        AdminLTE Design Team
-                                                        <small>
-                                                            <i class="fa fa-clock-o">
-                                                            </i>
-                                                            2 hours
-                                                        </small>
-                                                    </h4>
-                                                    <p>
-                                                        Why not buy a new awesome theme?
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <div class="pull-left">
-                                                        <img alt="User Image" class="img-circle" src="{{Request::root()}}/dist/img/user4-128x128.jpg">
-                                                        </img>
-                                                    </div>
-                                                    <h4>
-                                                        Developers
-                                                        <small>
-                                                            <i class="fa fa-clock-o">
-                                                            </i>
-                                                            Today
-                                                        </small>
-                                                    </h4>
-                                                    <p>
-                                                        Why not buy a new awesome theme?
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <div class="pull-left">
-                                                        <img alt="User Image" class="img-circle" src="{{Request::root()}}/dist/img/user3-128x128.jpg">
-                                                        </img>
-                                                    </div>
-                                                    <h4>
-                                                        Sales Department
-                                                        <small>
-                                                            <i class="fa fa-clock-o">
-                                                            </i>
-                                                            Yesterday
-                                                        </small>
-                                                    </h4>
-                                                    <p>
-                                                        Why not buy a new awesome theme?
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <div class="pull-left">
-                                                        <img alt="User Image" class="img-circle" src="{{Request::root()}}/dist/img/user4-128x128.jpg">
-                                                        </img>
-                                                    </div>
-                                                    <h4>
-                                                        Reviewers
-                                                        <small>
-                                                            <i class="fa fa-clock-o">
-                                                            </i>
-                                                            2 days
-                                                        </small>
-                                                    </h4>
-                                                    <p>
-                                                        Why not buy a new awesome theme?
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="footer">
-                                        <a href="{{Request::root()}}/#">
-                                            See All Messages
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- Notifications: style can be found in dropdown.less -->
-                            <li class="dropdown notifications-menu">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/#">
-                                    <i class="fa fa-bell-o">
-                                    </i>
-                                    <span class="label label-warning">
-                                        10
-                                    </span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="header">
-                                        You have 10 notifications
-                                    </li>
-                                    <li>
-                                        <!-- inner menu: contains the actual data -->
-                                        <ul class="menu">
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <i class="fa fa-users text-aqua">
-                                                    </i>
-                                                    5 new members joined today
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <i class="fa fa-warning text-yellow">
-                                                    </i>
-                                                    Very long description here that may not fit into the
-                                                    page and may cause design problems
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <i class="fa fa-users text-red">
-                                                    </i>
-                                                    5 new members joined
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <i class="fa fa-shopping-cart text-green">
-                                                    </i>
-                                                    25 sales made
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{Request::root()}}/#">
-                                                    <i class="fa fa-user text-red">
-                                                    </i>
-                                                    You changed your username
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="footer">
-                                        <a href="{{Request::root()}}/#">
-                                            View all
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- Tasks: style can be found in dropdown.less -->
-                            <li class="dropdown tasks-menu">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/#">
-                                    <i class="fa fa-flag-o">
-                                    </i>
-                                    <span class="label label-danger">
-                                        9
-                                    </span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="header">
-                                        You have 9 tasks
-                                    </li>
-                                    <li>
-                                        <!-- inner menu: contains the actual data -->
-                                        <ul class="menu">
-                                            <li>
-                                                <!-- Task item -->
-                                                <a href="{{Request::root()}}/#">
-                                                    <h3>
-                                                        Design some buttons
-                                                        <small class="pull-right">
-                                                            20%
-                                                        </small>
-                                                    </h3>
-                                                    <div class="progress xs">
-                                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="progress-bar progress-bar-aqua" role="progressbar" style="width: 20%">
-                                                            <span class="sr-only">
-                                                                20% Complete
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <!-- end task item -->
-                                            <li>
-                                                <!-- Task item -->
-                                                <a href="{{Request::root()}}/#">
-                                                    <h3>
-                                                        Create a nice theme
-                                                        <small class="pull-right">
-                                                            40%
-                                                        </small>
-                                                    </h3>
-                                                    <div class="progress xs">
-                                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="progress-bar progress-bar-green" role="progressbar" style="width: 40%">
-                                                            <span class="sr-only">
-                                                                40% Complete
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <!-- end task item -->
-                                            <li>
-                                                <!-- Task item -->
-                                                <a href="{{Request::root()}}/#">
-                                                    <h3>
-                                                        Some task I need to do
-                                                        <small class="pull-right">
-                                                            60%
-                                                        </small>
-                                                    </h3>
-                                                    <div class="progress xs">
-                                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="progress-bar progress-bar-red" role="progressbar" style="width: 60%">
-                                                            <span class="sr-only">
-                                                                60% Complete
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <!-- end task item -->
-                                            <li>
-                                                <!-- Task item -->
-                                                <a href="{{Request::root()}}/#">
-                                                    <h3>
-                                                        Make beautiful transitions
-                                                        <small class="pull-right">
-                                                            80%
-                                                        </small>
-                                                    </h3>
-                                                    <div class="progress xs">
-                                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="progress-bar progress-bar-yellow" role="progressbar" style="width: 80%">
-                                                            <span class="sr-only">
-                                                                80% Complete
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <!-- end task item -->
-                                        </ul>
-                                    </li>
-                                    <li class="footer">
-                                        <a href="{{Request::root()}}/#">
-                                            View all tasks
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/#">
                                     <img alt="User Image" class="user-image" src="{{Request::root()}}/dist/img/user2-160x160.jpg">
@@ -398,13 +115,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <!-- Control Sidebar Toggle Button -->
-                            <li>
-                                <a data-toggle="control-sidebar" href="{{Request::root()}}/#">
-                                    <i class="fa fa-gears">
-                                    </i>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -413,37 +123,6 @@
             <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
-                    <!-- Sidebar user panel -->
-                    <div class="user-panel">
-                        <div class="pull-left image">
-                            <img alt="User Image" class="img-circle" src="{{Request::root()}}/dist/img/user2-160x160.jpg">
-                            </img>
-                        </div>
-                        <div class="pull-left info">
-                            <p>
-                                Alexander Pierce
-                            </p>
-                            <a href="{{Request::root()}}/#">
-                                <i class="fa fa-circle text-success">
-                                </i>
-                                Online
-                            </a>
-                        </div>
-                    </div>
-                    <!-- search form -->
-                    <form action="#" class="sidebar-form" method="get">
-                        <div class="input-group">
-                            <input class="form-control" name="q" placeholder="Search..." type="text">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-flat" id="search-btn" name="search" type="submit">
-                                        <i class="fa fa-search">
-                                        </i>
-                                    </button>
-                                </span>
-                            </input>
-                        </div>
-                    </form>
-                    <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu" data-widget="tree">
                         <li class="header">
@@ -455,15 +134,6 @@
                                 </i>
                                 <span>
                                     Home
-                                </span>
-                            </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="{{Request::root()}}/users">
-                                <i class="fa fa-group">
-                                </i>
-                                <span>
-                                    usuarios
                                 </span>
                             </a>
                         </li>
@@ -844,11 +514,16 @@
         <!-- Bootstrap 3.3.7 -->
         <script src="{{Request::root()}}/bower_components/bootstrap/dist/js/bootstrap.min.js">
         </script>
-        <!-- SlimScroll -->
-        <script src="{{Request::root()}}/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- bootstrap datepicker -->
+        <!-- InputMask -->
+        <script src="{{Request::root()}}/plugins/input-mask/jquery.inputmask.js"></script>
+        <script src="{{Request::root()}}/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+        <script src="{{Request::root()}}/plugins/input-mask/jquery.inputmask.extensions.js"></script>
         <!-- FastClick -->
         <script src="{{Request::root()}}/bower_components/fastclick/lib/fastclick.js">
         </script>
+        <!-- CK Editor -->
+        <script src="{{Request::root()}}/bower_components/ckeditor/ckeditor.js"></script>
         <!--Data Tables -->
         <script src="{{Request::root()}}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
         <script src="{{Request::root()}}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
@@ -860,6 +535,7 @@
         </script>
         <script>
   $(function () {
+    $('.datemask').inputmask('yyyy/mm/dd', { 'placeholder': 'yyyy/mm/dd' })
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
@@ -869,7 +545,9 @@
       'info'        : true,
       'autoWidth'   : false
     })
+    CKEDITOR.replace('editor1')
   })
 </script>
+
     </body>
 </html>

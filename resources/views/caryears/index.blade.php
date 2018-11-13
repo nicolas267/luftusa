@@ -3,7 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Cars Types
+        Cars Years
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -14,7 +14,7 @@
             </a>
         </li>
         <li class="active">
-            Car Types
+            Car Years
         </li>
     </ol>
 </section>
@@ -23,22 +23,28 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-body">
-              <a href="{{url('carstype/create')}}" id="btnadd" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Car Type</a>
+              <a href="{{url('caryears/create')}}" id="btnadd" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Car Years</a>
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Car Type</th>
+                  <th>Start Years</th>
+                  <th>End Years</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </thead>
                 <tbody>
-              @foreach($carstype as $cartype)
+              @foreach($caryears as $caryear)
                 <tr>
-                  <td>{{ $cartype->car_type }}</td>
+                  <td>{{ $caryear->start_years }}</td>
+                  <td>{{ $caryear->end_years }}</td>
+                  <td>{{ $caryear->created_at }}</td>
+                  <td>{{ $caryear->updated_at }}</td>
                   <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('cartypeEdit',[$cartype->car_type_id])}}"><i class="fa fa-edit">
+                    <a id="editar" class="btn btn-primary editar" href="{{route('caryearsEdit',[$caryear->car_years_id])}}"><i class="fa fa-edit">
                 </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('cartypeDestroy',[$cartype->car_type_id])}}"><i class="fa fa-remove">
+                    <a id="borrar" class="btn btn-danger borrar" href="{{route('caryearsDestroy',[$caryear->car_years_id])}}"><i class="fa fa-remove">
                 </i></a>
                   </td>
 
@@ -47,7 +53,9 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>car Type</th>
+                  <th>Car Years</th>
+                  <th>Start Years</th>
+                  <th>End Years</th>
                   <th>Options</th>
                 </tr>
                 </tfoot>

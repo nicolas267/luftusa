@@ -3,7 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Cars Types
+        Cars Models
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -14,7 +14,7 @@
             </a>
         </li>
         <li class="active">
-            Car Types
+            Car Models
         </li>
     </ol>
 </section>
@@ -23,22 +23,22 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-body">
-              <a href="{{url('carstype/create')}}" id="btnadd" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Car Type</a>
+              <a href="{{url('carmodels/create')}}" id="btnadd" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Car models</a>
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Car Type</th>
+                  <th>Car Models</th>
                   <th>Options</th>
                 </tr>
                 </thead>
                 <tbody>
-              @foreach($carstype as $cartype)
+              @foreach($carmodels as $carmodel)
                 <tr>
-                  <td>{{ $cartype->car_type }}</td>
+                  <td>{{ $carmodel->car_model }}</td>
                   <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('cartypeEdit',[$cartype->car_type_id])}}"><i class="fa fa-edit">
+                    <a id="editar" class="btn btn-primary editar" href="{{route('carmodelsEdit',[$carmodel->car_model_id])}}"><i class="fa fa-edit">
                 </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('cartypeDestroy',[$cartype->car_type_id])}}"><i class="fa fa-remove">
+                    <a id="borrar" class="btn btn-danger borrar" href="{{route('carmodelsDestroy',[$carmodel->car_model_id])}}"><i class="fa fa-remove">
                 </i></a>
                   </td>
 
@@ -47,7 +47,7 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>car Type</th>
+                  <th>car models</th>
                   <th>Options</th>
                 </tr>
                 </tfoot>

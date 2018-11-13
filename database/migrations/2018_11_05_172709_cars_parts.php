@@ -13,7 +13,7 @@ class CarsParts extends Migration
      */
     public function up()
     {
-        Schema::create('cars_parts', function (Blueprint $table) {
+        Schema::create('car_parts', function (Blueprint $table) {
             $table->increments('car_part_id');
             $table->unsignedInteger('car_id');
             $table->foreign('car_id')->references('car_id')->on('cars');
