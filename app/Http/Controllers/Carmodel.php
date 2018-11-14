@@ -25,7 +25,7 @@ class Carmodel extends Controller
 
     	carmodelModel::create([
 
-    			'car_model' => $data['CarModels']
+    			'car_model' => $data['carmodels']
     	]);
 
     	return redirect('carmodels/');
@@ -40,8 +40,8 @@ class Carmodel extends Controller
     {
     	$data = Request()->all();
 
-    	carmodelModel::where('car_model_id', $data['CarModelid'])
-    				->update(['car_model' => $data['CarModel']
+    	carmodelModel::where('car_model_id', $data['carmodelid'])
+    				->update(['car_model' => $data['carmodel']
 							]);   
 		return redirect('/carmodels'); 
     }
@@ -50,6 +50,6 @@ class Carmodel extends Controller
     {
     	carmodelModel::where('car_model_id', $carmodelid)->delete();
 
-    	return redirect('carsmodels/');
+    	return redirect('carmodels/');
     }
 }

@@ -17,7 +17,7 @@
             User Type
         </li>
         <li class="active">
-            Create User Types
+            Create User Type
         </li>
     </ol>
 </section>
@@ -33,7 +33,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >User Type</label>
-                  <input type="text" class="form-control" name="UserType" placeholder="User Type">
+                  <input type="text" class="form-control" name="usertype" placeholder="User Type">
                 </div>
               </div>
               <div class="box-footer">

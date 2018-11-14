@@ -11,7 +11,7 @@ class Carversion extends Controller
     {
     	$carversions = carversionModel::all();
 
-    	return view('carversions/index')->with('carversions',  $carversions);
+    	return view('carversions/index', compact('carversions'));
     }
 
     public function create()
@@ -25,7 +25,7 @@ class Carversion extends Controller
 
     	carversionModel::create([
 
-    			'car_version' => $data['Carversions']
+    			'car_version' => $data['carversions']
     	]);
 
     	return redirect('carversions/');
@@ -40,9 +40,12 @@ class Carversion extends Controller
     {
     	$data = Request()->all();
 
-    	CarversionModel::where('car_versions_id', $data['Carversionid'])
-    				->update(['car_version' => $data['Carversion']
-							]);   
+    	CarversionModel::where('car_versions_id', $data['carversionid'])
+    				->update([
+                        
+                        'car_version' => $data['carversion']
+
+						]);   
 		return redirect('/carversions'); 
     }
 

@@ -21,7 +21,7 @@
 <section class="content">
     <div class="box">
             <div class="box-body">
-              <a href="{{url('blog/create')}}" id="btnadd" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Blog</a>
+              <a href="{{url('blogs/create')}}" id="btnadd" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Blog</a>
               <table id="example2" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -36,15 +36,15 @@
                 <tbody>
               @foreach($blogs as $blog)
                 <tr>
-                  <td>{{ $blog->user }}</td>
+                  <td>{{ $blog->names }}</td>
                   <td>{{ $blog->title }}</td>
                   <td>{{ $blog->description }}</td>
                   <td>{{ $blog->created_at }}</td>
                   <td>{{ $blog->updated_at }}</td>
                   <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('blogEdit',[$blog->blog_id])}}"><i class="fa fa-edit">
+                    <a id="editar" class="btn btn-primary editar" href="{{route('blogsEdit',[$blog->blog_id])}}"><i class="fa fa-edit">
                 </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('blogDestroy',[$blog->blog_id])}}"><i class="fa fa-remove">
+                    <a id="borrar" class="btn btn-danger borrar" href="{{route('blogsDestroy',[$blog->blog_id])}}"><i class="fa fa-remove">
                 </i></a>
                   </td>
                 </tr>

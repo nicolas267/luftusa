@@ -53,9 +53,10 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>Car Years</th>
                   <th>Start Years</th>
                   <th>End Years</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </tfoot>

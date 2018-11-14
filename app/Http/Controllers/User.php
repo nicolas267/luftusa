@@ -12,8 +12,8 @@ class User extends Controller
     public function index()
     {
     	$users =   DB::table('users')
-            ->select('user_id', 'names', 'lastnames', 'email', 'users_type', 'users.created_at', 'users.updated_at')
-            ->join('userstype','users.user_type_id','=','userstype.users_type_id')
+            ->select('user_id', 'names', 'lastnames', 'email', 'user_type', 'users.created_at', 'users.updated_at')
+            ->join('user_types','users.user_type_id','=','user_types.user_types_id')
             ->get();
         
     	return view('users/index')->with('users',  $users);
@@ -30,11 +30,11 @@ class User extends Controller
     	$data = Request()->all();
     	usersModels::create([
 
-    			'names' => $data['Name'],
-    			'lastnames' => $data['Lastname'],
-    			'email' => $data['Email'],
-    			'password' => $data['Password'],
-    			'user_type_id' => $data['Usertype']
+    			'names' => $data['name'],
+    			'lastnames' => $data['lastname'],
+    			'email' => $data['email'],
+    			'password' => $data['password'],
+    			'user_type_id' => $data['usertype']
     	]);
 
     	return redirect('users/');
@@ -51,11 +51,12 @@ class User extends Controller
     	$data = Request()->all();
        	usersModels::where('user_id', $data['userid'])
     				->update([ 
-                            'names' => $data['Name'],
-                            'lastnames' => $data['Lastname'],
-                            'email' => $data['Email'],
-                            'password' => $data['Password'],
-                            'user_type_id' => $data['Usertype']
+                        
+                            'names' => $data['name'],
+                            'lastnames' => $data['lastname'],
+                            'email' => $data['email'],
+                            'password' => $data['password'],
+                            'user_type_id' => $data['usertype']
 					]);   
 		return redirect('/users'); 
     }
