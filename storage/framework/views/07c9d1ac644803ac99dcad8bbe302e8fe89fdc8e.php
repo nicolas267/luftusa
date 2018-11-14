@@ -16,12 +16,11 @@
         <link href="<?php echo e(Request::root()); ?>/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
         <!-- Ionicons -->
         <link href="<?php echo e(Request::root()); ?>/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet"/>
-        <link href="<?php echo e(Request::root()); ?>/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-            <!-- Theme style -->
-            <link href="<?php echo e(Request::root()); ?>/dist/css/AdminLTE.min.css" rel="stylesheet"/>
-            <link href="<?php echo e(Request::root()); ?>/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
-            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
-        </link>
+        <link href="<?php echo e(Request::root()); ?>/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+        <!-- Theme style -->
+        <link href="<?php echo e(Request::root()); ?>/dist/css/AdminLTE.min.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper" style="overflow-y: hidden;">
