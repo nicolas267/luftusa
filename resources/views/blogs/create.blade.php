@@ -33,13 +33,11 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Title</label>
-                  <input type="title" class="form-control" name="title" placeholder="title">
+                  <input type="title" class="form-control" name="title" placeholder="Title">
                 </div>
-            <div class="box-body pad">
+            <div class="form-group">
               <label >Description</label>
-               <textarea id="editor1" name="editor1" rows="10" cols="80">
-                
-              </textarea>
+               <textarea id="editor1" name="description" rows="10" cols="80"></textarea>
             </div>
           </div>
           <input type="hidden" name="userid" value="1">

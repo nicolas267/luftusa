@@ -109,3 +109,27 @@ Route::get('blogs/destroy/{data}', 'Blog@destroy')->name('blogsDestroy');
 Route::post('blogs/store', 'Blog@store');
 
 Route::post('blogs/upgrade', 'Blog@upgrade');
+
+Route::get('/cars', 'Car@index');
+
+Route::get('cars/create', 'Car@create')->name('carsCreate');
+
+Route::get('cars/edit/{data}', 'Car@edit')->name('carsEdit');
+
+Route::get('cars/destroy/{data}', 'Car@destroy')->name('carsDestroy');
+
+Route::post('cars/store', 'Car@store');
+
+Route::post('cars/upgrade', 'Car@upgrade');
+
+Route::get('/carmodels', 'Carmodel@index');
+
+Route::get('carmodels/create', 'Carmodel@create')->name('carmodelsCreate');
+
+Route::get('carmodels/edit/{data}', 'Carmodel@edit')->name('carmodelsEdit');
+
+Route::get('carmodels/destroy/{data}', 'Carmodel@destroy')->name('carmodelsDestroy');
+
+Route::post('carmodels/store', 'Carmodel@store');
+
+Route::post('carmodels/upgrade', 'Carmodel@upgrade');

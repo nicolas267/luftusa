@@ -138,7 +138,7 @@
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(Request::root()); ?>/cars">
                                 <i class="fa fa-car">
                                 </i>
                                 <span>
@@ -156,7 +156,7 @@
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(Request::root()); ?>/carmodels">
                                 <i class="fa fa-clone">
                                 </i>
                                 <span>
@@ -165,7 +165,7 @@
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(Request::root()); ?>/carversions">
                                 <i class="fa fa-vimeo">
                                 </i>
                                 <span>
@@ -174,7 +174,7 @@
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(Request::root()); ?>/caryears">
                                 <i class="fa fa-calendar-check-o">
                                 </i>
                                 <span>
@@ -183,7 +183,7 @@
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(Request::root()); ?>/">
                                 <i class="fa fa-gears">
                                 </i>
                                 <span>
@@ -192,7 +192,7 @@
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(Request::root()); ?>/parts">
                                 <i class="fa fa-dashboard">
                                 </i>
                                 <span>
@@ -201,7 +201,7 @@
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(Request::root()); ?>/blogs">
                                 <i class="fa fa-book">
                                 </i>
                                 <span>

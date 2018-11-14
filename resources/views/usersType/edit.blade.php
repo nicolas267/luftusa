@@ -33,10 +33,10 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >User Type</label>
-                  <input type="User Type" class="form-control" name="UserType" placeholder="User Type" value="{{$data->user_type}}">
+                  <input type="User Type" class="form-control" name="usertype" placeholder="User Type" value="{{$data->user_type}}">
                 </div>
               </div>
-              <input type="hidden" name="Usertypeid" value="{{$data->user_types_id}}">
+              <input type="hidden" name="usertypeid" value="{{$data->user_types_id}}">
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Edit</button>
               </div>

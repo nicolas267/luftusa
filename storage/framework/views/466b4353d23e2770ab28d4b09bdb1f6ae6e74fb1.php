@@ -12,7 +12,7 @@
             </a>
         </li>
         <li class="active">
-            User
+            Users
         </li>
         <li class="active">
             Edit User
@@ -35,25 +35,25 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Name</label>
-                  <input type="Name" class="form-control" name="Name" placeholder="Name" value="<?php echo e($data->names); ?>">
+                  <input type="text" class="form-control" name="name" placeholder="Name" value="<?php echo e($data->names); ?>">
                 </div>
                 <div class="form-group">
                   <label >Lastname</label>
-                  <input type="Name" class="form-control" name="Lastname" placeholder="Lastname" value="<?php echo e($data->lastnames); ?>">
+                  <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="<?php echo e($data->lastnames); ?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" name="Email" placeholder="Enter email" value="<?php echo e($data->email); ?>">
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email" value="<?php echo e($data->email); ?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" name="Password" placeholder="Password" value="<?php echo e($data->password); ?>">
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" value="<?php echo e($data->password); ?>">
                 </div>
                 <div class="form-group">
                     <label for="title">User Type</label>
-                      <select class="form-control " style="width: 100%;" name="Usertype" tabindex="-1" aria-hidden="true">
+                      <select class="form-control " style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
                         <?php $__currentLoopData = $userstypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $usertype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                          <option value="<?php echo e($usertype->users_type_id); ?>"><?php echo e($usertype->users_type); ?></option>
+                          <option value="<?php echo e($usertype->user_types_id); ?>"><?php echo e($usertype->user_type); ?></option>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                       </select>
                 </div>

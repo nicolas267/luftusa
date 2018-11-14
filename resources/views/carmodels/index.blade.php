@@ -28,6 +28,8 @@
                 <thead>
                 <tr>
                   <th>Car Models</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </thead>
@@ -35,6 +37,8 @@
               @foreach($carmodels as $carmodel)
                 <tr>
                   <td>{{ $carmodel->car_model }}</td>
+                  <td>{{ $carmodel->created_at }}</td>
+                  <td>{{ $carmodel->updated_at }}</td>
                   <td>
                     <a id="editar" class="btn btn-primary editar" href="{{route('carmodelsEdit',[$carmodel->car_model_id])}}"><i class="fa fa-edit">
                 </i></a>
@@ -48,6 +52,8 @@
                 <tfoot>
                 <tr>
                   <th>car models</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </tfoot>

@@ -3,7 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Cars Types
+        Car Types
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -28,6 +28,8 @@
                 <thead>
                 <tr>
                   <th>Car Type</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </thead>
@@ -35,6 +37,8 @@
               @foreach($carstype as $cartype)
                 <tr>
                   <td>{{ $cartype->car_type }}</td>
+                  <td>{{ $cartype->created_at }}</td>
+                  <td>{{ $cartype->updated_at }}</td>
                   <td>
                     <a id="editar" class="btn btn-primary editar" href="{{route('cartypeEdit',[$cartype->car_type_id])}}"><i class="fa fa-edit">
                 </i></a>
@@ -48,6 +52,8 @@
                 <tfoot>
                 <tr>
                   <th>car Type</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </tfoot>

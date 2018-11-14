@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
 <section class="content-header">
     <h1>
-        Cars Types
+        Car Types
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -26,6 +26,8 @@
                 <thead>
                 <tr>
                   <th>Car Type</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </thead>
@@ -33,6 +35,8 @@
               <?php $__currentLoopData = $carstype; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cartype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
                   <td><?php echo e($cartype->car_type); ?></td>
+                  <td><?php echo e($cartype->created_at); ?></td>
+                  <td><?php echo e($cartype->updated_at); ?></td>
                   <td>
                     <a id="editar" class="btn btn-primary editar" href="<?php echo e(route('cartypeEdit',[$cartype->car_type_id])); ?>"><i class="fa fa-edit">
                 </i></a>
@@ -46,6 +50,8 @@
                 <tfoot>
                 <tr>
                   <th>car Type</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </tfoot>

@@ -31,7 +31,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Car Models</label>
-                  <input type="text" class="form-control" name="CarModels" placeholder="Car Models">
+                  <input type="text" class="form-control" name="carmodels" placeholder="Car Models">
                 </div>
               </div>
               <div class="box-footer">

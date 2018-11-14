@@ -37,25 +37,25 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Name</label>
-                  <input type="Name" class="form-control" name="Name" placeholder="Name" value="{{$data->names}}">
+                  <input type="text" class="form-control" name="name" placeholder="Name" value="{{$data->names}}">
                 </div>
                 <div class="form-group">
                   <label >Lastname</label>
-                  <input type="Name" class="form-control" name="Lastname" placeholder="Lastname" value="{{$data->lastnames}}">
+                  <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="{{$data->lastnames}}">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" name="Email" placeholder="Enter email" value="{{$data->email}}">
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email" value="{{$data->email}}">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" name="Password" placeholder="Password" value="{{$data->password}}">
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" value="{{$data->password}}">
                 </div>
                 <div class="form-group">
                     <label for="title">User Type</label>
-                      <select class="form-control " style="width: 100%;" name="Usertype" tabindex="-1" aria-hidden="true">
+                      <select class="form-control " style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
                         @foreach($userstypes as $usertype)
-                          <option value="{{$usertype->users_type_id}}">{{$usertype->users_type}}</option>
+                          <option value="{{$usertype->user_types_id}}">{{$usertype->user_type}}</option>
                         @endforeach
                       </select>
                 </div>

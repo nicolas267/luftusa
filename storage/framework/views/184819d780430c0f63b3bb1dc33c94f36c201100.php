@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
 <section class="content-header">
     <h1>
-        Create Car Types
+        Create Car Type
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -15,7 +15,7 @@
             Car Types
         </li>
         <li class="active">
-           Create Car Types
+           Create Car Type
         </li>
     </ol>
 </section>
@@ -31,7 +31,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Car Type</label>
-                  <input type="text" class="form-control" name="CarType" placeholder="Car Type">
+                  <input type="text" class="form-control" name="cartype" placeholder="car type">
                 </div>
               </div>
               <div class="box-footer">

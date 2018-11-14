@@ -31,25 +31,25 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Name</label>
-                  <input type="Name" class="form-control" name="Name" placeholder="Name">
+                  <input type="text" class="form-control" name="name" placeholder="Name">
                 </div>
                 <div class="form-group">
                   <label >Lastname</label>
-                  <input type="Name" class="form-control" name="Lastname" placeholder="Lastname">
+                  <input type="text" class="form-control" name="lastname" placeholder="Lastname">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" name="Email" placeholder="Enter email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" name="Password" placeholder="Password">
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
                 </div>
                 <div class="form-group">
                     <label for="title">User Type</label>
-                      <select class="form-control " style="width: 100%;" name="Usertype" tabindex="-1" aria-hidden="true">
+                      <select class="form-control " style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
                         <?php $__currentLoopData = $userstypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $usertype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                          <option value="<?php echo e($usertype->users_type_id); ?>"><?php echo e($usertype->users_type); ?></option>
+                          <option value="<?php echo e($usertype->user_types_id); ?>"><?php echo e($usertype->user_type); ?></option>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                       </select>
                 </div>

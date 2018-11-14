@@ -31,12 +31,12 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Car Type</label>
-                  <input type="text" class="form-control" name="CarType" placeholder="Car Type" value="<?php echo e($data->car_type); ?>">
+                  <input type="text" class="form-control" name="cartype" placeholder="Car Type" value="<?php echo e($data->car_type); ?>">
                 </div>
               </div>
-              <input type="hidden" class="form-control" name="CarTypeid"  value="<?php echo e($data->car_type_id); ?>">
+              <input type="hidden" class="form-control" name="cartypeid"  value="<?php echo e($data->car_type_id); ?>">
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Edit</button>
               </div>
             </form>
           </div>

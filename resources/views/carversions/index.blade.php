@@ -27,7 +27,9 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>car Versions</th>
+                  <th>Car Versions</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </thead>
@@ -35,6 +37,8 @@
               @foreach($carversions as $carversion)
                 <tr>
                   <td>{{ $carversion->car_version }}</td>
+                  <td>{{ $carversion->created_at }}</td>
+                  <td>{{ $carversion->updated_at }}</td>
                   <td>
                     <a id="editar" class="btn btn-primary editar" href="{{route('carversionsEdit',[$carversion->car_versions_id])}}"><i class="fa fa-edit">
                 </i></a>
@@ -47,7 +51,9 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>car Versions</th>
+                  <th>Car Versions</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </tfoot>

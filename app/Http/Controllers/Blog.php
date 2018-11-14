@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\models\blogModel;
 
@@ -9,7 +10,11 @@ class Blog extends Controller
 {
     public function index()
     {
-    	$blogs = blogModel::all();
+    	$blogs = DB::table('blogs')
+            ->select('blog_id', 'names', 'title', 'description', 'blogs.created_at', 'blogs.updated_at')
+            ->join('users','blogs.user_id','=','users.user_id')
+            ->get();
+
     	return view('blogs/index')->with('blogs',  $blogs);
     }
 
@@ -22,15 +27,18 @@ class Blog extends Controller
     {
     	$data = Request()->all();
 
-    	cartypeModel::create([
+    	blogModel::create([
 
-    			'car_type' => $data['CarType']
+    			'user_id' => $data['userid'],
+    			'title' => $data['title'],
+    			'description' => $data['description']
+
     	]);
 
     	return redirect('blogs/');
     }
 
-    public function edit(cartypeModel $data)
+    public function edit(blogModel $data)
     {
     	return view('blogs/edit', compact('data'));
     }
@@ -39,17 +47,22 @@ class Blog extends Controller
     {
     	$data = Request()->all();
 
-       	cartypeModel::where('car_type_id', $data['CarTypeid'])
-    				->update(['car_type' => $data['CarType']
-							]);   
-		return redirect('/Blog'); 
+       	blogModel::where('blog_id', $data['blogid'])
+    				->update([
+
+    					'user_id' => $data['userid'],
+    					'title' => $data['title'],
+    					'description' => $data['description']
+					
+					]);   
+		return redirect('blogs/'); 
     }
 
-    public function destroy($cartypeid)
+    public function destroy($blogid)
     {
-    	cartypeModel::where('car_type_id', $cartypeid)->delete();
+    	blogModel::where('blog_id', $blogid)->delete();
 
-    	return redirect('blog/');
+    	return redirect('blogs/');
 
     }
 }

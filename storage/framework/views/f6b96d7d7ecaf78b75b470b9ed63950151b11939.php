@@ -26,6 +26,8 @@
                 <thead>
                 <tr>
                   <th>Car Models</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </thead>
@@ -33,6 +35,8 @@
               <?php $__currentLoopData = $carmodels; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $carmodel): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
                   <td><?php echo e($carmodel->car_model); ?></td>
+                  <td><?php echo e($carmodel->created_at); ?></td>
+                  <td><?php echo e($carmodel->updated_at); ?></td>
                   <td>
                     <a id="editar" class="btn btn-primary editar" href="<?php echo e(route('carmodelsEdit',[$carmodel->car_model_id])); ?>"><i class="fa fa-edit">
                 </i></a>
@@ -46,6 +50,8 @@
                 <tfoot>
                 <tr>
                   <th>car models</th>
+                  <th>Created at</th>
+                  <th>Updated at</th>
                   <th>Options</th>
                 </tr>
                 </tfoot>
