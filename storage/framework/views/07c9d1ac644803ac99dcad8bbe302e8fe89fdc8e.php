@@ -1,27 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta charset="utf-8">
-            <meta content="IE=edge" http-equiv="X-UA-Compatible">
-                <title>
-                    AdminLTE 2 | General Form Elements
-                </title>
-                <!-- Tell the browser to be responsive to screen width -->
-                <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-                <!-- Bootstrap 3.3.7 -->
-                <link href="<?php echo e(Request::root()); ?>/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-                <!-- daterange picker -->
-                <link rel="stylesheet" href="<?php echo e(Request::root()); ?>/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-                <!-- Font Awesome -->
-                <link href="<?php echo e(Request::root()); ?>/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
-                <!-- Ionicons -->
-                <link href="<?php echo e(Request::root()); ?>/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet"/>
-                <!-- Theme style -->
-                <link href="<?php echo e(Request::root()); ?>/dist/css/AdminLTE.min.css" rel="stylesheet"/>
-                <link href="<?php echo e(Request::root()); ?>/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
-                <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
-            </meta>
-        </meta>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <title>
+            AdminLTE 2 | General Form Elements
+        </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <!-- Bootstrap 3.3.7 -->
+        <link href="<?php echo e(Request::root()); ?>/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <!-- daterange picker -->
+        <link href="<?php echo e(Request::root()); ?>/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"/>
+        <!-- Font Awesome -->
+        <link href="<?php echo e(Request::root()); ?>/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+        <!-- Ionicons -->
+        <link href="<?php echo e(Request::root()); ?>/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+            <!-- Theme style -->
+            <link href="<?php echo e(Request::root()); ?>/dist/css/AdminLTE.min.css" rel="stylesheet"/>
+            <link href="<?php echo e(Request::root()); ?>/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
+        </link>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper" style="overflow-y: hidden;">
@@ -128,7 +128,7 @@
                         <li class="header">
                             MAIN NAVIGATION
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/">
                                 <i class="fa fa-home">
                                 </i>
@@ -137,7 +137,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/cars">
                                 <i class="fa fa-car">
                                 </i>
@@ -146,7 +146,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/carstype">
                                 <i class="fa fa-archive">
                                 </i>
@@ -155,7 +155,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/carmodels">
                                 <i class="fa fa-clone">
                                 </i>
@@ -164,7 +164,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/carversions">
                                 <i class="fa fa-vimeo">
                                 </i>
@@ -173,7 +173,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/caryears">
                                 <i class="fa fa-calendar-check-o">
                                 </i>
@@ -182,7 +182,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/">
                                 <i class="fa fa-gears">
                                 </i>
@@ -191,7 +191,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/parts">
                                 <i class="fa fa-dashboard">
                                 </i>
@@ -200,7 +200,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/blogs">
                                 <i class="fa fa-book">
                                 </i>
@@ -209,7 +209,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/../#">
                                 <i class="fa fa-envelope-o">
                                 </i>
@@ -218,7 +218,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/../#">
                                 <i class="fa fa-group">
                                 </i>
@@ -227,7 +227,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/../#">
                                 <i class="fa fa-user">
                                 </i>
@@ -236,7 +236,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/../#">
                                 <i class="fa fa-gear">
                                 </i>
@@ -245,7 +245,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/../#">
                                 <i class="fa fa-sign-out">
                                 </i>
@@ -516,17 +516,23 @@
         </script>
         <!-- bootstrap datepicker -->
         <!-- InputMask -->
-        <script src="<?php echo e(Request::root()); ?>/plugins/input-mask/jquery.inputmask.js"></script>
-        <script src="<?php echo e(Request::root()); ?>/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-        <script src="<?php echo e(Request::root()); ?>/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+        <script src="<?php echo e(Request::root()); ?>/plugins/input-mask/jquery.inputmask.js">
+        </script>
+        <script src="<?php echo e(Request::root()); ?>/plugins/input-mask/jquery.inputmask.date.extensions.js">
+        </script>
+        <script src="<?php echo e(Request::root()); ?>/plugins/input-mask/jquery.inputmask.extensions.js">
+        </script>
         <!-- FastClick -->
         <script src="<?php echo e(Request::root()); ?>/bower_components/fastclick/lib/fastclick.js">
         </script>
         <!-- CK Editor -->
-        <script src="<?php echo e(Request::root()); ?>/bower_components/ckeditor/ckeditor.js"></script>
+        <script src="<?php echo e(Request::root()); ?>/bower_components/ckeditor/ckeditor.js">
+        </script>
         <!--Data Tables -->
-        <script src="<?php echo e(Request::root()); ?>/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="<?php echo e(Request::root()); ?>/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="<?php echo e(Request::root()); ?>/bower_components/datatables.net/js/jquery.dataTables.min.js">
+        </script>
+        <script src="<?php echo e(Request::root()); ?>/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js">
+        </script>
         <!-- AdminLTE App -->
         <script src="<?php echo e(Request::root()); ?>/dist/js/adminlte.min.js">
         </script>
@@ -534,7 +540,7 @@
         <script src="<?php echo e(Request::root()); ?>/dist/js/demo.js">
         </script>
         <script>
-  $(function () {
+            $(function () {
     $('.datemask').inputmask('yyyy/mm/dd', { 'placeholder': 'yyyy/mm/dd' })
     $('#example1').DataTable()
     $('#example2').DataTable({
@@ -547,7 +553,6 @@
     })
     CKEDITOR.replace('editor1')
   })
-</script>
-
+        </script>
     </body>
 </html>
