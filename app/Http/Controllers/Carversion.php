@@ -25,7 +25,7 @@ class Carversion extends Controller
 
     	carversionModel::create([
 
-    			'car_version' => $data['carversions']
+    			'car_version' => $data['carversion']
     	]);
 
     	return redirect('carversions/');

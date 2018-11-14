@@ -31,10 +31,10 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Car Version</label>
-                  <input type="text" class="form-control" name="Carversion" placeholder="Car version" value="<?php echo e($data->car_version); ?>">
+                  <input type="text" class="form-control" name="carversion" placeholder="Car version" value="<?php echo e($data->car_version); ?>">
                 </div>
               </div>
-              <input type="hidden" class="form-control" name="Carversionid"  value="<?php echo e($data->car_versions_id); ?>">
+              <input type="hidden" class="form-control" name="carversionid"  value="<?php echo e($data->car_versions_id); ?>">
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Edit</button>
               </div>
