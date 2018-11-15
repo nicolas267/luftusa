@@ -11,9 +11,11 @@
 |
 */
 Route::get('/', function () {
+    return view('home/index');
+});
+Route::get('admin', function () {
     return view('home');
 });
-
 Route::get('/users', 'User@index');
 
 Route::get('users/create', 'User@create')->name('userCreate');
@@ -133,3 +135,5 @@ Route::get('carmodels/destroy/{data}', 'Carmodel@destroy')->name('carmodelsDestr
 Route::post('carmodels/store', 'Carmodel@store');
 
 Route::post('carmodels/upgrade', 'Carmodel@upgrade');
+
+Route::get('home', 'Home@index');
