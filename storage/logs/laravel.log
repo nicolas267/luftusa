@@ -21210,3 +21210,11 @@ esbot\\carbon\\src\\Carbon\\Carbon.php:63)
 #54 C:\\xampp\\htdocs\\luftusa\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+[2018-11-16 00:55:38] local.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Maximum execution time of 30 seconds exceeded at C:\\xampp\\htdocs\\luftusa\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 {main}
+"} 
+[2018-11-16 00:55:38] local.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Maximum execution time of 30 seconds exceeded at C:\\xampp\\htdocs\\luftusa\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php:22)
+[stacktrace]
+#0 {main}
+"} 

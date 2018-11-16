@@ -213,41 +213,6 @@
 							</ul>
 						</div>
 					</div>
-					<div class="frontsearch-cont" id="frontsearch-cont" data-lines-count="20">
-						<p class="frontsearch-img">
-							<img src="img/filter-img.png" alt="">
-						</p>
-						<p class="frontsearch-model">GT-Z600</p>
-
-						<div class="frontsearch-res frontsearch-res1"><a href="catalog.html"><span>260</span> Hand Controls</a></div>
-						<div class="frontsearch-point frontsearch-point1"></div>
-
-						<div class="frontsearch-res frontsearch-res2"><a href="catalog.html"><span>14</span> Seats</a></div>
-						<div class="frontsearch-point frontsearch-point2"></div>
-
-						<div class="frontsearch-res frontsearch-res3"><a href="catalog.html"><span>2</span> Windshields</a></div>
-						<div class="frontsearch-point frontsearch-point3"></div>
-
-						<div class="frontsearch-res frontsearch-res4"><a href="catalog.html">Exhausts <span>103</span></a></div>
-						<div class="frontsearch-point frontsearch-point4"></div>
-
-						<div class="frontsearch-res frontsearch-res5"><a href="catalog.html"><span>267</span> Lightings</a></div>
-						<div class="frontsearch-point frontsearch-point5"></div>
-
-						<div class="frontsearch-res frontsearch-res6"><a href="catalog.html">Brake Shoes <span>6</span></a></div>
-						<div class="frontsearch-point frontsearch-point6"></div>
-
-						<div class="frontsearch-res frontsearch-res7"><a href="catalog.html"><span>34</span> Wheels</a></div>
-						<div class="frontsearch-point frontsearch-point7"></div>
-
-						<div class="frontsearch-res frontsearch-res8"><a href="catalog.html"><span>874</span> Engines</a></div>
-						<div class="frontsearch-point frontsearch-point8"></div>
-
-						<div class="frontsearch-res frontsearch-res9"><a href="catalog.html"><span>54</span> Filtres</a></div>
-						<div class="frontsearch-point frontsearch-point9"></div>
-
-						<div class="frontsearch-res frontsearch-res10"><a href="catalog.html"><span>15</span> Tires</a></div>
-						<div class="frontsearch-point frontsearch-point10"></div>
 
 					</div>
 				</div>
