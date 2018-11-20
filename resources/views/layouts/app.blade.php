@@ -182,7 +182,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/">
+                            <a href="{{Request::root()}}/carparts">
                                 <i class="fa fa-gears">
                                 </i>
                                 <span>

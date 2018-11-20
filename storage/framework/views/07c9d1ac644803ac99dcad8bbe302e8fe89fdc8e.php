@@ -182,7 +182,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo e(Request::root()); ?>/">
+                            <a href="<?php echo e(Request::root()); ?>/carparts">
                                 <i class="fa fa-gears">
                                 </i>
                                 <span>

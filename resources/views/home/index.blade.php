@@ -333,28 +333,6 @@
 				<span class="special-line2"></span>
 			</div>
 		</div>
-
-
-
-		<!-- Get a Special Deals -->
-		<div class="getspec-wrap">
-			<div class="cont getspec">
-				<div class="getspec-cont">
-					<h3>Winter is coming</h3>
-					<p>New snowmobile parts</p>
-					<form action="#" class="form-validate">
-						<input data-required="text" data-required-email="email" type="text" placeholder="Email address" name="email3">
-						<input type="submit" value="Get a special deals">
-					</form>
-				</div>
-				<a href="#" class="getspec-img">
-					<img src="{{Request::root()}}/frontend_template/HTML/img/getspec.jpg" alt="">
-				</a>
-			</div>
-		</div>
-
-
-
 		<!-- Popular Items -->
 		<div class="populars-wrap">
 			<div class="cont populars">
@@ -471,21 +449,6 @@
 				</p>
 				<span class="popular-line1"></span>
 				<span class="popular-line2"></span>
-			</div>
-		</div>
-
-
-		<!-- Frontpage Article -->
-		<div class="botarticle-wrap">
-			<div class="cont botarticle">
-				<div class="botarticle-cont">
-					<h3>Kings of the dirt</h3>
-					<p>Best motocross gear</p>
-					<a href="#" class="botarticle-more">Read more</a>
-				</div>
-				<a href="blog.html" class="botarticle-img">
-					<img src="{{Request::root()}}/frontend_template/HTML/img/article1.jpg" alt="">
-				</a>
 			</div>
 		</div>
 	</main>

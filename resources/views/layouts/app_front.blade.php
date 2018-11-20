@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/ion.rangeSlider.skinFlat.css">
 <link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/style.css">
 <link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/media.css">
-
+ <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
@@ -152,17 +152,16 @@
 					<p>Company</p>
 					<ul>
 						<li><a href="#">Shipping</a></li>
-						<li><a href="#">Careers</a></li>
 						<li><a href="#">About us</a></li>
+						<li><a href="#">Services</a></li>
 					</ul>
 				</div>
 				<div class="footer-menu">
 					<p>Information</p>
 					<ul>
-						<li><a href="#">Affiliate Program</a></li>
 						<li><a href="#">Privacy Policy</a></li>
 						<li><a href="#">Site Map</a></li>
-						<li><a href="#">Search Terms</a></li>
+
 					</ul>
 				</div>
 				<div class="footer-menu">
@@ -214,9 +213,9 @@
 							</a>
 						</li>
 					</ul>
-					<form action="#" class="form-validate">
-						<input data-required="text" data-required-email="email" type="text" placeholder="Email address" name="email1">
-						<input type="submit" value="Subscribe">
+					<form class="form-validate">
+						<input data-required="text" data-required-email="email" type="text" placeholder="Email address" name="email" id="email">
+						<input type="button" value="Subscribe" id="sub" class="btn-submit">
 					</form>
 				</div>
 
@@ -253,41 +252,60 @@
 		<script src="{{Request::root()}}/frontend_template/HTML/js/main.js"></script>
 
 		<script>
-		"use strict";
-		// Range Slider
-		$(document).ready(function () {
-			var $range_cost = $("#range_cost");
-			$range_cost.ionRangeSlider({
-			    type: "double",
-			    grid: true,
-			    min: 0,
-			    max: 20000,
-			    from: 200,
-			    to: 14000,
-			    prefix: "$",
-			});
-			$range_cost.on("change", function () {
-			    var $this = $(this),
-			        value = $this.prop("value").split(";");
+			"use strict";
+			// Range Slider
+			$(document).ready(function () {
+				var $range_cost = $("#range_cost");
+				$range_cost.ionRangeSlider({
+				    type: "double",
+				    grid: true,
+				    min: 0,
+				    max: 20000,
+				    from: 200,
+				    to: 14000,
+				    prefix: "$",
+				});
+				$range_cost.on("change", function () {
+				    var $this = $(this),
+				        value = $this.prop("value").split(";");
 
-			    $('#range_cost_ttl').html("$" + value[0] + " - $" + value[1]);
-			});
-			var $range_year = $("#range_year");
-			$range_year.ionRangeSlider({
-			    type: "double",
-			    grid: true,
-			    min: 1990,
-			    max: 2016,
-			    from: 2013,
-			    to: 2016,
-			});
-			$range_year.on("change", function () {
-			    var $this = $(this),
-			        value = $this.prop("value").split(";");
+				    $('#range_cost_ttl').html("$" + value[0] + " - $" + value[1]);
+				});
+				var $range_year = $("#range_year");
+				$range_year.ionRangeSlider({
+				    type: "double",
+				    grid: true,
+				    min: 1990,
+				    max: 2016,
+				    from: 2013,
+				    to: 2016,
+				});
+				$range_year.on("change", function () {
+				    var $this = $(this),
+				        value = $this.prop("value").split(";");
 
-			    $('#range_year_ttl').html(value[0] + " - " + value[1]);
+				    $('#range_year_ttl').html(value[0] + " - " + value[1]);
+				});
 			});
-		});
+		</script>
+		<script>
+			$.ajaxSetup({
+		        headers: {
+		            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		        }
+		    });
+		    $(".btn-submit").click(function(e){
+		        e.preventDefault();
+		        var email = $("input[name=email]").val();
+		        $.ajax({
+		           type:'POST',
+		           url:'/newsletter',
+		           data:{email:email},
+		           success:function(data){
+		              alert(data.success);
+		           }
+		        });
+			});
 		</script>
 	</body>
 </html>

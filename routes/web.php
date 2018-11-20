@@ -137,3 +137,5 @@ Route::post('carmodels/store', 'Carmodel@store');
 Route::post('carmodels/upgrade', 'Carmodel@upgrade');
 
 Route::get('home', 'Home@index');
+
+Route::post('newsletter', 'Newsletter@store');
