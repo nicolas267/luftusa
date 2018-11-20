@@ -53,7 +53,6 @@
                     </tr>
                 </thead>
                 <tbody>
-<<<<<<< HEAD
                     @foreach($users as $user)
                     <tr>
                         <td>
@@ -86,25 +85,6 @@
                         </td>
                     </tr>
                     @endforeach
-=======
-              @foreach($users as $user)
-                <tr>
-                  <td>{{ $user->user_type }}</td>
-                  <td>{{ $user->names }}
-                  </td>
-                  <td>{{ $user->lastnames }}</td>
-                  <td>{{ $user->email }}</td>
-                  <td>{{ $user->created_at }}</td>
-                  <td>{{ $user->updated_at }}</td>
-                  <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('userEdit',[$user->user_id])}}"><i class="fa fa-edit">
-                </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('userDestroy',[$user->user_id])}}"><i class="fa fa-remove">
-                </i></a>
-                  </td>
-                </tr>
-              @endforeach
->>>>>>> 193e3a2eb34ac794506a155d491420d721e7bd0c
                 </tbody>
                 <tfoot>
                     <tr>

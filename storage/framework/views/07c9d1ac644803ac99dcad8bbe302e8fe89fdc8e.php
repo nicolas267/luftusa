@@ -209,6 +209,24 @@
                             </a>
                         </li>
                         <li>
+                            <a href="<?php echo e(Request::root()); ?>/users">
+                                <i class="fa fa-user">
+                                </i>
+                                <span>
+                                   Users
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo e(Request::root()); ?>/userstype">
+                                <i class="fa fa-user-times">
+                                </i>
+                                <span>
+                                   Users Types
+                                </span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="<?php echo e(Request::root()); ?>/../#">
                                 <i class="fa fa-envelope-o">
                                 </i>
@@ -228,7 +246,7 @@
                         </li>
                         <li>
                             <a href="<?php echo e(Request::root()); ?>/../#">
-                                <i class="fa fa-user">
+                                <i class="fa-info">
                                 </i>
                                 <span>
                                     My Data
