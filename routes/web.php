@@ -132,10 +132,11 @@ Route::get('carmodels/edit/{data}', 'Carmodel@edit')->name('carmodelsEdit');
 
 Route::get('carmodels/destroy/{data}', 'Carmodel@destroy')->name('carmodelsDestroy');
 
-Route::post('carmodels/store', 'Carmodel@store');
+Route::post('carmodels/store', 'Cstoarmodel@re');
 
 Route::post('carmodels/upgrade', 'Carmodel@upgrade');
 
 Route::get('home', 'Home@index');
 
 Route::post('newsletter', 'Newsletter@store');
+

@@ -19,12 +19,8 @@
 <section class="content">
     <div class="box">
         <div class="box-body">
-            <a class="btn btn-primary " href="<?php echo e(url('blogs/create')); ?>" id="btnadd" style="margin-bottom: 20px;">
-                <i class="fa fa-plus">
-                </i>
-                Create Blog
-            </a>
-            <table class="table table-bordered table-striped" id="example2">
+              <a href="<?php echo e(url('blogs/create')); ?>" id="btnadd" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Blog</a>
+              <table id="example2" class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th>
@@ -82,6 +78,21 @@
                         </td>
                     </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <tr>
+                  <td><?php echo e($blog->names); ?></td>
+                  <td><?php echo e($blog->title); ?></td>
+                  <td><?php echo e($blog->description); ?></td>
+                  <td><?php echo e($blog->created_at); ?></td>
+                  <td><?php echo e($blog->updated_at); ?></td>
+                  <td>
+                    <a id="editar" class="btn btn-primary editar" href="<?php echo e(route('blogsEdit',[$blog->blog_id])); ?>"><i class="fa fa-edit">
+                </i></a>
+                    <a id="borrar" class="btn btn-danger borrar" href="<?php echo e(route('blogsDestroy',[$blog->blog_id])); ?>"><i class="fa fa-remove">
+                </i></a>
+                  </td>
+                </tr>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
                 <tfoot>
                     <tr>

@@ -136,7 +136,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li>
+                        <li class="treeview">
                             <a href="{{Request::root()}}/cars">
                                 <i class="fa fa-car">
                                 </i>

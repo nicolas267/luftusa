@@ -24,7 +24,6 @@ class Carversion extends Controller
     	$data = Request()->all();
 
     	carversionModel::create([
-
     			'car_version' => $data['carversion']
     	]);
 
