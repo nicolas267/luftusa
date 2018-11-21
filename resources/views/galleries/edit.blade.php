@@ -37,6 +37,7 @@
                   <input type="file" class="form-control" name="image">
                 </div>
               </div>
+              <input type="hidden" name="galleryid" value="{{$data->gallery_id}}">
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Edit</button>
               </div>
