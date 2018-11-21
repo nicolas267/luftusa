@@ -17,8 +17,7 @@ class CarsParts extends Migration
             $table->increments('car_part_id');
             $table->unsignedInteger('car_id');
             $table->foreign('car_id')->references('car_id')->on('cars');
-            $table->unsignedInteger('part_id');
-            $table->foreign('part_id')->references('part_id')->on('parts');
+            $table->string('part');
             $table->integer('price');
             $table->integer('stock');
 

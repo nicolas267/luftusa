@@ -43,15 +43,13 @@ class Gallery extends Controller
 
     public function upgrade(Request $request)
     {
-    	$data = $request->all();
-
     	$image = $request->file('image');
 
-    	$nombre = $image->getClientOriginalName();
+        $nombre = $image->getClientOriginalName();
         
-        \Storage::disk('public')->delete($data['image']->getClientOriginalName());
+        \Storage::disk('public')->put($nombre,  \File::get($image));
 
-    	\Storage::disk('public')->put($nombre,  \File::get($image));
+        $data = $request->all();
 
        	galleryModel::where('gallery_id', $data['galleryid'])
     				->update([
