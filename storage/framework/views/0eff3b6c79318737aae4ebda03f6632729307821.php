@@ -49,7 +49,7 @@
                     <label for="title">User Type</label>
                       <select class="form-control " style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
                         <?php $__currentLoopData = $userstypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $usertype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                          <option value="<?php echo e($usertype->user_types_id); ?>"><?php echo e($usertype->user_type); ?></option>
+                          <option value="<?php echo e($usertype->user_type_id); ?>"><?php echo e($usertype->user_type); ?></option>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                       </select>
                 </div>

@@ -80,7 +80,7 @@
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
-                  <td><?php echo e($blog->names); ?></td>
+                  <td><?php echo e($blog->name); ?></td>
                   <td><?php echo e($blog->title); ?></td>
                   <td><?php echo e($blog->description); ?></td>
                   <td><?php echo e($blog->created_at); ?></td>

@@ -58,11 +58,11 @@
 
                         </td>
                         <td>
-                            <?php echo e($user->names); ?>
+                            <?php echo e($user->name); ?>
 
                         </td>
                         <td>
-                            <?php echo e($user->lastnames); ?>
+                            <?php echo e($user->lastname); ?>
 
                         </td>
                         <td>

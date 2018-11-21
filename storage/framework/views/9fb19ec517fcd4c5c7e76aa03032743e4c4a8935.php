@@ -19,44 +19,132 @@
 <section class="content">
     <div class="row">
         <div class="col-xs-12">
-          <div class="box">
-            <div class="box-body">
-              <a href="<?php echo e(url('carparts/create')); ?>" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Car Parts</a>
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Car Parts</th>
-                  <th>Options</th>
-                </tr>
-                </thead>
-                <tbody>
-              <?php $__currentLoopData = $carparts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $carpart): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <tr>
-                  <td><?php echo e($carpart->car_part); ?></td>
-                  <td>
-                    <a id="editar" class="btn btn-primary editar" href="<?php echo e(route('carPartsEdit',[$carpart->car_part_id])); ?>"><i class="fa fa-edit">
-                </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="<?php echo e(route('carpartsDestroy',[$carpart->car_part_id])); ?>"><i class="fa fa-remove">
-                </i></a>
-                  </td>
+            <div class="box">
+                <div class="box-body">
+                    <a class="btn btn-primary " href="<?php echo e(url('carparts/create')); ?>" style="margin-bottom: 20px;">
+                        <i class="fa fa-plus">
+                        </i>
+                        Create Car Parts
+                    </a>
+                    <table class="table table-bordered table-striped" id="example1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Part
+                                </th>
+                                <th>
+                                    Car Model
+                                </th>
+                                <th>
+                                    Car Version
+                                </th>
+                                <th>
+                                    Year
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    stock
+                                </th>
+                                <th>
+                                    Created at
+                                </th>
+                                <th>
+                                    Updated at
+                                </th>
+                                <th>
+                                    Options
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php for($i = 0; $i < count($carparts); $i++): ?>
+                            <tr>
+                                <td>
+                                    <?php echo e($carparts[$i]->part); ?>
 
-                </tr>
-              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                </tbody>
-                <tfoot>
-                <tr>
-                  <th>car Parts</th>
-                  <th>Options</th>
-                </tr>
-                </tfoot>
-              </table>
+                                </td>
+                                <td>
+                                    <?php echo e($models[$i][0]->car_model); ?>
+
+                                </td>
+                                <td>
+                                    <?php echo e($versions[$i][0]->car_version); ?>
+
+                                </td>
+                                <td>
+                                    <?php echo e($carparts[$i]->year); ?>
+
+                                </td>
+                                <td>
+                                    <?php echo e($carparts[$i]->price); ?>
+
+                                </td>
+                                <td>
+                                    <?php echo e($carparts[$i]->stock); ?>
+
+                                </td>
+                                <td>
+                                    <?php echo e($carparts[$i]->created_at); ?>
+
+                                </td>
+                                <td>
+                                    <?php echo e($carparts[$i]->updated_at); ?>
+
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary editar" href="<?php echo e(route('carpartsEdit',[ $carparts[$i]->car_part_id ])); ?>" id="editar">
+                                        <i class="fa fa-edit">
+                                        </i>
+                                    </a>
+                                    <a class="btn btn-danger borrar" href="<?php echo e(route('carpartsDestroy',[ $carparts[$i]->car_part_id ])); ?>" id="borrar">
+                                        <i class="fa fa-remove">
+                                        </i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <?php endfor; ?>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    Part
+                                </th>
+                                <th>
+                                    Car Model
+                                </th>
+                                <th>
+                                    Car Version
+                                </th>
+                                <th>
+                                    Year
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    stock
+                                </th>
+                                <th>
+                                    Created at
+                                </th>
+                                <th>
+                                    Updated at
+                                </th>
+                                <th>
+                                    Options
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
         </div>
-      </div>
+    </div>
 </section>
+<!-- /.box-body -->
+<!-- /.box -->
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
