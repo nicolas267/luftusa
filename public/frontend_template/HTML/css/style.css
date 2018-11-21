@@ -5812,7 +5812,7 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
 .footer-info form input[type=text]:-ms-input-placeholder {
    color: #b1bcd0;
 }
-.footer-info form input[type=submit] {
+.footer-info form input[type=button] {
     background: #ff3100;
     transition: all 0.2s;
     border-radius: 2px;
@@ -5832,7 +5832,7 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
     min-width: 174px;
     cursor: pointer;
 }
-.footer-info form input[type=submit]:hover {
+.footer-info form input[type=button]:hover {
 	background: #ff4719;
 }
 

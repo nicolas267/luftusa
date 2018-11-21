@@ -128,7 +128,7 @@
                             MAIN NAVIGATION
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/">
+                            <a href="{{Request::root()}}/admin">
                                 <i class="fa fa-home">
                                 </i>
                                 <span>

@@ -34,17 +34,12 @@ class Newsletter extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        //$data = Request()->all();
-
-       /* newsletterModel::create([
-            'email' => $data['email'],
-        ]);*/
-
-       // print_r($data);
-        $input = request()->all();
-        return response()->json(['success'=>'Got Simple Ajax Request.']);
+        $newsletter = new newsletterModel();
+        $newsletter->email = $request->input('email');
+        $newsletter->save();
+        return response()->json(['success'=>'Thanks! You have Subscribed successfully']);
     }
 
     /**

@@ -138,5 +138,8 @@ Route::post('carmodels/upgrade', 'Carmodel@upgrade');
 
 Route::get('home', 'Home@index');
 
-Route::post('newsletter', 'Newsletter@store');
+Route::post('/newsletter','Newsletter@store');
 
+Route::get('contact', 'Contact@index');
+
+Route::get('about', 'About@index');

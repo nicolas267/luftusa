@@ -16,10 +16,6 @@ class CreateNewslettersTable extends Migration
         Schema::create('newsletters', function (Blueprint $table) {
             $table->increments('newsletter_id');
             $table->string('email');
-            $table->integer('user_id');
-            $table->integer('subtotal');
-            $table->string('tax');
-            $table->integer('total');
             $table->timestamps();
         });
     }

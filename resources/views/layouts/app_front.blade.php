@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/ion.rangeSlider.skinFlat.css">
 <link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/style.css">
 <link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/media.css">
+
  <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 <!--[if lt IE 9]>
@@ -88,53 +89,22 @@
 			<nav id="top-menu">
 				<ul>
 					<li class="active">
-						<a href="index.html">Home</a>
-					</li>
-					<li class="has-child">
-						<a href="catalog.html">Catalog</a>
-						<i class="fa fa-angle-down"></i>
-						<ul>
-							<li><a href="catalog.html">Catalog: List Mode</a></li>
-							<li><a href="catalog-gallery.html">Catalog: Gallery Mode</a></li>
-							<li><a href="product.html">Product: Standart</a></li>
-							<li><a href="product-vehicle.html">Product: Vehicle</a></li>
-						</ul>
-					</li>
-					<li class="has-child">
-						<a href="#">Pages</a>
-						<i class="fa fa-angle-down"></i>
-						<ul>
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="contacts.html">Contacts</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="err404.html">Error 404</a></li>
-						</ul>
-					</li>
-					<li class="has-child">
-						<a href="blog.html">Blog</a>
-						<i class="fa fa-angle-down"></i>
-						<ul>
-							<li><a href="blog.html">Blog: Standart</a></li>
-							<li><a href="blog-full.html">Blog: Full Width</a></li>
-							<li><a href="blog-left.html">Blog: Left Sidebar</a></li>
-							<li><a href="post.html">Single Post: Standart</a></li>
-							<li><a href="post-map.html">Single Post: With a Map</a></li>
-							<li><a href="post-video.html">Single Post: Video</a></li>
-							<li><a href="post-slider.html">Single Post: Slider</a></li>
-							<li><a href="post-sidebar.html">Single Post: Sidebar</a></li>
-						</ul>
+						<a href="{{url('home')}}">Home</a>
 					</li>
 					<li>
-						<a href="contacts.html">Contacts</a>
+						<a href="{{url('about')}}">About Us</a>
 					</li>
-					<li class="has-child">
-						<a href="orders.html">Orders</a>
-						<i class="fa fa-angle-down"></i>
-						<ul>
-							<li><a href="orders.html">Orders</a></li>
-							<li><a href="message.html">Messages</a></li>
-							<li><a href="cart.html">Shopping Cart</a></li>
-						</ul>
+					<li>
+						<a href="{{url('store')}}">Store</a>
+					</li>
+					<li>
+						<a href="{{url('service')}}">Services</a>
+					</li>
+					<li>
+						<a href="{{url('blog')}}">Blogs</a>
+					</li>
+					<li>
+						<a href="{{url('contact')}}">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -213,7 +183,9 @@
 							</a>
 						</li>
 					</ul>
-					<form class="form-validate">
+					<div class="alert_success"></div>
+					<form action="{{action('Newsletter@store')}}" method="post">
+						{{csrf_field()}}
 						<input data-required="text" data-required-email="email" type="text" placeholder="Email address" name="email" id="email">
 						<input type="button" value="Subscribe" id="sub" class="btn-submit">
 					</form>
@@ -250,7 +222,7 @@
 		<script src="{{Request::root()}}/frontend_template/HTML/js/ion.rangeSlider.min.js"></script>
 
 		<script src="{{Request::root()}}/frontend_template/HTML/js/main.js"></script>
-
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script>
 			"use strict";
 			// Range Slider
@@ -299,13 +271,32 @@
 		        var email = $("input[name=email]").val();
 		        $.ajax({
 		           type:'POST',
-		           url:'/newsletter',
+		           url:'{{action('Newsletter@store')}}',
 		           data:{email:email},
 		           success:function(data){
-		              alert(data.success);
+		              $('.alert_success').html('<div class="alert alert-success alert-dismissible fade show" role="alert">'+
+						  ''+data.success+'</div>');
 		           }
 		        });
 			});
 		</script>
+		<script>
+			"use strict";
+			function initialize() {
+				var mapOptions = {
+					zoom: 15,
+					scrollwheel: false,
+					center: new google.maps.LatLng(40.440128, -79.974326)
+				};
+				var map = new google.maps.Map(document.getElementById('contacts-map'),
+					mapOptions);
+				var marker = new google.maps.Marker({
+					position: map.getCenter(),
+					icon: 'img/marker.png',
+					map: map
+				});
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+			</script> 
 	</body>
 </html>

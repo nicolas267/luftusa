@@ -128,7 +128,7 @@
                             MAIN NAVIGATION
                         </li>
                         <li>
-                            <a href="<?php echo e(Request::root()); ?>/">
+                            <a href="<?php echo e(Request::root()); ?>/admin">
                                 <i class="fa fa-home">
                                 </i>
                                 <span>
