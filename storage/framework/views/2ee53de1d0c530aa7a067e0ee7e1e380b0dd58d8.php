@@ -38,9 +38,9 @@
                   <td><?php echo e($carversion->created_at); ?></td>
                   <td><?php echo e($carversion->updated_at); ?></td>
                   <td>
-                    <a id="editar" class="btn btn-primary editar" href="<?php echo e(route('carversionsEdit',[$carversion->car_versions_id])); ?>"><i class="fa fa-edit">
+                    <a id="editar" class="btn btn-primary editar" href="<?php echo e(route('carversionsEdit',[$carversion->car_version_id])); ?>"><i class="fa fa-edit">
                 </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="<?php echo e(route('carversionsDestroy',[$carversion->car_versions_id])); ?>"><i class="fa fa-remove">
+                    <a id="borrar" class="btn btn-danger borrar" href="<?php echo e(route('carversionsDestroy',[$carversion->car_version_id])); ?>"><i class="fa fa-remove">
                 </i></a>
                   </td>
 

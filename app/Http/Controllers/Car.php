@@ -13,76 +13,74 @@ class Car extends Controller
 {
     public function index()
     {
-    	$cars = DB::table('cars')
-            ->select('car_id', 'car_model', 'car_version', 'start_years', 'end_years', 'cars.created_at', 'cars.updated_at')
-            ->join('car_models','cars.car_model_id','=','car_models.car_model_id')
-            ->join('car_versions','cars.car_version_id','=','car_versions.car_versions_id')
-            ->join('car_years','cars.car_year_id','=','car_years.car_years_id')
+        $cars = DB::table('cars')
+            ->select('car_id', 'car_model', 'car_version', 'year', 'cars.created_at', 'cars.updated_at')
+            ->join('car_models', 'cars.car_model_id', '=', 'car_models.car_model_id')
+            ->join('car_versions', 'cars.car_version_id', '=', 'car_versions.car_version_id')
             ->get();
 
-    	return view('cars/index')->with('cars',  $cars);
+        return view('cars/index')->with('cars', $cars);
     }
 
     public function create()
     {
-        $carmodels = carmodelModel::all();
+        $carmodels   = carmodelModel::all();
         $carversions = carversionModel::all();
-        $caryears = caryearModel::all();
+        $year = date("y")+2000;
 
-    	return view('cars/create', compact('carmodels', 'carversions', 'caryears'));
+        return view('cars/create', compact('carmodels', 'carversions', 'year'));
     }
 
     public function store()
     {
-    	$data = Request()->all();
+        $data = Request()->all();
 
-    	carModel::create([
+        carModel::create([
 
-    			'car_model_id' => $data['carmodel'],
-    			'car_version_id' => $data['carversion'],
-    			'car_year_id' => $data['caryears']
-    	]);
+            'car_model_id'   => $data['carmodel'],
+            'car_version_id' => $data['carversion'],
+            'year'           => $data['year']
+        ]);
 
-    	return redirect('cars/');
+        return redirect('cars/');
     }
 
     public function edit($id)
     {
 
-    	$datas = DB::table('cars')
+        $datas = DB::table('cars')
             ->where('car_id', $id)
-            ->select('car_id', 'car_model', 'car_version', 'cars.car_model_id', 'cars.car_version_id','start_years', 'end_years', 'cars.car_year_id' ,'cars.created_at', 'cars.updated_at')
-            ->join('car_models','cars.car_model_id','=','car_models.car_model_id')
-            ->join('car_versions','cars.car_version_id','=','car_versions.car_versions_id')
-            ->join('car_years','cars.car_year_id','=','car_years.car_years_id')
+            ->select('car_id', 'car_model', 'car_version', 'year', 'cars.car_model_id', 'cars.car_version_id')
+            ->join('car_models', 'cars.car_model_id', '=', 'car_models.car_model_id')
+            ->join('car_versions', 'cars.car_version_id', '=', 'car_versions.car_version_id')
             ->get();
 
-        $carmodels = carmodelModel::all();
+        $carmodels   = carmodelModel::all();
         $carversions = carversionModel::all();
-        $caryears = caryearModel::all();
+        $year = date("y")+2000;
 
-    	return view('cars/edit', compact('datas', 'carmodels', 'carversions', 'caryears'));
+        return view('cars/edit', compact('datas', 'carmodels', 'carversions', 'year'));
     }
 
     public function upgrade()
     {
-    	$data = Request()->all();
+        $data = Request()->all();
 
-    	carModel::where('car_id', $data['carid'])
-    				->update([
+        carModel::where('car_id', $data['carid'])
+            ->update([
 
-    					'car_model_id' => $data['carmodel'],
-    					'car_version_id' => $data['carversion'],
-    					'car_year_id' => $data['caryears']
+                'car_model_id'   => $data['carmodel'],
+                'car_version_id' => $data['carversion'],
+                'year'           => $data['year']
 
-					]);   
-		return redirect('/cars'); 
+            ]);
+        return redirect('/cars');
     }
 
     public function destroy($carid)
     {
-    	carModel::where('car_id', $carid)->delete();
+        carModel::where('car_id', $carid)->delete();
 
-    	return redirect('cars/');
+        return redirect('cars/');
     }
 }

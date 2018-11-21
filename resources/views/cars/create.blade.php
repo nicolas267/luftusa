@@ -43,16 +43,17 @@
                     <label for="title">Car Version</label>
                       <select class="form-control " style="width: 100%;" name="carversion" tabindex="-1" aria-hidden="true">
                         @foreach($carversions as $carversion)
-                          <option value="{{$carversion->car_versions_id}}">{{$carversion->car_version}}</option>
+                          <option value="{{$carversion->car_version_id}}">{{$carversion->car_version}}</option>
                         @endforeach
                       </select>
                 </div>
                 <div class="form-group">
                     <label for="title">Car Years</label>
-                      <select class="form-control " style="width: 100%;" name="caryears" tabindex="-1" aria-hidden="true">
-                        @foreach($caryears as $caryear)
-                          <option value="{{$caryear->car_years_id}}">{{$caryear->start_years}} - {{$caryear->end_years}}</option>
-                        @endforeach
+                      <select class="form-control " style="width: 100%;" name="year" tabindex="-1" aria-hidden="true">
+                        <option>año</option>
+                      @for($i = 1950; $i <= $year; $i++)
+                        <option value="{{$i}}">{{ $i }}</option>
+                      @endfor
                       </select>
                 </div>
               </div>

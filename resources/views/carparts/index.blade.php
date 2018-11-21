@@ -21,42 +21,122 @@
 <section class="content">
     <div class="row">
         <div class="col-xs-12">
-          <div class="box">
-            <div class="box-body">
-              <a href="{{url('carparts/create')}}" style="margin-bottom: 20px;"class="btn btn-primary "><i class="fa fa-plus"></i> Create Car Parts</a>
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Car Parts</th>
-                  <th>Options</th>
-                </tr>
-                </thead>
-                <tbody>
-              @foreach($carparts as $carpart)
-                <tr>
-                  <td>{{ $carpart->car_part }}</td>
-                  <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('carPartsEdit',[$carpart->car_part_id])}}"><i class="fa fa-edit">
-                </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('carpartsDestroy',[$carpart->car_part_id])}}"><i class="fa fa-remove">
-                </i></a>
-                  </td>
-
-                </tr>
-              @endforeach
-                </tbody>
-                <tfoot>
-                <tr>
-                  <th>car Parts</th>
-                  <th>Options</th>
-                </tr>
-                </tfoot>
-              </table>
+            <div class="box">
+                <div class="box-body">
+                    <a class="btn btn-primary " href="{{url('carparts/create')}}" style="margin-bottom: 20px;">
+                        <i class="fa fa-plus">
+                        </i>
+                        Create Car Parts
+                    </a>
+                    <table class="table table-bordered table-striped" id="example1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Part
+                                </th>
+                                <th>
+                                    Car Model
+                                </th>
+                                <th>
+                                    Car Version
+                                </th>
+                                <th>
+                                    Year
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    stock
+                                </th>
+                                <th>
+                                    Created at
+                                </th>
+                                <th>
+                                    Updated at
+                                </th>
+                                <th>
+                                    Options
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for ($i = 0; $i < count($carparts); $i++)
+                            <tr>
+                                <td>
+                                    {{ $carparts[$i]->part }}
+                                </td>
+                                <td>
+                                    {{ $models[$i][0]->car_model }}
+                                </td>
+                                <td>
+                                    {{ $versions[$i][0]->car_version }}
+                                </td>
+                                <td>
+                                    {{ $carparts[$i]->year }}
+                                </td>
+                                <td>
+                                    {{ $carparts[$i]->price }}
+                                </td>
+                                <td>
+                                    {{ $carparts[$i]->stock }}
+                                </td>
+                                <td>
+                                    {{ $carparts[$i]->created_at }}
+                                </td>
+                                <td>
+                                    {{ $carparts[$i]->updated_at }}
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary editar" href="{{route('carpartsEdit',[ $carparts[$i]->car_part_id ])}}" id="editar">
+                                        <i class="fa fa-edit">
+                                        </i>
+                                    </a>
+                                    <a class="btn btn-danger borrar" href="{{route('carpartsDestroy',[ $carparts[$i]->car_part_id ])}}" id="borrar">
+                                        <i class="fa fa-remove">
+                                        </i>
+                                    </a>
+                                </td>
+                            </tr>
+                            @endfor
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    Part
+                                </th>
+                                <th>
+                                    Car Model
+                                </th>
+                                <th>
+                                    Car Version
+                                </th>
+                                <th>
+                                    Year
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    stock
+                                </th>
+                                <th>
+                                    Created at
+                                </th>
+                                <th>
+                                    Updated at
+                                </th>
+                                <th>
+                                    Options
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
         </div>
-      </div>
+    </div>
 </section>
+<!-- /.box-body -->
+<!-- /.box -->
 @endsection

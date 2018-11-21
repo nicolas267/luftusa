@@ -48,8 +48,7 @@ class Usertype extends Controller
 
     public function destroy($usertypeid)
     {
-        usertypeModel::where('user_types_id', $usertypeid)->delete();
-
+    	usertypeModel::where('user_type_id', $usertypeid)->delete();
         return redirect('userstype/');
 
     }

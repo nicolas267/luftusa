@@ -17,7 +17,7 @@
             Car Versions
         </li>
         <li class="active">
-           Create Car Versions
+            Create Car Versions
         </li>
     </ol>
 </section>
@@ -25,24 +25,30 @@
     <div class="row">
         <!-- left column -->
         <div class="col-md-12">
-          <!-- general form elements -->
-          <div class="box box-primary">
-            <!-- form start -->
-            <form role="form" action="{{action('Carversion@store')}}" method="post">
-              @csrf
-              <div class="box-body">
-                <div class="form-group">
-                  <label >Car Versions</label>
-                  <input type="text" class="form-control" name="carversion" placeholder="Car versions">
-                </div>
-              </div>
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Create</button>
-              </div>
-            </form>
-          </div>
-        <!--/.col (right) -->
-      </div>
-      <!-- /.row -->
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <!-- form start -->
+                <form action="{{action('Carversion@store')}}" method="post" role="form">
+                    @csrf
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>
+                                Car Versions
+                            </label>
+                            <input class="form-control" name="carversion" placeholder="Car versions" type="text">
+                            </input>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button class="btn btn-primary" type="submit">
+                            Create
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </div>
 </section>
 @endsection

@@ -77,7 +77,7 @@
                     @endforeach
             @foreach($blogs as $blog)
                 <tr>
-                  <td>{{ $blog->names }}</td>
+                  <td>{{ $blog->name }}</td>
                   <td>{{ $blog->title }}</td>
                   <td>{{ $blog->description }}</td>
                   <td>{{ $blog->created_at }}</td>

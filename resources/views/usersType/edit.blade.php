@@ -36,7 +36,7 @@
                   <input type="User Type" class="form-control" name="usertype" placeholder="User Type" value="{{$data->user_type}}">
                 </div>
               </div>
-              <input type="hidden" name="usertypeid" value="{{$data->user_types_id}}">
+              <input type="hidden" name="usertypeid" value="{{$data->user_type_id}}">
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Edit</button>
               </div>

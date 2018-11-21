@@ -8,7 +8,7 @@ class carpartModel extends Model
 {
     protected $table = 'car_parts';
 
-    protected $fillable = ['car_part'];
+    protected $fillable = ['part', 'car_id', 'price', 'stock'];
 
     protected $guarded = ['car_part_id'];
 

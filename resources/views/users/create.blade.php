@@ -51,7 +51,7 @@
                     <label for="title">User Type</label>
                       <select class="form-control " style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
                         @foreach($userstypes as $usertype)
-                          <option value="{{$usertype->user_types_id}}">{{$usertype->user_type}}</option>
+                          <option value="{{$usertype->user_type_id}}">{{$usertype->user_type}}</option>
                         @endforeach
                       </select>
                 </div>

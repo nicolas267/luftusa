@@ -18,8 +18,8 @@ class UsersTable extends Migration
             $table->increments('user_id');
             $table->unsignedInteger('user_type_id');
             $table->foreign('user_type_id')->references('user_types_id')->on('user_types');
-            $table->string('names');
-            $table->string('lastnames');
+            $table->string('name');
+            $table->string('lastname');
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();

@@ -3,7 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Create Car Parts
+        Create Car Part
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -17,7 +17,7 @@
             Car Parts
         </li>
         <li class="active">
-           Create Car Parts
+           Create Car Part
         </li>
     </ol>
 </section>
@@ -31,10 +31,25 @@
             <form role="form" action="{{action('Carpart@store')}}" method="post">
               @csrf
               <div class="box-body">
+                <label >Cars</label>
+                <select class="form-control " style="width: 100%;" name="cars" tabindex="-1" aria-hidden="true">
+                        @foreach($cars as $car)
+                          <option value="{{$car->car_id}}">{{$car->car_id}}</option>
+                        @endforeach
+                      </select>
                 <div class="form-group">
-                  <label >Car Parts</label>
-                  <input type="text" class="form-control" name="Carparts" placeholder="Car Parts">
+                  <label >Part</label>
+                  <input type="text" class="form-control" name="part" placeholder="Part">
                 </div>
+                <div class="form-group">
+                  <label >Price</label>
+                  <input type="text" class="form-control" name="price" placeholder="Price">
+                </div>
+                <div class="form-group">
+                  <label >Stock</label>
+                  <input type="text" class="form-control" name="stock" placeholder="Stock">
+                </div>
+
               </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Create</button>

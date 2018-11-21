@@ -43,11 +43,11 @@
 
                         </td>
                         <td>
-                            <a class="btn btn-primary editar" href="<?php echo e(route('usertypeEdit',[$usertype->user_types_id])); ?>" id="editar">
+                            <a class="btn btn-primary editar" href="<?php echo e(route('usertypeEdit',[$usertype->user_type_id])); ?>" id="editar">
                                 <i class="fa fa-edit">
                                 </i>
                             </a>
-                            <a class="btn btn-danger borrar" href="<?php echo e(route('usertypeDestroy',[$usertype->user_types_id])); ?>" id="borrar">
+                            <a class="btn btn-danger borrar" href="<?php echo e(route('usertypeDestroy',[$usertype->user_type_id])); ?>" id="borrar">
                                 <i class="fa fa-remove">
                                 </i>
                             </a>
