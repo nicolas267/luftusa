@@ -66,37 +66,13 @@ Route::get('/carparts', 'Carpart@index');
 
 Route::get('carparts/create', 'Carpart@create')->name('carpartsCreate');
 
-Route::get('carparts/edit/{data}', 'Carpart@edit')->name('carpartsEdit');
+Route::get('carparts/edit/{datas}', 'Carpart@edit')->name('carpartsEdit');
 
 Route::get('carparts/destroy/{data}', 'Carpart@destroy')->name('carpartsDestroy');
 
 Route::post('carparts/store', 'Carpart@store');
 
 Route::post('carparts/upgrade', 'Carpart@upgrade');
-
-Route::get('/caryears', 'Caryear@index');
-
-Route::get('caryears/create', 'Caryear@create')->name('caryearsCreate');
-
-Route::get('caryears/edit/{data}', 'Caryear@edit')->name('caryearsEdit');
-
-Route::get('caryears/destroy/{data}', 'Caryear@destroy')->name('caryearsDestroy');
-
-Route::post('caryears/store', 'Caryear@store');
-
-Route::post('caryears/upgrade', 'Caryear@upgrade');
-
-Route::get('/parts', 'Part@index');
-
-Route::get('parts/create', 'Part@create')->name('partsCreate');
-
-Route::get('parts/edit/{data}', 'Part@edit')->name('partsEdit');
-
-Route::get('parts/destroy/{data}', 'Part@destroy')->name('partsDestroy');
-
-Route::post('parts/store', 'Part@store');
-
-Route::post('parts/upgrade', 'Part@upgrade');
 
 Route::get('/blogs', 'Blog@index');
 
@@ -133,3 +109,19 @@ Route::get('carmodels/destroy/{data}', 'Carmodel@destroy')->name('carmodelsDestr
 Route::post('carmodels/store', 'Carmodel@store');
 
 Route::post('carmodels/upgrade', 'Carmodel@upgrade');
+
+Route::get('mydata/{data}', 'Mydata@edit');
+
+Route::post('mydata/store', 'Mydata@upgrade');
+
+Route::get('/galleries', 'Gallery@index');
+
+Route::get('galleries/create', 'Gallery@create')->name('galleriesCreate');
+
+Route::get('galleries/edit/{data}', 'Gallery@edit')->name('galleriesEdit');
+
+Route::get('galleries/destroy/{data}', 'Gallery@destroy')->name('galleriesDestroy');
+
+Route::post('galleries/store', 'Gallery@store');
+
+Route::post('galleries/upgrade/{data}', 'Gallery@upgrade')->name('galleriesUpdate');

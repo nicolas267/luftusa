@@ -3,7 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Create Part
+        Edit Gallery
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -14,10 +14,10 @@
             </a>
         </li>
         <li class="active">
-            Part
+            Gallery
         </li>
         <li class="active">
-           Create Part
+            Edit Gallery
         </li>
     </ol>
 </section>
@@ -28,16 +28,17 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <!-- form start -->
-            <form role="form" action="{{action('Part@store')}}" method="post">
+             <form role="form" action="{{route('galleriesUpdate',[$data->gallery_id])}}" method="post" enctype="multipart/form-data">
               @csrf
               <div class="box-body">
+
                 <div class="form-group">
-                  <label >Part</label>
-                  <input type="text" class="form-control" name="part" placeholder="Part">
+                  <label >image</label>
+                  <input type="file" class="form-control" name="image">
                 </div>
               </div>
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Edit</button>
               </div>
             </form>
           </div>

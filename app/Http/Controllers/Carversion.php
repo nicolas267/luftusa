@@ -25,7 +25,7 @@ class Carversion extends Controller
 
     	carversionModel::create([
 
-    			'car_version' => $data['carversions']
+    			'car_version' => $data['carversion']
     	]);
 
     	return redirect('carversions/');
@@ -40,7 +40,7 @@ class Carversion extends Controller
     {
     	$data = Request()->all();
 
-    	CarversionModel::where('car_versions_id', $data['carversionid'])
+    	CarversionModel::where('car_version_id', $data['carversionid'])
     				->update([
                         
                         'car_version' => $data['carversion']
@@ -51,7 +51,7 @@ class Carversion extends Controller
 
     public function destroy($carversionid)
     {
-    	CarversionModel::where('car_versions_id', $carversionid)->delete();
+    	CarversionModel::where('car_version_id', $carversionid)->delete();
 
     	return redirect('carversions/');
     }

@@ -14,7 +14,7 @@ class CarVersions extends Migration
     public function up()
     {
         Schema::create('car_versions', function (Blueprint $table) {
-            $table->increments('car_versions_id');
+            $table->increments('car_version_id');
             $table->string('car_version');
             $table->timestamps();
         });

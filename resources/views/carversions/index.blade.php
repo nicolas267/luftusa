@@ -40,9 +40,9 @@
                   <td>{{ $carversion->created_at }}</td>
                   <td>{{ $carversion->updated_at }}</td>
                   <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('carversionsEdit',[$carversion->car_versions_id])}}"><i class="fa fa-edit">
+                    <a id="editar" class="btn btn-primary editar" href="{{route('carversionsEdit',[$carversion->car_version_id])}}"><i class="fa fa-edit">
                 </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('carversionsDestroy',[$carversion->car_versions_id])}}"><i class="fa fa-remove">
+                    <a id="borrar" class="btn btn-danger borrar" href="{{route('carversionsDestroy',[$carversion->car_version_id])}}"><i class="fa fa-remove">
                 </i></a>
                   </td>
 

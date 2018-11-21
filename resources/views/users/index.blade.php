@@ -38,9 +38,9 @@
               @foreach($users as $user)
                 <tr>
                   <td>{{ $user->user_type }}</td>
-                  <td>{{ $user->names }}
+                  <td>{{ $user->name }}
                   </td>
-                  <td>{{ $user->lastnames }}</td>
+                  <td>{{ $user->lastname }}</td>
                   <td>{{ $user->email }}</td>
                   <td>{{ $user->created_at }}</td>
                   <td>{{ $user->updated_at }}</td>

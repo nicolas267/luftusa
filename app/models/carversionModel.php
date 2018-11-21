@@ -10,11 +10,10 @@ class carversionModel extends Model
 
     protected $fillable = ['car_version'];
 
-    protected $guarded = ['car_version_id'];
-
     public function getRouteKeyName()
 	{
-    	return 'car_versions_id'; // db column name
+    	return 'car_version_id'; // db column name
 
 	}
 }
+

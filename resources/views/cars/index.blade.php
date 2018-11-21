@@ -29,8 +29,7 @@
                 <tr>
                   <th>Car Model</th>
                   <th>Car Version</th>
-                  <th>Start Year</th>
-                  <th>End Year</th>
+                  <th>Year</th>
                   <th>Created at</th>
                   <th>Updated at</th>
                   <th>Options</th>
@@ -41,8 +40,7 @@
                 <tr>
                   <td>{{ $car->car_model }}</td>
                   <td>{{ $car->car_version }}</td>
-                  <td>{{ $car->start_years }}</td>
-                  <td>{{ $car->end_years }}</td>
+                  <td>{{ $car->year }}</td>
                   <td>{{ $car->created_at }}</td>
                   <td>{{ $car->updated_at }}</td>
                   <td>
@@ -59,8 +57,7 @@
                 <tr>
                   <th>Car Model</th>
                   <th>Car Version</th>
-                  <th>Start Year</th>
-                  <th>End Year</th>
+                  <th>Year</th>
                   <th>Created at</th>
                   <th>Updated at</th>
                   <th>Options</th>

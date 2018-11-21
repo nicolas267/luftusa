@@ -1,33 +1,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta charset="utf-8">
-            <meta content="IE=edge" http-equiv="X-UA-Compatible">
-                <title>
-                    AdminLTE 2 | General Form Elements
-                </title>
-                <!-- Tell the browser to be responsive to screen width -->
-                <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-                <!-- Bootstrap 3.3.7 -->
-                <link href="{{Request::root()}}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-                <!-- daterange picker -->
-                <link rel="stylesheet" href="{{Request::root()}}/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-                <!-- Font Awesome -->
-                <link href="{{Request::root()}}/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
-                <!-- Ionicons -->
-                <link href="{{Request::root()}}/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet"/>
-                <!-- Theme style -->
-                <link href="{{Request::root()}}/dist/css/AdminLTE.min.css" rel="stylesheet"/>
-                <link href="{{Request::root()}}/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
-                <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
-            </meta>
-        </meta>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <title>
+            AdminLTE 2 | General Form Elements
+        </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <!-- Bootstrap 3.3.7 -->
+        <link href="{{Request::root()}}/public/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <!-- daterange picker -->
+        <link href="{{Request::root()}}/public/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"/>
+        <!-- Font Awesome -->
+        <link href="{{Request::root()}}/public/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+        <!-- Ionicons -->
+        <link href="{{Request::root()}}/public/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet"/>
+        <link href="{{Request::root()}}/public/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+            <!-- Theme style -->
+            <link href="{{Request::root()}}/public/dist/css/AdminLTE.min.css" rel="stylesheet"/>
+            <link href="{{Request::root()}}/public/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
+        </link>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper" style="overflow-y: hidden;">
             <header class="main-header">
                 <!-- Logo -->
-                <a class="logo" href="{{Request::root()}}/index2.html">
+                <a class="logo" href="{{Request::root()}}/public/index2.html">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini">
                         <b>
@@ -46,7 +46,7 @@
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
                     <!-- Sidebar toggle button-->
-                    <a class="sidebar-toggle" data-toggle="push-menu" href="{{Request::root()}}/#" role="button">
+                    <a class="sidebar-toggle" data-toggle="push-menu" href="{{Request::root()}}/public/#" role="button">
                         <span class="sr-only">
                             Toggle navigation
                         </span>
@@ -60,8 +60,8 @@
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
                             <li class="dropdown user user-menu">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/#">
-                                    <img alt="User Image" class="user-image" src="{{Request::root()}}/dist/img/user2-160x160.jpg">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/public/#">
+                                    <img alt="User Image" class="user-image" src="{{Request::root()}}/public/dist/img/user2-160x160.jpg">
                                         <span class="hidden-xs">
                                             Alexander Pierce
                                         </span>
@@ -70,7 +70,7 @@
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img alt="User Image" class="img-circle" src="{{Request::root()}}/dist/img/user2-160x160.jpg">
+                                        <img alt="User Image" class="img-circle" src="{{Request::root()}}/public/dist/img/user2-160x160.jpg">
                                             <p>
                                                 Alexander Pierce - Web Developer
                                                 <small>
@@ -83,17 +83,17 @@
                                     <li class="user-body">
                                         <div class="row">
                                             <div class="col-xs-4 text-center">
-                                                <a href="{{Request::root()}}/#">
+                                                <a href="{{Request::root()}}/public/#">
                                                     Followers
                                                 </a>
                                             </div>
                                             <div class="col-xs-4 text-center">
-                                                <a href="{{Request::root()}}/#">
+                                                <a href="{{Request::root()}}/public/#">
                                                     Sales
                                                 </a>
                                             </div>
                                             <div class="col-xs-4 text-center">
-                                                <a href="{{Request::root()}}/#">
+                                                <a href="{{Request::root()}}/public/#">
                                                     Friends
                                                 </a>
                                             </div>
@@ -103,12 +103,12 @@
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                         <div class="pull-left">
-                                            <a class="btn btn-default btn-flat" href="{{Request::root()}}/#">
+                                            <a class="btn btn-default btn-flat" href="{{Request::root()}}/public/#">
                                                 Profile
                                             </a>
                                         </div>
                                         <div class="pull-right">
-                                            <a class="btn btn-default btn-flat" href="{{Request::root()}}/#">
+                                            <a class="btn btn-default btn-flat" href="{{Request::root()}}/public/#">
                                                 Sign out
                                             </a>
                                         </div>
@@ -128,7 +128,7 @@
                         <li class="header">
                             MAIN NAVIGATION
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="{{Request::root()}}/">
                                 <i class="fa fa-home">
                                 </i>
@@ -137,7 +137,25 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
+                            <a href="{{Request::root()}}/users">
+                                <i class="fa fa-user">
+                                </i>
+                                <span>
+                                   Users
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{Request::root()}}/userstype">
+                                <i class="fa fa-group">
+                                </i>
+                                <span>
+                                    User Types
+                                </span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{Request::root()}}/cars">
                                 <i class="fa fa-car">
                                 </i>
@@ -146,7 +164,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="{{Request::root()}}/carstype">
                                 <i class="fa fa-archive">
                                 </i>
@@ -155,7 +173,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="{{Request::root()}}/carmodels">
                                 <i class="fa fa-clone">
                                 </i>
@@ -164,7 +182,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="{{Request::root()}}/carversions">
                                 <i class="fa fa-vimeo">
                                 </i>
@@ -173,17 +191,8 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
-                            <a href="{{Request::root()}}/caryears">
-                                <i class="fa fa-calendar-check-o">
-                                </i>
-                                <span>
-                                    Car Years
-                                </span>
-                            </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="{{Request::root()}}/">
+                        <li>
+                            <a href="{{Request::root()}}/carparts">
                                 <i class="fa fa-gears">
                                 </i>
                                 <span>
@@ -191,16 +200,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
-                            <a href="{{Request::root()}}/parts">
-                                <i class="fa fa-dashboard">
-                                </i>
-                                <span>
-                                    Parts
-                                </span>
-                            </a>
-                        </li>
-                        <li class="treeview">
+                        <li>
                             <a href="{{Request::root()}}/blogs">
                                 <i class="fa fa-book">
                                 </i>
@@ -209,7 +209,16 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
+                            <a href="{{Request::root()}}/galleries">
+                                <i class="fa fa-image">
+                                </i>
+                                <span>
+                                    Galleries
+                                </span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{Request::root()}}/../#">
                                 <i class="fa fa-envelope-o">
                                 </i>
@@ -218,7 +227,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="{{Request::root()}}/../#">
                                 <i class="fa fa-group">
                                 </i>
@@ -227,8 +236,8 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
-                            <a href="{{Request::root()}}/../#">
+                        <li>
+                            <a href="{{Request::root()}}/mydata/1">
                                 <i class="fa fa-user">
                                 </i>
                                 <span>
@@ -236,7 +245,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="{{Request::root()}}/../#">
                                 <i class="fa fa-gear">
                                 </i>
@@ -245,7 +254,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="{{Request::root()}}/../#">
                                 <i class="fa fa-sign-out">
                                 </i>
@@ -271,7 +280,7 @@
                 </div>
                 <strong>
                     Copyright © 2014-2016
-                    <a href="{{Request::root()}}/https://adminlte.io">
+                    <a href="{{Request::root()}}/public/https://adminlte.io">
                         Almsaeed Studio
                     </a>
                     .
@@ -284,13 +293,13 @@
                 <!-- Create the tabs -->
                 <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
                     <li>
-                        <a data-toggle="tab" href="{{Request::root()}}/#control-sidebar-home-tab">
+                        <a data-toggle="tab" href="{{Request::root()}}/public/#control-sidebar-home-tab">
                             <i class="fa fa-home">
                             </i>
                         </a>
                     </li>
                     <li>
-                        <a data-toggle="tab" href="{{Request::root()}}/#control-sidebar-settings-tab">
+                        <a data-toggle="tab" href="{{Request::root()}}/public/#control-sidebar-settings-tab">
                             <i class="fa fa-gears">
                             </i>
                         </a>
@@ -305,7 +314,7 @@
                         </h3>
                         <ul class="control-sidebar-menu">
                             <li>
-                                <a href="{{Request::root()}}/javascript:void(0)">
+                                <a href="{{Request::root()}}/public/javascript:void(0)">
                                     <i class="menu-icon fa fa-birthday-cake bg-red">
                                     </i>
                                     <div class="menu-info">
@@ -319,7 +328,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/javascript:void(0)">
+                                <a href="{{Request::root()}}/public/javascript:void(0)">
                                     <i class="menu-icon fa fa-user bg-yellow">
                                     </i>
                                     <div class="menu-info">
@@ -333,7 +342,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/javascript:void(0)">
+                                <a href="{{Request::root()}}/public/javascript:void(0)">
                                     <i class="menu-icon fa fa-envelope-o bg-light-blue">
                                     </i>
                                     <div class="menu-info">
@@ -347,7 +356,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/javascript:void(0)">
+                                <a href="{{Request::root()}}/public/javascript:void(0)">
                                     <i class="menu-icon fa fa-file-code-o bg-green">
                                     </i>
                                     <div class="menu-info">
@@ -367,7 +376,7 @@
                         </h3>
                         <ul class="control-sidebar-menu">
                             <li>
-                                <a href="{{Request::root()}}/javascript:void(0)">
+                                <a href="{{Request::root()}}/public/javascript:void(0)">
                                     <h4 class="control-sidebar-subheading">
                                         Custom Template Design
                                         <span class="label label-danger pull-right">
@@ -381,7 +390,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/javascript:void(0)">
+                                <a href="{{Request::root()}}/public/javascript:void(0)">
                                     <h4 class="control-sidebar-subheading">
                                         Update Resume
                                         <span class="label label-success pull-right">
@@ -395,7 +404,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/javascript:void(0)">
+                                <a href="{{Request::root()}}/public/javascript:void(0)">
                                     <h4 class="control-sidebar-subheading">
                                         Laravel Integration
                                         <span class="label label-warning pull-right">
@@ -409,7 +418,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/javascript:void(0)">
+                                <a href="{{Request::root()}}/public/javascript:void(0)">
                                     <h4 class="control-sidebar-subheading">
                                         Back End Framework
                                         <span class="label label-primary pull-right">
@@ -492,7 +501,7 @@
                             <div class="form-group">
                                 <label class="control-sidebar-subheading">
                                     Delete chat history
-                                    <a class="text-red pull-right" href="{{Request::root()}}/javascript:void(0)">
+                                    <a class="text-red pull-right" href="{{Request::root()}}/public/javascript:void(0)">
                                         <i class="fa fa-trash-o">
                                         </i>
                                     </a>
@@ -509,32 +518,38 @@
         </div>
         <!-- ./wrapper -->
         <!-- jQuery 3 -->
-        <script src="{{Request::root()}}/bower_components/jquery/dist/jquery.min.js">
+        <script src="{{Request::root()}}/public/bower_components/jquery/dist/jquery.min.js">
         </script>
         <!-- Bootstrap 3.3.7 -->
-        <script src="{{Request::root()}}/bower_components/bootstrap/dist/js/bootstrap.min.js">
+        <script src="{{Request::root()}}/public/bower_components/bootstrap/dist/js/bootstrap.min.js">
         </script>
         <!-- bootstrap datepicker -->
         <!-- InputMask -->
-        <script src="{{Request::root()}}/plugins/input-mask/jquery.inputmask.js"></script>
-        <script src="{{Request::root()}}/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-        <script src="{{Request::root()}}/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+        <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.js">
+        </script>
+        <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.date.extensions.js">
+        </script>
+        <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.extensions.js">
+        </script>
         <!-- FastClick -->
-        <script src="{{Request::root()}}/bower_components/fastclick/lib/fastclick.js">
+        <script src="{{Request::root()}}/public/bower_components/fastclick/lib/fastclick.js">
         </script>
         <!-- CK Editor -->
-        <script src="{{Request::root()}}/bower_components/ckeditor/ckeditor.js"></script>
+        <script src="{{Request::root()}}/public/bower_components/ckeditor/ckeditor.js">
+        </script>
         <!--Data Tables -->
-        <script src="{{Request::root()}}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="{{Request::root()}}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="{{Request::root()}}/public/bower_components/datatables.net/js/jquery.dataTables.min.js">
+        </script>
+        <script src="{{Request::root()}}/public/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js">
+        </script>
         <!-- AdminLTE App -->
-        <script src="{{Request::root()}}/dist/js/adminlte.min.js">
+        <script src="{{Request::root()}}/public/dist/js/adminlte.min.js">
         </script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{Request::root()}}/dist/js/demo.js">
+        <script src="{{Request::root()}}/public/dist/js/demo.js">
         </script>
         <script>
-  $(function () {
+            $(function () {
     $('.datemask').inputmask('yyyy/mm/dd', { 'placeholder': 'yyyy/mm/dd' })
     $('#example1').DataTable()
     $('#example2').DataTable({
@@ -547,7 +562,6 @@
     })
     CKEDITOR.replace('editor1')
   })
-</script>
-
+        </script>
     </body>
 </html>

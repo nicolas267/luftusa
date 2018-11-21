@@ -12,8 +12,8 @@ class User extends Controller
     public function index()
     {
     	$users =   DB::table('users')
-            ->select('user_id', 'names', 'lastnames', 'email', 'user_type', 'users.created_at', 'users.updated_at')
-            ->join('user_types','users.user_type_id','=','user_types.user_types_id')
+            ->select('user_id', 'name', 'lastname', 'email', 'user_type', 'users.created_at', 'users.updated_at')
+            ->join('user_types','users.user_type_id','=','user_types.user_type_id')
             ->get();
         
     	return view('users/index')->with('users',  $users);
@@ -30,8 +30,8 @@ class User extends Controller
     	$data = Request()->all();
     	usersModels::create([
 
-    			'names' => $data['name'],
-    			'lastnames' => $data['lastname'],
+    			'name' => $data['name'],
+    			'lastname' => $data['lastname'],
     			'email' => $data['email'],
     			'password' => $data['password'],
     			'user_type_id' => $data['usertype']
@@ -52,8 +52,8 @@ class User extends Controller
        	usersModels::where('user_id', $data['userid'])
     				->update([ 
                         
-                            'names' => $data['name'],
-                            'lastnames' => $data['lastname'],
+                            'name' => $data['name'],
+                            'lastname' => $data['lastname'],
                             'email' => $data['email'],
                             'password' => $data['password'],
                             'user_type_id' => $data['usertype']

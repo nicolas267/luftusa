@@ -12,7 +12,7 @@ class usertypeModel extends Model
 
     public function getRouteKeyName()
 	{
-    	return 'user_types_id'; // db column name
+    	return 'user_type_id'; // db column name
 
 	}
 }

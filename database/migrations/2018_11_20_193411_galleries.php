@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CarYears extends Migration
+class Galleries extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CarYears extends Migration
      */
     public function up()
     {
-        Schema::create('car_years', function (Blueprint $table) {
-            $table->increments('car_years_id');
-            $table->dateTime('start_years');
-            $table->dateTime('end_years');
+        Schema::create('galleries', function (Blueprint $table) {
+            $table->increments('gallery_id');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CarYears extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('car_years');
+        Schema::dropIfExists('galleries');
     }
 }

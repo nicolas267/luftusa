@@ -37,11 +37,11 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Name</label>
-                  <input type="text" class="form-control" name="name" placeholder="Name" value="{{$data->names}}">
+                  <input type="text" class="form-control" name="name" placeholder="Name" value="{{$data->name}}">
                 </div>
                 <div class="form-group">
                   <label >Lastname</label>
-                  <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="{{$data->lastnames}}">
+                  <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="{{$data->lastname}}">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
@@ -55,7 +55,7 @@
                     <label for="title">User Type</label>
                       <select class="form-control " style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
                         @foreach($userstypes as $usertype)
-                          <option value="{{$usertype->user_types_id}}">{{$usertype->user_type}}</option>
+                          <option value="{{$usertype->user_type_id}}">{{$usertype->user_type}}</option>
                         @endforeach
                       </select>
                 </div>
