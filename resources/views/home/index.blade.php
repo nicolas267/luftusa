@@ -109,9 +109,9 @@
 						<div class="dropdown-wrap frontsearch-select">
 							<p class="dropdown-title frontsearch-select-ttl">Choose Type</p>
 							<ul class="dropdown-list">
-								@foreach($carstype as $carstype)
+								@foreach($carstype as $cartype)
 			 						<li>
-										<a href="#">{{ $carstype->car_type }}</a>
+										<a href="#">{{ $cartype->car_type }}</a>
 									</li>
 								@endforeach
 							</ul>
@@ -129,7 +129,7 @@
 						<div class="dropdown-wrap frontsearch-select">
 							<p class="dropdown-title frontsearch-select-ttl">Choose Version</p>
 							<ul class="dropdown-list">
-								@foreach($carversions as $carversions)
+								@foreach($carversions as $carversion)
 								<li>
 									<a href="#">{{ $carversions->car_version }}</a>
 								</li>

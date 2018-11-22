@@ -86,7 +86,7 @@ class Orders extends Controller
 
     public function popular()
     {  
-        $counts = DB::table('orders_products')->select('car_part_id')->distinct()->get();
+        /*$counts = DB::table('orders_products')->select('car_part_id')->distinct()->get();
 
         foreach ($counts as $count) {
             $products[] = DB::table('orders_products')->select('car_part_id')->where('car_part_id', '=', $count->car_part_id)->count('car_part_id');
@@ -100,6 +100,6 @@ class Orders extends Controller
             }
         }
 
-        dd($products);
+        dd($products);*/
     }
 }
