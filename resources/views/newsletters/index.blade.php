@@ -3,7 +3,7 @@
 @section('content')
 <section class="content-header">
     <h1>
-        Car Types
+        Newsletters
     </h1>
     <ol class="breadcrumb">
         <li>
@@ -14,7 +14,7 @@
             </a>
         </li>
         <li class="active">
-            Car Types
+            Newsletters
         </li>
     </ol>
 </section>
@@ -23,19 +23,11 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body">
-                    <a class="btn btn-primary " href="{{url('carstype/create')}}" id="btnadd" style="margin-bottom: 20px;">
-                        <i class="fa fa-plus">
-                        </i>
-                        Create Car Type
-                    </a>
                     <table class="table table-bordered table-striped" id="example1">
                         <thead>
                             <tr>
                                 <th>
-                                    Car Type
-                                </th>
-                                <th>
-                                    Created at
+                                    Email
                                 </th>
                                 <th>
                                     Updated at
@@ -46,23 +38,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($carstype as $cartype)
+                            @foreach($newsletter as $newsletter)
                             <tr>
                                 <td>
-                                    {{ $cartype->car_type }}
+                                    {{ $newsletter->email }}
                                 </td>
+                                <td>{{ $newsletter->updated_at }}</td>
                                 <td>
-                                    {{ $cartype->created_at }}
-                                </td>
-                                <td>
-                                    {{ $cartype->updated_at }}
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary editar" href="{{route('cartypeEdit',[$cartype->car_type_id])}}" id="editar">
-                                        <i class="fa fa-edit">
-                                        </i>
-                                    </a>
-                                    <a class="btn btn-danger borrar" href="{{route('cartypeDestroy',[$cartype->car_type_id])}}" id="borrar">
+                                    <a class="btn btn-danger borrar" href="{{route('newsletterDestroy',[$newsletter->newsletter_id])}}" id="borrar">
                                         <i class="fa fa-remove">
                                         </i>
                                     </a>
@@ -73,10 +56,7 @@
                         <tfoot>
                             <tr>
                                 <th>
-                                    car Type
-                                </th>
-                                <th>
-                                    Created at
+                                    Email
                                 </th>
                                 <th>
                                     Updated at

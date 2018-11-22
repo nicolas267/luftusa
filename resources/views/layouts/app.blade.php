@@ -226,7 +226,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/../#">
+                            <a href="{{Request::root()}}/newsletters">
                                 <i class="fa fa-group">
                                 </i>
                                 <span>

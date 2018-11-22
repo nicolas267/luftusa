@@ -15,7 +15,8 @@ class Newsletter extends Controller
      */
     public function index()
     {
-        //
+        $newsletter = newsletterModel::all();
+        return view('newsletters/index',compact('newsletter'));
     }
 
     /**
@@ -84,6 +85,8 @@ class Newsletter extends Controller
      */
     public function destroy($id)
     {
-        //
+        newsletterModel::where('newsletter_id', $id)->delete();
+
+        return redirect('newsletters/');
     }
 }
