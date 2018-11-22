@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use App\models\cartypeModel;
 use App\models\carmodelModel;
 use App\models\carversionModel;
+use App\models\Orders;
+use App\models\Orders_products;
 use App\Http\Controllers\Controller;
+use DB;
 
 class Home extends Controller
 {
@@ -17,10 +20,20 @@ class Home extends Controller
      */
     public function index()
     {
+        $products = DB::table('car_parts')
+            ->join('orders_products', 'car_parts.car_part_id', '=', 'orders_products.car_part_id')
+            ->join('orders', 'orders.order_id', '=', 'orders_products.order_id')
+            ->selectRaw('count(orders_products.car_part_id) as user_count,orders_products.car_part_id,part,price')
+            ->orderBy('user_count','desc')
+            ->groupBy('orders_products.car_part_id')
+            ->groupBy('car_parts.car_part_id')
+            ->limit(8)
+            ->get();
+
         $carstype    = cartypeModel::all();
         $carmodel    = carmodelModel::all();
         $carversions = carversionModel::all();
-        return view('home/index',compact('carstype','carmodel','carversions'));
+        return view('home/index',compact('carstype','carmodel','carversions','products'));
     }
 
     /**

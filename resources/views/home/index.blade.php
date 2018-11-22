@@ -131,7 +131,7 @@
 							<ul class="dropdown-list">
 								@foreach($carversions as $carversion)
 								<li>
-									<a href="#">{{ $carversions->car_version }}</a>
+									<a href="#">{{ $carversion->car_version }}</a>
 								</li>
 								@endforeach
 							</ul>
@@ -274,17 +274,17 @@
 				<h2>Popular</h2>
 				<p class="populars-count">7 ITEMS</p>
 				<div class="populars-list">
-					@foreach($product as $product)
+					@foreach($products as $product)
 					<div class="popular">
 						<a href="product.html" class="popular-link">
 							<p class="popular-img">
 								<img src="{{Request::root()}}/frontend_template/HTML/img/pop1.jpg" alt="">
 							</p>
-							<h3><span>Suspendisse lobortis</span></h3>
+							<h3><span>{{ucwords($product->part)}}</span></h3>
 						</a>
 						<p class="popular-info">
 							<a href="#" class="popular-categ">Helmets</a>
-							<span class="popular-price">$290</span>
+							<span class="popular-price">${{number_format($product->price,'2',',','.')}}</span>
 							<a href="#" class="popular-add">+ Add to cart</a>
 						</p>
 					</div>
