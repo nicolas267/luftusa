@@ -10,14 +10,14 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/zabuto_calendar.css">
-<link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/flexslider.css">
-<link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/jquery.fancybox.css">
-<link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/ion.rangeSlider.css">
-<link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/ion.rangeSlider.skinFlat.css">
-<link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/style.css">
-<link rel="stylesheet" href="{{Request::root()}}/frontend_template/HTML/css/media.css">
+<link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/zabuto_calendar.css">
+<link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/flexslider.css">
+<link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/jquery.fancybox.css">
+<link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/ion.rangeSlider.css">
+<link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/ion.rangeSlider.skinFlat.css">
+<link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/style.css">
+<link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/media.css">
 
  <meta name="csrf-token" content="{{ csrf_token() }}" />
 
@@ -61,7 +61,7 @@
 				<a href="cart.html" class="header-cart">
 					<div class="header-cart-inner">
 						<p class="header-cart-count">
-							<img src="{{Request::root()}}/frontend_template/HTML/img/cart.png" alt="">
+							<img src="{{Request::root()}}/public/frontend_template/HTML/img/cart.png" alt="">
 							<span>3</span>
 						</p>
 						<p class="header-cart-summ">$300</p>
@@ -82,7 +82,7 @@
 
 			<!-- Logotype -->
 			<p class="header-logo">
-				<a href="index.html"><img src="{{Request::root()}}/frontend_template/HTML/img/logo.png" alt=""></a>
+				<a href="index.html"><img src="{{Request::root()}}/public/frontend_template/HTML/img/logo.png" alt=""></a>
 			</p>
 
 			<!-- Navmenu - start -->
@@ -212,16 +212,16 @@
 		</div>
 		<!-- Header - start -->
 
-		<script src="{{Request::root()}}/frontend_template/HTML/js/jquery-1.12.3.min.js"></script>
-		<script src="{{Request::root()}}/frontend_template/HTML/js/fancybox/fancybox.js"></script>
-		<script src="{{Request::root()}}/frontend_template/HTML/js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
-		<script src="{{Request::root()}}/frontend_template/HTML/js/jquery.flexslider-min.js"></script>
-		<script src="{{Request::root()}}/frontend_template/HTML/js/masonry.pkgd.min.js"></script>
+		<script src="{{Request::root()}}/public/frontend_template/HTML/js/jquery-1.12.3.min.js"></script>
+		<script src="{{Request::root()}}/public/frontend_template/HTML/js/fancybox/fancybox.js"></script>
+		<script src="{{Request::root()}}/public/frontend_template/HTML/js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+		<script src="{{Request::root()}}/public/frontend_template/HTML/js/jquery.flexslider-min.js"></script>
+		<script src="{{Request::root()}}/public/frontend_template/HTML/js/masonry.pkgd.min.js"></script>
 
-		<script src="{{Request::root()}}/frontend_template/HTML/js/jquery.fractionslider.min.js"></script>
-		<script src="{{Request::root()}}/frontend_template/HTML/js/ion.rangeSlider.min.js"></script>
+		<script src="{{Request::root()}}/public/frontend_template/HTML/js/jquery.fractionslider.min.js"></script>
+		<script src="{{Request::root()}}/public/frontend_template/HTML/js/ion.rangeSlider.min.js"></script>
 
-		<script src="{{Request::root()}}/frontend_template/HTML/js/main.js"></script>
+		<script src="{{Request::root()}}/public/frontend_template/HTML/js/main.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script>
 			"use strict";

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\models\cartypeModel;
+use App\models\carmodelModel;
+use App\models\carversionModel;
 use App\Http\Controllers\Controller;
 
 class Home extends Controller
@@ -14,7 +17,10 @@ class Home extends Controller
      */
     public function index()
     {
-        return view('home/index');
+        $carstype    = cartypeModel::all();
+        $carmodel    = carmodelModel::all();
+        $carversions = carversionModel::all();
+        return view('home/index',compact('carstype','carmodel','carversions'));
     }
 
     /**

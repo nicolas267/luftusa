@@ -172,28 +172,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/caryears">
-                                <i class="fa fa-calendar-check-o">
-                                </i>
-                                <span>
-                                    Car Years
-                                </span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="{{Request::root()}}/carparts">
                                 <i class="fa fa-gears">
                                 </i>
                                 <span>
                                     Car Parts
                                 </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{Request::root()}}/parts">
-                                <i class="fa fa-dashboard">
-                                </i>
-                                <span>Parts</span>
                             </a>
                         </li>
                         <li>

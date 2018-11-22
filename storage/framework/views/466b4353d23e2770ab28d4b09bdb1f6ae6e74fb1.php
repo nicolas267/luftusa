@@ -35,11 +35,11 @@
               <div class="box-body">
                 <div class="form-group">
                   <label >Name</label>
-                  <input type="text" class="form-control" name="name" placeholder="Name" value="<?php echo e($data->names); ?>">
+                  <input type="text" class="form-control" name="name" placeholder="Name" value="<?php echo e($data->name); ?>">
                 </div>
                 <div class="form-group">
                   <label >Lastname</label>
-                  <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="<?php echo e($data->lastnames); ?>">
+                  <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="<?php echo e($data->lastname); ?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
@@ -53,7 +53,7 @@
                     <label for="title">User Type</label>
                       <select class="form-control " style="width: 100%;" name="usertype" tabindex="-1" aria-hidden="true">
                         <?php $__currentLoopData = $userstypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $usertype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                          <option value="<?php echo e($usertype->user_types_id); ?>"><?php echo e($usertype->user_type); ?></option>
+                          <option value="<?php echo e($usertype->user_type_id); ?>"><?php echo e($usertype->user_type); ?></option>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                       </select>
                 </div>

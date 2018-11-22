@@ -107,93 +107,33 @@
 				<div class="frontsearch-wrap">
 					<div class="frontsearch-selects">
 						<div class="dropdown-wrap frontsearch-select">
-							<p class="dropdown-title frontsearch-select-ttl">Motorcycles</p>
+							<p class="dropdown-title frontsearch-select-ttl">Choose Type</p>
 							<ul class="dropdown-list">
-								<li>
-									<a href="#">Choose Type</a>
-								</li>
-		 						<li>
-									<a href="#">Automobiles</a>
-								</li>
-								<li class="active">
-									<a href="#">Motorcycles</a>
-								</li>
-								<li>
-									<a href="#">ATVs</a>
-								</li>
-								<li>
-									<a href="#">Snowmobiles</a>
-								</li>
-								<li>
-									<a href="#">UTVs</a>
-								</li>
-								<li>
-									<a href="#">Scooters</a>
-								</li>
-								<li>
-									<a href="#">Watercrafts</a>
-								</li>
+								@foreach($carstype as $carstype)
+			 						<li>
+										<a href="#">{{ $carstype->car_type }}</a>
+									</li>
+								@endforeach
 							</ul>
 						</div>
 						<div class="dropdown-wrap frontsearch-select">
-							<p class="dropdown-title frontsearch-select-ttl">Enzo</p>
+							<p class="dropdown-title frontsearch-select-ttl">Choose Model</p>
 							<ul class="dropdown-list">
-								<li>
-									<a href="#">Choose Model</a>
-								</li>
-								<li>
-									<a href="#">Jetmax</a>
-								</li>
-								<li>
-									<a href="#">Speeder</a>
-								</li>
-								<li>
-									<a href="#">PCG</a>
-								</li>
-								<li>
-									<a href="#">Sanchez</a>
-								</li>
-								<li>
-									<a href="#">Vader</a>
-								</li>
-								<li class="active">
-									<a href="#">Enzo</a>
-								</li>
-								<li>
-									<a href="#">Nex</a>
-								</li>
+								@foreach($carmodel as $carmodel)
+									<li>
+										<a href="#">{{ $carmodel->car_model }}</a>
+									</li>
+								@endforeach
 							</ul>
 						</div>
 						<div class="dropdown-wrap frontsearch-select">
-							<p class="dropdown-title frontsearch-select-ttl">GT-Z600</p>
+							<p class="dropdown-title frontsearch-select-ttl">Choose Version</p>
 							<ul class="dropdown-list">
+								@foreach($carversions as $carversions)
 								<li>
-									<a href="#">Choose Version</a>
+									<a href="#">{{ $carversions->car_version }}</a>
 								</li>
-								<li>
-									<a href="#">GT-Z10</a>
-								</li>
-								<li>
-									<a href="#">GT-Z400</a>
-								</li>
-								<li class="active">
-									<a href="#">GT-Z600</a>
-								</li>
-								<li>
-									<a href="#">H-200</a>
-								</li>
-								<li>
-									<a href="#">H-300</a>
-								</li>
-								<li>
-									<a href="#">F10</a>
-								</li>
-								<li>
-									<a href="#">F20</a>
-								</li>
-								<li>
-									<a href="#">A120</a>
-								</li>
+								@endforeach
 							</ul>
 						</div>
 						<div class="dropdown-wrap frontsearch-select dropdown-wrap-range">
@@ -213,16 +153,11 @@
 							</ul>
 						</div>
 					</div>
-
+					<div style="height: 200px;"></div>
 					</div>
 				</div>
-				<span class="frontsearch-line1"></span>
-				<span class="frontsearch-line2"></span>
 			</div>
 		</div>
-
-
-
 
 		<!-- Special Deals Items -->
 		<div class="specials-wrap">
@@ -339,6 +274,7 @@
 				<h2>Popular</h2>
 				<p class="populars-count">7 ITEMS</p>
 				<div class="populars-list">
+					@foreach($product as $product)
 					<div class="popular">
 						<a href="product.html" class="popular-link">
 							<p class="popular-img">
@@ -352,97 +288,7 @@
 							<a href="#" class="popular-add">+ Add to cart</a>
 						</p>
 					</div>
-					<div class="popular">
-						<a href="product.html" class="popular-link">
-							<p class="popular-img">
-								<img src="{{Request::root()}}/frontend_template/HTML/img/pop2.jpg" alt="">
-							</p>
-							<h3><span>Nulla lacinia lectus</span></h3>
-						</a>
-						<p class="popular-info">
-							<a href="#" class="popular-categ">Filtres</a>
-							<span class="popular-price">$1180</span>
-							<a href="#" class="popular-add">+ Add to cart</a>
-						</p>
-					</div>
-					<div class="popular">
-						<a href="product.html" class="popular-link">
-							<p class="popular-img">
-								<img src="{{Request::root()}}/frontend_template/HTML/img/pop3.jpg" alt="">
-							</p>
-							<h3><span>Praesent amet mollis</span></h3>
-						</a>
-						<p class="popular-info">
-							<a href="#" class="popular-categ">Batteries</a>
-							<span class="popular-price">$312</span>
-							<a href="#" class="popular-add">+ Add to cart</a>
-						</p>
-					</div>
-					<div class="popular">
-						<a href="product.html" class="popular-link">
-							<p class="popular-img">
-								<img src="{{Request::root()}}/frontend_template/HTML/img/pop4.jpg" alt="">
-							</p>
-							<h3><span>Mauris suscipit tellus</span></h3>
-						</a>
-						<p class="popular-info">
-							<a href="#" class="popular-categ">Boots</a>
-							<span class="popular-price">$230.50</span>
-							<a href="#" class="popular-add">+ Add to cart</a>
-						</p>
-					</div>
-					<div class="popular">
-						<a href="product.html" class="popular-link">
-							<p class="popular-img">
-								<img src="{{Request::root()}}/frontend_template/HTML/img/pop5.jpg" alt="">
-							</p>
-							<h3><span>Suspendisse lobortis</span></h3>
-						</a>
-						<p class="popular-info">
-							<a href="#" class="popular-categ">Breaks</a>
-							<span class="popular-price">$1290</span>
-							<a href="#" class="popular-add">+ Add to cart</a>
-						</p>
-					</div>
-					<div class="popular">
-						<a href="product.html" class="popular-link">
-							<p class="popular-img">
-								<img src="{{Request::root()}}/frontend_template/HTML/img/pop6.jpg" alt="">
-							</p>
-							<h3><span>Nam iaculis risus nisi</span></h3>
-						</a>
-						<p class="popular-info">
-							<a href="#" class="popular-categ">Bearings</a>
-							<span class="popular-price">$1180</span>
-							<a href="#" class="popular-add">+ Add to cart</a>
-						</p>
-					</div>
-					<div class="popular">
-						<a href="product.html" class="popular-link">
-							<p class="popular-img">
-								<img src="{{Request::root()}}/frontend_template/HTML/img/pop7.jpg" alt="">
-							</p>
-							<h3><span>Sed fermentum elit</span></h3>
-						</a>
-						<p class="popular-info">
-							<a href="#" class="popular-categ">Parts</a>
-							<span class="popular-price">$305</span>
-							<a href="#" class="popular-add">+ Add to cart</a>
-						</p>
-					</div>
-					<div class="popular">
-						<a href="product.html" class="popular-link">
-							<p class="popular-img">
-								<img src="{{Request::root()}}/frontend_template/HTML/img/pop8.jpg" alt="">
-							</p>
-							<h3><span>Mauris suscipit tellus</span></h3>
-						</a>
-						<p class="popular-info">
-							<a href="#" class="popular-categ">Lights</a>
-							<span class="popular-price">$230.30</span>
-							<a href="#" class="popular-add">+ Add to cart</a>
-						</p>
-					</div>
+					@endforeach
 				</div>
 				<p class="popular-more">
 					<a href="#">show more</a>
