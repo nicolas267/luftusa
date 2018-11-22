@@ -226,7 +226,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(Request::root()); ?>/newsletters">
                                 <i class="fa fa-group">
                                 </i>
                                 <span>

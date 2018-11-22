@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function () {
-    return view('home/index');
+    return redirect('home');
 });
 Route::get('admin', function () {
     return view('home');
@@ -114,7 +114,11 @@ Route::post('carmodels/upgrade', 'Carmodel@upgrade');
 
 Route::get('home', 'Home@index');
 
-Route::post('/newsletter','Newsletter@store');
+Route::get('/newsletters','Newsletter@index');
+
+Route::post('newsletter/store','Newsletter@store');
+
+Route::get('newsletter/destroy/{data}', 'newsletter@destroy')->name('newsletterDestroy');
 
 Route::get('contact', 'Contact@index');
 

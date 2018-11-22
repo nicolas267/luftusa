@@ -88,7 +88,7 @@
 			<!-- Navmenu - start -->
 			<nav id="top-menu">
 				<ul>
-					<li class="active">
+					<li class="active"> 
 						<a href="{{url('home')}}">Home</a>
 					</li>
 					<li>
@@ -184,7 +184,7 @@
 						</li>
 					</ul>
 					<div class="alert_success"></div>
-					<form action="{{action('Newsletter@store')}}" method="post">
+					<form>
 						{{csrf_field()}}
 						<input data-required="text" data-required-email="email" type="text" placeholder="Email address" name="email" id="email">
 						<input type="button" value="Subscribe" id="sub" class="btn-submit">
@@ -197,7 +197,6 @@
 			</div>
 		</footer>
 		<!-- Footer - end -->
-
 
 		<!-- Modal Form -->
 		<div id="modal-form" class="modal-form">
@@ -297,6 +296,14 @@
 				});
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
-			</script> 
+		</script> 
+		<script>
+			$(document).ready(function(){
+				$('#top-menu li').on('click', function(){
+				    $('ul li.active').removeClass('active');
+				    $(this).addClass('active');
+				});
+			})
+		</script>
 	</body>
 </html>
