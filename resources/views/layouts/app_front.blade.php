@@ -18,13 +18,13 @@
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/ion.rangeSlider.skinFlat.css">
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/style.css">
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/media.css">
+<link href="{{Request::root()}}/public/build/css/bootstrap.min.css'" rel="stylesheet"/>
 
  <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <![endif]-->
-
 </head>
 	<body>
 		<div class="header">
@@ -43,7 +43,7 @@
 							<a href="#">Bookmarks <span>6</span></a>
 						</li>
 						<li>
-							<a href="cart.html">Shopping Cart <span>5</span></a>
+							<a href="{{url('cart')}}">Shopping Cart <span>5</span></a>
 						</li>
 						<li class="header-order">
 							<a href="orders.html">Order Status</a>
@@ -52,7 +52,7 @@
 							<a href="#">Settings</a>
 						</li>
 						<li>
-							<a href="#">Log out</a>
+							<a href="{{ route('logout') }}">Log out</a>
 						</li>
 					</ul>
 				</div>
@@ -62,9 +62,7 @@
 					<div class="header-cart-inner">
 						<p class="header-cart-count">
 							<img src="{{Request::root()}}/public/frontend_template/HTML/img/cart.png" alt="">
-							<span>3</span>
 						</p>
-						<p class="header-cart-summ">$300</p>
 					</div>
 				</a>
 
@@ -81,9 +79,20 @@
 			</div>
 
 			<!-- Logotype -->
-			<p class="header-logo">
-				<a href="index.html"><img src="{{Request::root()}}/public/frontend_template/HTML/img/logo.png" alt=""></a>
-			</p>
+			<div class="header-logo">
+				<a rel="nofollow" target="_blank" href="http://facebook.com">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a rel="nofollow" class="left" target="_blank" href="http://youtube.com">
+					<i class="fa fa-youtube-play"></i>
+				</a>
+				<a rel="nofollow" class="left" target="_blank" href="http://youtube.com">
+					<i class="fa fa-instagram"></i>
+				</a>
+				<a rel="nofollow" class="left" target="_blank" href="mailto:email@email.com">
+					<i class="fa fa-paper-plane"></i>
+				</a>
+			</div>
 
 			<!-- Navmenu - start -->
 			<nav id="top-menu">
@@ -97,6 +106,9 @@
 					<li>
 						<a href="{{url('store')}}">Store</a>
 					</li>
+					<li class="">
+						<a href="{{url('store')}}">Store</a>
+					</li>
 					<li>
 						<a href="{{url('service')}}">Services</a>
 					</li>
@@ -108,6 +120,8 @@
 					</li>
 				</ul>
 			</nav>
+
+			
 			<!-- Navmenu - end -->
 		</div>
 		<!-- Header - end -->
@@ -153,33 +167,18 @@
 							</a>
 						</li>
 						<li>
-							<a rel="nofollow" target="_blank" href="mailto:email@email.com">
-								<i class="fa fa-paper-plane"></i>
-							</a>
-						</li>
-						<li>
-							<a rel="nofollow" target="_blank" href="http://pinterest.com">
-								<i class="fa fa-pinterest-p"></i>
-							</a>
-						</li>
-						<li>
-							<a rel="nofollow" target="_blank" href="http://youtube.com">
+							<a rel="nofollow" class="left" target="_blank" href="http://youtube.com">
 								<i class="fa fa-youtube-play"></i>
 							</a>
 						</li>
 						<li>
-							<a rel="nofollow" target="_blank" href="http://twitter.com">
-								<i class="fa fa-twitter"></i>
+							<a rel="nofollow" class="left" target="_blank" href="http://youtube.com">
+								<i class="fa fa-instagram"></i>
 							</a>
 						</li>
 						<li>
-							<a rel="nofollow" target="_blank" href="http://google.com">
-								<i class="fa fa-google-plus"></i>
-							</a>
-						</li>
-						<li>
-							<a rel="nofollow" target="_blank" href="http://twitter.com">
-								<i class="fa fa-share-alt"></i>
+							<a rel="nofollow" class="left" target="_blank" href="mailto:email@email.com">
+								<i class="fa fa-paper-plane"></i>
 							</a>
 						</li>
 					</ul>
@@ -193,7 +192,7 @@
 
 			</div>
 			<div class="copyright">
-				<p class="cont">© 2016 Stockware All Right Received</p>
+				<p class="cont">© 2018 Luft technik All Rights Received. Design By Ushuaia Creative</p>
 			</div>
 		</footer>
 		<!-- Footer - end -->
@@ -206,7 +205,7 @@
 				<input data-required="text" type="text" placeholder="Phone" name="phone2">
 				<input data-required="text" data-required-email="email" type="text" placeholder="Email" name="email2">
 				<textarea placeholder="Your message" name="mess2"></textarea>
-				<input type="submit" value="Send">
+				<input type="submit" value="Send"> 
 			</form>
 		</div>
 		<!-- Header - start -->

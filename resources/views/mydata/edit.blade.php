@@ -41,43 +41,38 @@
                             <label>
                                 Name
                             </label>
-                            <input class="form-control" name="name" placeholder="Name" type="text" value="{{$data->name}}">
-                            </input>
+                            <input class="form-control" name="name" placeholder="Name" type="text" value="{{auth()->user()->name}}"/>
                         </div>
                         <div class="form-group">
                             <label>
                                 Lastname
                             </label>
-                            <input class="form-control" name="lastname" placeholder="Lastname" type="text" value="{{$data->lastname}}">
-                            </input>
+                            <input class="form-control" name="lastname" placeholder="Lastname" type="text" value="{{auth()->user()->lastname}}"/>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">
                                 Email address
                             </label>
-                            <input class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email" type="email" value="{{$data->email}}">
-                            </input>
+                            <input class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email" type="email" value="{{auth()->user()->email}}"/>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">
                                 Password
                             </label>
-                            <input class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" type="password" value="{{$data->password}}">
-                            </input>
+                            <input class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" type="password" value=""/>
                         </div>
-                    </div>
-                    <input name="userid" type="hidden" value="{{$data->user_id}}">
+                        <input name="userid" type="hidden" value="{{auth()->user()->user_id}}"/>
                         <div class="box-footer">
                             <button class="btn btn-primary" type="submit">
                                 Edit
                             </button>
                         </div>
-                    </input>
+                        <!--/.col (right) -->
+                    </div>
                 </form>
             </div>
-            <!--/.col (right) -->
         </div>
-        <!-- /.row -->
     </div>
 </section>
+<!-- /.row -->
 @endsection

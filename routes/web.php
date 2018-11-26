@@ -13,9 +13,9 @@
 Route::get('/', function () {
     return redirect('home');
 });
-Route::get('admin', function () {
-    return view('home');
-});
+
+Route::get('admin', 'Admin@index');
+
 Route::get('/users', 'User@index');
 
 Route::get('users/create', 'User@create')->name('userCreate');
@@ -124,7 +124,7 @@ Route::get('contact', 'Contact@index');
 
 Route::get('about', 'About@index');
 
-Route::get('mydata/{data}', 'Mydata@edit');
+Route::get('mydata/', 'Mydata@edit');
 
 Route::post('mydata/store', 'Mydata@upgrade');
 
@@ -139,3 +139,21 @@ Route::get('galleries/destroy/{data}', 'Gallery@destroy')->name('galleriesDestro
 Route::post('galleries/store', 'Gallery@store');
 
 Route::post('galleries/upgrade/{data}', 'Gallery@upgrade')->name('galleriesUpdate');
+
+Route::get('cart', 'Cart@index');
+
+Route::get('main', 'Main@index');
+
+Route::get('product', 'Products@index');
+
+Route::get('orders', 'Orders@index');
+
+Auth::routes();
+
+Route::get('/home', 'Home@index')->name('home');
+
+Route::get('logout', 'Auth\LoginController@logout');
+
+Route::get('profile', 'Profile@index');
+
+Route::post('update', 'Profile@update');

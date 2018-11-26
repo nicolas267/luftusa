@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class Usertype extends Controller
 {
+    function __construct(){
+        $this->middleware('auth');
+    }
     public function index()
     {
         $userstype = usertypeModel::all();

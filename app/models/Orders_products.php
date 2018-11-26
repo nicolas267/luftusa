@@ -11,7 +11,7 @@ class Orders_products extends Model
 
     public function Orders()
     {
-        return $this->belongsTo('App\models\Orders');
+        return $this->belongsTo('App\models\ordersModel');
     }
 
     public function cart_part()

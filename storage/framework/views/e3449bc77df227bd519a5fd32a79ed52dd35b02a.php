@@ -201,7 +201,8 @@
                                             </i>
                                             5:15
                                         </small>
-                                        Alexander Pierce
+                                        <?php echo e(ucwords(auth()->user()->name." ".auth()->user()->lastname)); ?>
+
                                     </a>
                                     I would like to meet you to discuss the latest news about
                       the arrival of the new theme. They say it is going to be one the

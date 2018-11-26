@@ -10,21 +10,22 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $primaryKey = 'user_id';
+    
+    protected $table = 'users';
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    protected $fillable = ['name', 'lastname', 'email', 'password', 'user_type_id'];
+
+    protected $guarded = ['user_id'];
+
+    public function getRouteKeyName()
+    {
+        return 'user_id'; // db column name
+
+    }
+
+    public function users_type()
+    {
+        return $this->belongsToMany('App\models\usertypeModel');
+    }
 }

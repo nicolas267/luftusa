@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 class Contact extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *

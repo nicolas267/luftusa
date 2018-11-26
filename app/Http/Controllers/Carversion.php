@@ -7,6 +7,9 @@ use App\models\carversionModel;
 
 class Carversion extends Controller
 {
+    function __construct(){
+        $this->middleware('auth');
+    }
     public function index()
     {
     	$carversions = carversionModel::all();

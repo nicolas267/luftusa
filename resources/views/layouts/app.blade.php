@@ -61,7 +61,7 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/public/#">
                                     <img alt="User Image" class="user-image" src="{{Request::root()}}/public/dist/img/user2-160x160.jpg">
                                         <span class="hidden-xs">
-                                            Alexander Pierce
+                                           {{ucwords(auth()->user()->name." ". auth()->user()->lastname)}}
                                         </span>
                                     </img>
                                 </a>
@@ -70,7 +70,7 @@
                                     <li class="user-header">
                                         <img alt="User Image" class="img-circle" src="{{Request::root()}}/public/dist/img/user2-160x160.jpg">
                                             <p>
-                                                Alexander Pierce - Web Developer
+                                                {{ucwords(auth()->user()->name." ". auth()->user()->lastname)}} - Web Developer
                                                 <small>
                                                     Member since Nov. 2012
                                                 </small>
@@ -106,7 +106,7 @@
                                             </a>
                                         </div>
                                         <div class="pull-right">
-                                            <a class="btn btn-default btn-flat" href="{{Request::root()}}/public/#">
+                                            <a class="btn btn-default btn-flat" href="{{ route('logout') }}">
                                                 Sign out
                                             </a>
                                         </div>
@@ -235,7 +235,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/mydata/1">
+                            <a href="{{Request::root()}}/mydata/">
                                 <i class="fa fa-info">
                                 </i>
                                 <span>
@@ -253,7 +253,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/../#">
+                            <a href="{{ route('logout') }}">
                                 <i class="fa fa-sign-out">
                                 </i>
                                 <span>

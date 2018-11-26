@@ -4,23 +4,6 @@
 <!-- Header - end -->
 <!-- Main Content - start -->
 <main>
-    <!-- Breadcrumbs -->
-    <div class="b-crumbs-wrap">
-        <div class="cont b-crumbs">
-            <ul>
-                <li>
-                    <a href="index.html">
-                        Motor
-                    </a>
-                </li>
-                <li>
-                    <span>
-                        Contacts
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </div>
     <div class="cont maincont">
         <h1>
             <span>
@@ -103,22 +86,18 @@
                     Send us a message
                 </h3>
                 <form action="#" class="form-validate">
-                    <input data-required="text" name="name4" placeholder="Name" type="text">
-                        <input data-required="text" data-required-email="email" name="email4" placeholder="Email address" type="text">
-                            <input data-required="text" name="phone4" placeholder="Phone number" type="text">
-                                <input type="submit" value="Send">
-                                </input>
-                            </input>
-                        </input>
-                    </input>
+                    <input data-required="text" name="name4" placeholder="Name" type="text"/>
+                    <input data-required="text" data-required-email="email" name="email4" placeholder="Email address" type="text"/>
+                    <input data-required="text" name="phone4" placeholder="Phone number" type="text"/>
+                    <input type="submit" value="Send"/>
                 </form>
             </div>
         </div>
-        <!-- Contacts - end -->
-    </div>
-    <!-- Map -->
-    <div class="contacts-map" id="contacts-map">
     </div>
 </main>
+<!-- Contacts - end -->
+<!-- Map -->
+<div class="contacts-map" id="contacts-map">
+</div>
 <!-- Main Content - end -->
 @endsection

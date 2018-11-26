@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class Blog extends Controller
 {
+    function __construct(){
+        $this->middleware('auth');
+    }
     public function index()
     {
         $blogs = DB::table('blogs')

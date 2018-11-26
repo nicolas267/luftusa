@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\models\cartypeModel;
 use App\models\carmodelModel;
 use App\models\carversionModel;
-use App\models\Orders;
+use App\models\ordersModel;
 use App\models\Orders_products;
 use App\Http\Controllers\Controller;
 use DB;

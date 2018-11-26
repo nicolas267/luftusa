@@ -8,34 +8,13 @@
         <div class="responisve-container">
             <div class="slider" id="front-slider">
                 <div class="slide">
-                    <img alt="American Legends" data-delay="0" data-in="fade" data-out="fade" data-position="45,430" src="{{Request::root()}}/frontend_template/HTML/img/front-slider/1.png">
-                        <p class="caption1" data-delay="0" data-in="right" data-out="fade" data-position="50,0" data-step="0">
-                            AMERICAN
-                        </p>
-                        <p class="caption2" data-delay="0" data-in="right" data-out="fade" data-position="150,0" data-step="0">
-                            LEGENDS
-                        </p>
-                    </img>
-                </div>
-                <div class="slide">
-                    <img alt="Legendary Bike" data-delay="0" data-in="fade" data-out="fade" data-position="50,518" src="{{Request::root()}}/frontend_template/HTML/img/front-slider/2.png">
-                        <p class="caption1" data-delay="0" data-in="right" data-out="fade" data-position="50,0" data-step="0">
-                            OFFROAD
-                        </p>
-                        <p class="caption2" data-delay="0" data-in="right" data-out="fade" data-position="150,0" data-step="0">
-                            KING
-                        </p>
-                    </img>
-                </div>
-                <div class="slide">
-                    <img alt="Dream Car" data-delay="0" data-in="fade" data-out="fade" data-position="21,480" src="{{Request::root()}}/frontend_template/HTML/img/front-slider/3.png">
-                        <p class="caption1" data-delay="0" data-in="right" data-out="fade" data-position="50,0" data-step="0">
-                            DREAM
-                        </p>
-                        <p class="caption2" data-delay="0" data-in="right" data-out="fade" data-position="150,0" data-step="0">
-                            CARS
-                        </p>
-                    </img>
+                    <img alt="Legendary Bike" width="544" height="330" data-delay="0" data-in="fade" data-out="fade" data-position="50,518" src="{{Request::root()}}/public/frontend_template/HTML/img/front-slider/2.png"/>
+                    <p class="caption1" data-delay="0" data-in="right" data-out="fade" data-position="50,0" data-step="0">
+                        OFFROAD
+                    </p>
+                    <p class="caption2" data-delay="0" data-in="right" data-out="fade" data-position="150,0" data-step="0">
+                        KING
+                    </p>
                 </div>
             </div>
         </div>
@@ -46,8 +25,8 @@
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/front-categories/frcateg1.png">
-                        </img>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg1.png"/>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg1h.png"/>
                     </span>
                     <p>
                         Automobiles
@@ -57,8 +36,8 @@
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/front-categories/frcateg2.png">
-                        </img>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg2.png"/>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg2h.png"/>
                     </span>
                     <p>
                         Motorcycles
@@ -68,8 +47,8 @@
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/front-categories/frcateg3.png">
-                        </img>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg3.png"/>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg3h.png"/>
                     </span>
                     <p>
                         ATVs
@@ -79,8 +58,8 @@
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/front-categories/frcateg4.png">
-                        </img>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg4.png"/>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg4h.png"/>
                     </span>
                     <p>
                         Snowmobiles
@@ -90,8 +69,8 @@
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/front-categories/frcateg5.png">
-                        </img>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg5.png"/>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg5h.png"/>
                     </span>
                     <p>
                         UTVs
@@ -101,8 +80,8 @@
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/front-categories/frcateg6.png">
-                        </img>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg6.png"/>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg6h.png"/>
                     </span>
                     <p>
                         Scooters
@@ -112,8 +91,8 @@
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/front-categories/frcateg7.png">
-                        </img>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg7.png"/>
+                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg7h.png"/>
                     </span>
                     <p>
                         Watercrafts
@@ -122,15 +101,15 @@
             </li>
         </ul>
     </div>
-    <!-- Frontpage Filter -->
-    <div class="frontsearch-wrap">
+    <div class="frontsearch-wrap maincont">
         <div class="cont frontsearch">
             <h2>
                 Search
             </h2>
-            <p class="frontsearch-count">
-                21900 ITEMS
-            </p>
+            <span class="maincont-line1" style="bottom: 50px;">
+            </span>
+            <span class="maincont-line2">
+            </span>
             <div class="frontsearch-wrap">
                 <div class="frontsearch-selects">
                     <div class="dropdown-wrap frontsearch-select">
@@ -202,252 +181,242 @@
                 </div>
             </div>
         </div>
+        <!-- Special Deals Items -->
+        <div class="specials-wrap">
+            <div class="cont specials">
+                <h2>
+                    Special Deals
+                </h2>
+                <div class="specials-list">
+                    <div class="special special-pseudo">
+                        <a class="special-link" href="#">
+                        </a>
+                    </div>
+                    <div class="special special-first">
+                        <a class="special-link" href="product.html">
+                            <p class="special-img">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/spec1.jpg"/>
+                            </p>
+                            <h3>
+                                <span>
+                                    Nulla lacinia lectus
+                                </span>
+                            </h3>
+                        </a>
+                        <p class="special-info">
+                            <a class="special-categ" href="#">
+                                Suspensions
+                            </a>
+                            <span class="special-price">
+                                $200
+                            </span>
+                            <del>
+                                $400
+                            </del>
+                            <a class="special-add" href="#">
+                                + Add to cart
+                            </a>
+                        </p>
+                    </div>
+                    <div class="special">
+                        <a class="special-link" href="product.html">
+                            <p class="special-img">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/spec2.jpg"/>
+                            </p>
+                            <h3>
+                                <span>
+                                    Praesent amet mollis
+                                </span>
+                            </h3>
+                        </a>
+                        <p class="special-info">
+                            <a class="special-categ" href="#">
+                                Brakes
+                            </a>
+                            <span class="special-price">
+                                $312
+                            </span>
+                            <a class="special-add" href="#">
+                                + Add to cart
+                            </a>
+                        </p>
+                    </div>
+                    <div class="special">
+                        <a class="special-link" href="product.html">
+                            <p class="special-img">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/spec3.jpg"/>
+                            </p>
+                            <h3>
+                                <span>
+                                    Mauris suscipit tellus
+                                </span>
+                            </h3>
+                        </a>
+                        <p class="special-info">
+                            <a class="special-categ" href="#">
+                                Gauges
+                            </a>
+                            <span class="special-price">
+                                $230.50
+                            </span>
+                            <a class="special-add" href="#">
+                                + Add to cart
+                            </a>
+                        </p>
+                    </div>
+                    <div class="special">
+                        <a class="special-link" href="product.html">
+                            <p class="special-img">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/spec4.jpg"/>
+                            </p>
+                            <h3>
+                                <span>
+                                    Suspendisse lobortis
+                                </span>
+                            </h3>
+                        </a>
+                        <p class="special-info">
+                            <a class="special-categ" href="#">
+                                Filters
+                            </a>
+                            <span class="special-price">
+                                $1290
+                            </span>
+                            <a class="special-add" href="#">
+                                + Add to cart
+                            </a>
+                        </p>
+                    </div>
+                    <div class="special">
+                        <a class="special-link" href="product.html">
+                            <p class="special-img">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/spec5.jpg"/>
+                            </p>
+                            <h3>
+                                <span>
+                                    Nam iaculis risus nisi
+                                </span>
+                            </h3>
+                        </a>
+                        <p class="special-info">
+                            <a class="special-categ" href="#">
+                                Sprockets
+                            </a>
+                            <span class="special-price">
+                                $1180
+                            </span>
+                            <a class="special-add" href="#">
+                                + Add to cart
+                            </a>
+                        </p>
+                    </div>
+                    <div class="special">
+                        <a class="special-link" href="product.html">
+                            <p class="special-img">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/spec6.jpg"/>
+                            </p>
+                            <h3>
+                                <span>
+                                    Sed fermentum elit
+                                </span>
+                            </h3>
+                        </a>
+                        <p class="special-info">
+                            <a class="special-categ" href="#">
+                                Spark Plugs
+                            </a>
+                            <span class="special-price">
+                                $305
+                            </span>
+                            <a class="special-add" href="#">
+                                + Add to cart
+                            </a>
+                        </p>
+                    </div>
+                    <div class="special">
+                        <a class="special-link" href="product.html">
+                            <p class="special-img">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/spec7.jpg"/>
+                            </p>
+                            <h3>
+                                <span>
+                                    Mauris suscipit tellus
+                                </span>
+                            </h3>
+                        </a>
+                        <p class="special-info">
+                            <a class="special-categ" href="#">
+                                Springs
+                            </a>
+                            <span class="special-price">
+                                $230.30
+                            </span>
+                            <a class="special-add" href="#">
+                                + Add to cart
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <p class="special-more">
+                    <a href="#">
+                        show more
+                    </a>
+                </p>
+                <span class="special-line1">
+                </span>
+                <span class="special-line2">
+                </span>
+            </div>
+        </div>
+        <!-- Popular Items -->
+        <div class="populars-wrap">
+            <div class="cont populars">
+                <h2>
+                    Popular
+                </h2>
+                <p class="populars-count">
+                    8 ITEMS
+                </p>
+                <div class="populars-list">
+                    @foreach($products as $product)
+                    <div class="popular">
+                        <a class="popular-link" href="product.html">
+                            <p class="popular-img">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/pop1.jpg"/>
+                            </p>
+                            <h3>
+                                <span>
+                                    {{ucwords($product->part)}}
+                                </span>
+                            </h3>
+                        </a>
+                        <p class="popular-info">
+                            <a class="popular-categ" href="#">
+                                Helmets
+                            </a>
+                            <span class="popular-price">
+                                ${{number_format($product->price,'2',',','.')}}
+                            </span>
+                            <a class="popular-add" href="#">
+                                + Add to cart
+                            </a>
+                        </p>
+                    </div>
+                    @endforeach
+                </div>
+                <p class="popular-more">
+                    <a href="#">
+                        show more
+                    </a>
+                </p>
+                <span class="popular-line1">
+                </span>
+                <span class="popular-line2">
+                </span>
+            </div>
+        </div>
+        <!-- Main Content - end -->
     </div>
 </main>
-<!-- Special Deals Items -->
-<div class="specials-wrap">
-    <div class="cont specials">
-        <h2>
-            Special Deals
-        </h2>
-        <p class="specials-count">
-            350 ITEMS
-        </p>
-        <div class="specials-list">
-            <div class="special special-pseudo">
-                <a class="special-link" href="#">
-                </a>
-            </div>
-            <div class="special special-first">
-                <a class="special-link" href="product.html">
-                    <p class="special-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/spec1.jpg">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Nulla lacinia lectus
-                        </span>
-                    </h3>
-                </a>
-                <p class="special-info">
-                    <a class="special-categ" href="#">
-                        Suspensions
-                    </a>
-                    <span class="special-price">
-                        $200
-                    </span>
-                    <del>
-                        $400
-                    </del>
-                    <a class="special-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="special">
-                <a class="special-link" href="product.html">
-                    <p class="special-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/spec2.jpg">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Praesent amet mollis
-                        </span>
-                    </h3>
-                </a>
-                <p class="special-info">
-                    <a class="special-categ" href="#">
-                        Brakes
-                    </a>
-                    <span class="special-price">
-                        $312
-                    </span>
-                    <a class="special-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="special">
-                <a class="special-link" href="product.html">
-                    <p class="special-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/spec3.jpg">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Mauris suscipit tellus
-                        </span>
-                    </h3>
-                </a>
-                <p class="special-info">
-                    <a class="special-categ" href="#">
-                        Gauges
-                    </a>
-                    <span class="special-price">
-                        $230.50
-                    </span>
-                    <a class="special-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="special">
-                <a class="special-link" href="product.html">
-                    <p class="special-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/spec4.jpg">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Suspendisse lobortis
-                        </span>
-                    </h3>
-                </a>
-                <p class="special-info">
-                    <a class="special-categ" href="#">
-                        Filters
-                    </a>
-                    <span class="special-price">
-                        $1290
-                    </span>
-                    <a class="special-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="special">
-                <a class="special-link" href="product.html">
-                    <p class="special-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/spec5.jpg">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Nam iaculis risus nisi
-                        </span>
-                    </h3>
-                </a>
-                <p class="special-info">
-                    <a class="special-categ" href="#">
-                        Sprockets
-                    </a>
-                    <span class="special-price">
-                        $1180
-                    </span>
-                    <a class="special-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="special">
-                <a class="special-link" href="product.html">
-                    <p class="special-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/spec6.jpg">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Sed fermentum elit
-                        </span>
-                    </h3>
-                </a>
-                <p class="special-info">
-                    <a class="special-categ" href="#">
-                        Spark Plugs
-                    </a>
-                    <span class="special-price">
-                        $305
-                    </span>
-                    <a class="special-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="special">
-                <a class="special-link" href="product.html">
-                    <p class="special-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/spec7.jpg">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Mauris suscipit tellus
-                        </span>
-                    </h3>
-                </a>
-                <p class="special-info">
-                    <a class="special-categ" href="#">
-                        Springs
-                    </a>
-                    <span class="special-price">
-                        $230.30
-                    </span>
-                    <a class="special-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-        </div>
-        <p class="special-more">
-            <a href="#">
-                show more
-            </a>
-        </p>
-        <span class="special-line1">
-        </span>
-        <span class="special-line2">
-        </span>
-    </div>
-</div>
-<!-- Popular Items -->
-<div class="populars-wrap">
-    <div class="cont populars">
-        <h2>
-            Popular
-        </h2>
-        <p class="populars-count">
-            8 ITEMS
-        </p>
-        <div class="populars-list">
-            @foreach($products as $product)
-            <div class="popular">
-                <a class="popular-link" href="product.html">
-                    <p class="popular-img">
-                        <img alt="" src="{{Request::root()}}/frontend_template/HTML/img/pop1.jpg">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            {{ucwords($product->part)}}
-                        </span>
-                    </h3>
-                </a>
-                <p class="popular-info">
-                    <a class="popular-categ" href="#">
-                        Helmets
-                    </a>
-                    <span class="popular-price">
-                        ${{number_format($product->price,'2',',','.')}}
-                    </span>
-                    <a class="popular-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            @endforeach
-        </div>
-        <p class="popular-more">
-            <a href="#">
-                show more
-            </a>
-        </p>
-        <span class="popular-line1">
-        </span>
-        <span class="popular-line2">
-        </span>
-    </div>
-</div>
-<!-- Main Content - end -->
+
 @endsection

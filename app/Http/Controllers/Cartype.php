@@ -2,57 +2,61 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\models\cartypeModel;
+use Illuminate\Http\Request;
 
 class Cartype extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-    	$carstype = cartypeModel::all();
-    	return view('carstype/index')->with('carstype',  $carstype);
+        $carstype = cartypeModel::all();
+        return view('carstype/index')->with('carstype', $carstype);
     }
 
     public function create()
     {
-    	return view('carstype/create');
+        return view('carstype/create');
     }
 
     public function store()
     {
-    	$data = Request()->all();
+        $data = Request()->all();
 
-    	cartypeModel::create([
+        cartypeModel::create([
 
-    			'car_type' => $data['cartype']
-    	]);
+            'car_type' => $data['cartype'],
+        ]);
 
-    	return redirect('carstype/');
+        return redirect('carstype/');
     }
 
     public function edit(cartypeModel $data)
     {
-    	return view('carstype/edit', compact('data'));
+        return view('carstype/edit', compact('data'));
     }
 
     public function upgrade()
     {
-    	$data = Request()->all();
+        $data = Request()->all();
 
-       	cartypeModel::where('car_type_id', $data['cartypeid'])
-    				->update([
+        cartypeModel::where('car_type_id', $data['cartypeid'])
+            ->update([
 
-                        'car_type' => $data['cartype']
-					
-                    ]);   
-		return redirect('/carstype'); 
+                'car_type' => $data['cartype'],
+
+            ]);
+        return redirect('/carstype');
     }
 
     public function destroy($cartypeid)
     {
-    	cartypeModel::where('car_type_id', $cartypeid)->delete();
+        cartypeModel::where('car_type_id', $cartypeid)->delete();
 
-    	return redirect('carstype/');
+        return redirect('carstype/');
 
     }
 }

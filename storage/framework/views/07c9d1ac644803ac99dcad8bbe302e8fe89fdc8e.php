@@ -61,7 +61,8 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo e(Request::root()); ?>/public/#">
                                     <img alt="User Image" class="user-image" src="<?php echo e(Request::root()); ?>/public/dist/img/user2-160x160.jpg">
                                         <span class="hidden-xs">
-                                            Alexander Pierce
+                                           <?php echo e(ucwords(auth()->user()->name." ". auth()->user()->lastname)); ?>
+
                                         </span>
                                     </img>
                                 </a>
@@ -70,7 +71,7 @@
                                     <li class="user-header">
                                         <img alt="User Image" class="img-circle" src="<?php echo e(Request::root()); ?>/public/dist/img/user2-160x160.jpg">
                                             <p>
-                                                Alexander Pierce - Web Developer
+                                                <?php echo e(ucwords(auth()->user()->name." ". auth()->user()->lastname)); ?> - Web Developer
                                                 <small>
                                                     Member since Nov. 2012
                                                 </small>
@@ -106,7 +107,7 @@
                                             </a>
                                         </div>
                                         <div class="pull-right">
-                                            <a class="btn btn-default btn-flat" href="<?php echo e(Request::root()); ?>/public/#">
+                                            <a class="btn btn-default btn-flat" href="<?php echo e(route('logout')); ?>">
                                                 Sign out
                                             </a>
                                         </div>
@@ -235,7 +236,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo e(Request::root()); ?>/mydata/1">
+                            <a href="<?php echo e(Request::root()); ?>/mydata/">
                                 <i class="fa fa-info">
                                 </i>
                                 <span>
@@ -253,7 +254,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo e(Request::root()); ?>/../#">
+                            <a href="<?php echo e(route('logout')); ?>">
                                 <i class="fa fa-sign-out">
                                 </i>
                                 <span>

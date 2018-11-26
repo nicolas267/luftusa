@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\models\Orders;
+use App\models\ordersModel;
 
 class Orders extends Controller
 {
@@ -13,9 +13,12 @@ class Orders extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    function __construct(){
+        $this->middleware('auth');
+    }
     public function index()
     {
-       
+       return view('orders/index');
     }
 
     /**

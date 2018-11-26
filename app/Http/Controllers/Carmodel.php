@@ -7,6 +7,9 @@ use App\models\carmodelModel;
 
 class Carmodel extends Controller
 {
+    function __construct(){
+        $this->middleware('auth');
+    }
     public function index()
     {
     	$carmodels = carmodelModel::all();

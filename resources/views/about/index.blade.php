@@ -3,23 +3,6 @@
 @section('content')
 <!-- Main Content - start -->
 <main>
-    <!-- Breadcrumbs -->
-    <div class="b-crumbs-wrap">
-        <div class="cont b-crumbs">
-            <ul>
-                <li>
-                    <a href="index.html">
-                        Motor
-                    </a>
-                </li>
-                <li>
-                    <span>
-                        About us
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </div>
     <div class="cont maincont">
         <h1>
             <span>
@@ -82,7 +65,7 @@
     <div class="cont maincont">
         <h1>
             <span>
-                Community feed
+                Gallery
             </span>
         </h1>
         <span class="maincont-line1 maincont-line12">
@@ -93,70 +76,16 @@
         <ul class="about-gallery" id="about-gallery">
             <li class="grid-sizer">
             </li>
-            <li class="grid-item">
-                <a class="fancy-img" data-fancybox-group="about" href="img/logo.png">
-                    <span>
-                        <img alt="" src="http://placehold.it/292x176">
-                        </img>
-                    </span>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a class="fancy-img about-video" data-fancybox-group="about" href="https://www.youtube.com/watch?v=L1bruVSY8LE&fs=1&autoplay=1">
-                    <span>
-                        <img alt="" src="http://placehold.it/292x176">
-                        </img>
-                    </span>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a class="fancy-img" data-fancybox-group="about" href="img/logo.png">
-                    <span>
-                        <img alt="" src="http://placehold.it/292x176">
-                        </img>
-                    </span>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a class="fancy-img" data-fancybox-group="about" href="img/logo.png">
-                    <span>
-                        <img alt="" src="http://placehold.it/292x176">
-                        </img>
-                    </span>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a class="fancy-img" data-fancybox-group="about" href="img/logo.png">
-                    <span>
-                        <img alt="" src="http://placehold.it/292x176">
-                        </img>
-                    </span>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a class="fancy-img" data-fancybox-group="about" href="img/logo.png">
-                    <span>
-                        <img alt="" src="http://placehold.it/292x176">
-                        </img>
-                    </span>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a class="fancy-img about-video" data-fancybox-group="about" href="https://www.youtube.com/watch?v=L1bruVSY8LE&fs=1&autoplay=1">
-                    <span>
-                        <img alt="" src="http://placehold.it/292x176">
-                        </img>
-                    </span>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a class="fancy-img" data-fancybox-group="about" href="img/logo.png">
-                    <span>
-                        <img alt="" src="http://placehold.it/292x176">
-                        </img>
-                    </span>
-                </a>
-            </li>
+            @foreach($galleries as $gallery)
+                <li class="grid-item">
+                    <a class="fancy-img" data-fancybox-group="about" href="storage/app/public/{{ $gallery->image }}">
+                        <span>
+                            <img alt="{{ $gallery->image }}" src="storage/app/public/{{ $gallery->image }}">
+                            </img>
+                        </span>
+                    </a>
+                </li>
+            @endforeach
         </ul>
         <!-- Gallery About us - end -->
     </div>

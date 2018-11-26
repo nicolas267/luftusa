@@ -7,6 +7,9 @@ use App\models\caryearModel;
 
 class Caryear extends Controller
 {
+    function __construct(){
+        $this->middleware('auth');
+    }
     public function index()
     {
     	$caryears = caryearModel::all();
