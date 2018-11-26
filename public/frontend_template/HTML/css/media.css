@@ -3,14 +3,19 @@
         width: 970px;
     }
     /* HEADER */
+    .header{
+        height: 100%
+    }
     .header .header-info {
         float: right;
         width: 100%;
-        height: 50px;
+        height: 70px;
         max-width: 400px;
+
     }
+    
     .header .header-cart .header-cart-inner {
-        line-height: 50px;
+        line-height: 70px;
     }
     .header .header-search {
         line-height: 48px;
@@ -35,9 +40,24 @@
         width: auto;
         display: block;
     }
+
+    .header .header-logo{
+        display: inline;
+        position: absolute;
+        top:1;
+    }
     .header nav ul li {
         line-height: 100%;
-        margin: 3px 0 6px 4%;
+        margin: 0px 0 6px 4%;
+    }
+    .nav-logo{
+        background: transparent;
+    }
+    .header .li-logo{
+       position: absolute;
+       left: 30px;
+       background: transparent;
+       top: 50px;
     }
     /* HEADER */
     /* FRONT SLIDER */
@@ -229,6 +249,7 @@
     .section-top {
         padding: 0 0 0 145px;
     }
+
     .section-top .section-menu-btn {
         padding: 6px 56px 4px 22px;
         background: url(../img/menu-section.png) no-repeat 85% center;
@@ -489,6 +510,9 @@
         width: auto;
         padding: 0;
     }
+    .nav-logo{
+        background: #7a7878;
+    }
     /* FOOTER */
 }
 @media only screen and (max-width: 768px) {
@@ -500,6 +524,7 @@
         max-width: none;
         width: auto;
     }
+
     .header .header-searchbtn {
         width: 50px;
     }
@@ -508,6 +533,18 @@
     }
     .header .header-compare {
         width: 50px;
+    }
+    .nav-logo {
+       border-radius: 400px;
+       width: 80px;
+       height: 80px;
+       position: absolute;
+       top: -40px;
+       right: 0px;
+    }
+    .nav-logo img{
+       width: 80px;
+       height: 80px;
     }
     .header .header-cart {
         /*min-width: 140px;*/
@@ -522,7 +559,6 @@
         /*display: none;*/
     }
     .header-menutoggle {
-        width: 30%;
         width: 120px;
         height: 100%;
         /*background: url(../img/menu-top.png) no-repeat 15px center;*/
@@ -539,6 +575,7 @@
         padding: 0 15px 0 45px;
         z-index: 21;
         position: relative;
+        margin-top: 10px;
     }
     .header-menutoggle:before {
         height: 50px;
@@ -595,6 +632,7 @@
     .header nav>ul {
         padding: 77px 0 35px;
         box-shadow: 0 0 25px 0 rgba(26, 53, 99, 0.1);
+        margin-left: 80px;
     }
     .header nav>ul>li {
         padding: 0;
@@ -697,6 +735,7 @@
         margin: 0;
         color: #868CA7;
     }
+    
     .header nav>ul>li>ul>li>a:hover {
         color: #ff3100;
     }
@@ -705,6 +744,14 @@
     }
     .header nav>ul>li>ul>li.active:after {
         display: none;
+    }
+    .header .header-logo .social a{
+        margin-left: 8%;
+    }
+    .header .header-logo .social{
+        position: absolute;
+        bottom: 1px;
+        height: 50px;
     }
     /* HEADER */
     /* FRONT CATEGORIES */
@@ -1101,7 +1148,7 @@
     }
     .header-menutoggle {
         position: absolute;
-        top: 50px;
+        top: 70px;
         right: 0;
         float: none;
         margin: 0;
@@ -1110,17 +1157,15 @@
     .header-menutoggle:before {
         display: none;
     }
-    .header .header-logo {
-        width: 50%;
-        top: 50px;
-        left: 15px;
-        height: 50px;
+    
+    .header .header-logo .social a{
+        margin-left: 8%;
     }
     .header .header-logo img {
         max-width: 180px;
     }
     .header nav {
-        top: 50px;
+        top: 30px;
     }
     /* FRONT SEARCH */
     .frontsearch .frontsearch-model {
@@ -1190,6 +1235,9 @@
     .about-gallery li {
         width: 50%;
     }
+    .header nav{
+        margin-top: 20px;
+    }
     /*.about-gallery li:nth-child(3n+1) {
     clear: none;
 }
@@ -1248,6 +1296,7 @@
     .specials .special-line1 {
         display: none;
     }
+
     /* SPECIALS */
     /* POPULARS */
     .populars h2 {
@@ -1421,6 +1470,10 @@
     .header .header-search input[type=text] {
         margin: 0 0 0 34%;
         width: 50%;
+    }
+    .nav-logo{
+        display: none;
+        top: 1000px;
     }
     /* HEADER */
     /* FRONT CATEGORIES */

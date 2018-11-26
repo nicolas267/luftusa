@@ -31,7 +31,6 @@
 			<!-- Navmenu Mobile Toggle Button -->
 			<a href="#" class="header-menutoggle" id="header-menutoggle">Menu</a>
 			<div class="header-info">
-
 				<!-- Personal Menu -->
 				<div class="header-personal">
 					<a href="#" class="header-gopersonal"></a>
@@ -75,23 +74,23 @@
 					<input type="text" placeholder="Search parts or vehicles">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
-
 			</div>
-
 			<!-- Logotype -->
 			<div class="header-logo">
-				<a rel="nofollow" target="_blank" href="http://facebook.com">
-					<i class="fa fa-facebook"></i>
-				</a>
-				<a rel="nofollow" class="left" target="_blank" href="http://youtube.com">
-					<i class="fa fa-youtube-play"></i>
-				</a>
-				<a rel="nofollow" class="left" target="_blank" href="http://youtube.com">
-					<i class="fa fa-instagram"></i>
-				</a>
-				<a rel="nofollow" class="left" target="_blank" href="mailto:email@email.com">
-					<i class="fa fa-paper-plane"></i>
-				</a>
+				<div class="social">
+					<a rel="nofollow" target="_blank" href="http://facebook.com">
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a rel="nofollow" class="left" target="_blank" href="http://youtube.com">
+						<i class="fa fa-youtube-play"></i>
+					</a>
+					<a rel="nofollow" class="left" target="_blank" href="http://youtube.com">
+						<i class="fa fa-instagram"></i>
+					</a>
+					<a rel="nofollow" class="left" target="_blank" href="mailto:email@email.com">
+						<i class="fa fa-paper-plane"></i>
+					</a>
+				</div>
 			</div>
 
 			<!-- Navmenu - start -->
@@ -106,8 +105,12 @@
 					<li>
 						<a href="{{url('store')}}">Store</a>
 					</li>
-					<li class="">
-						<a href="{{url('store')}}">Store</a>
+					<li class="li-logo" style="width: 60px;">
+						<div class="nav-logo">
+							<a href="{{url('home')}}" title="">
+								<img src="{{Request::root()}}/public/frontend_template/HTML/img/logo.png" alt="">
+							</a>
+						</div>
 					</li>
 					<li>
 						<a href="{{url('service')}}">Services</a>
