@@ -25,77 +25,60 @@
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg1.png"/>
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg1h.png"/>
+                        <div class="acce">
+                            
+                        </div>
                     </span>
                     <p>
-                        Automobiles
+                        Air
                     </p>
                 </a>
             </li>
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg2.png"/>
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg2h.png"/>
+                       <div class="acce">
+                            
+                        </div>
                     </span>
                     <p>
-                        Motorcycles
+                        Performance
                     </p>
                 </a>
             </li>
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg3.png"/>
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg3h.png"/>
+                       <div class="acce">
+                            
+                        </div>
                     </span>
                     <p>
-                        ATVs
+                        Exterior
                     </p>
                 </a>
             </li>
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg4.png"/>
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg4h.png"/>
+                       <div class="acce">
+                            
+                        </div>
                     </span>
                     <p>
-                        Snowmobiles
+                        Accessories
                     </p>
                 </a>
             </li>
             <li>
                 <a href="catalog.html">
                     <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg5.png"/>
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg5h.png"/>
+                       <div class="acce">
+                            
+                        </div>
                     </span>
                     <p>
-                        UTVs
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a href="catalog.html">
-                    <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg6.png"/>
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg6h.png"/>
-                    </span>
-                    <p>
-                        Scooters
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a href="catalog.html">
-                    <span class="frontcategs-img">
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg7.png"/>
-                        <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-categories/frcateg7h.png"/>
-                    </span>
-                    <p>
-                        Watercrafts
+                        Apparel
                     </p>
                 </a>
             </li>
@@ -106,9 +89,9 @@
             <h2>
                 Search
             </h2>
-            <span class="maincont-line1" style="bottom: 50px;">
+            <span class="maincont-line1" style="margin-top: -10px; margin-right:50px; margin-left: -10px;">
             </span>
-            <span class="maincont-line2">
+            <span class="maincont-line2" style="margin-left: 40px; margin-top: 47px;">
             </span>
             <div class="frontsearch-wrap">
                 <div class="frontsearch-selects">
@@ -374,9 +357,6 @@
                 <h2>
                     Popular
                 </h2>
-                <p class="populars-count">
-                    8 ITEMS
-                </p>
                 <div class="populars-list">
                     @foreach($products as $product)
                     <div class="popular">

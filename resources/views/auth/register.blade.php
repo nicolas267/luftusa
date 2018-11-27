@@ -13,7 +13,7 @@
         </span>
         <!-- Contacts - start -->
         <div class="pagecont contacts">
-            <div class="contacts-form" style="width: 50%; margin-left: 25%; float: left;">
+            <div class="contacts-form" style="width: 50%; margin-left: 25%; float: left; margin-top: 0px;">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8">

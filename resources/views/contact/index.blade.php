@@ -81,7 +81,7 @@
                     </p>
                 </li>
             </ul>
-            <div class="contacts-form">
+            <div class="contacts-form" style="margin-top: 0px;">
                 <h3>
                     Send us a message
                 </h3>

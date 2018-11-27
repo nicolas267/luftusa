@@ -22,6 +22,7 @@
     }
     .header .header-logo {
         width: 25%;
+        top:10px;
     }
     .header nav {
         /*width: 70%;
@@ -52,6 +53,7 @@
     }
     .nav-logo{
         background: transparent;
+        left: -20px;
     }
     .header .li-logo{
        position: absolute;
@@ -1470,10 +1472,6 @@
     .header .header-search input[type=text] {
         margin: 0 0 0 34%;
         width: 50%;
-    }
-    .nav-logo{
-        display: none;
-        top: 1000px;
     }
     /* HEADER */
     /* FRONT CATEGORIES */

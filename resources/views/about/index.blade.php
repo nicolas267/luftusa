@@ -68,7 +68,7 @@
                 Gallery
             </span>
         </h1>
-        <span class="maincont-line1 maincont-line12">
+        <span class="maincont-line1 maincont-line12" style="margin-left: -30px;">
         </span>
         <span class="maincont-line2 maincont-line22">
         </span>

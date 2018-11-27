@@ -15,7 +15,7 @@
         <div class="pagecont contacts" style="padding: 89px;">
                 {!! $errors->first('email','<span class="help-block">:message</span>') !!}
                 {!! $errors->first('password','<span class="help-block">:message</span>') !!}
-            <div class="contacts-form" style="width: 60%; margin-left: 20%; float: left;">
+            <div class="contacts-form" style="width: 60%; margin-left: 20%; float: left; margin-top: 0px;">
                 <form method="POST" action="{{ route('login') }}">
                     {{csrf_field()}}
                     <label class="col-md-4 col-form-label text-md-right" for="name">

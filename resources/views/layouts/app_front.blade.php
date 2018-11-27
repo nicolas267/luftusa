@@ -57,7 +57,7 @@
 				</div>
 
 				<!-- Small Cart -->
-				<a href="cart.html" class="header-cart">
+				<a href="{{url('cart')}}" class="header-cart">
 					<div class="header-cart-inner">
 						<p class="header-cart-count">
 							<img src="{{Request::root()}}/public/frontend_template/HTML/img/cart.png" alt="">
@@ -105,7 +105,7 @@
 					<li>
 						<a href="{{url('store')}}">Store</a>
 					</li>
-					<li class="li-logo" style="width: 60px;">
+					<li class="li-logo" style="width: 100px;">
 						<div class="nav-logo">
 							<a href="{{url('home')}}" title="">
 								<img src="{{Request::root()}}/public/frontend_template/HTML/img/logo.png" alt="">
