@@ -157,3 +157,5 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::get('profile', 'Profile@index');
 
 Route::post('update', 'Profile@update');
+
+Route::get('shipping', 'Shipping@index');

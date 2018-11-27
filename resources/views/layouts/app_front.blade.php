@@ -18,9 +18,7 @@
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/ion.rangeSlider.skinFlat.css">
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/style.css">
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/media.css">
-<link href="{{Request::root()}}/public/build/css/bootstrap.min.css'" rel="stylesheet"/>
-
- <meta name="csrf-token" content="{{ csrf_token() }}" />
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
