@@ -42,7 +42,6 @@
         width: auto;
         display: block;
     }
-
     .header .header-logo .social{
         height: 20px;
         top:30px;
@@ -248,7 +247,7 @@
     }
     .header .header-logo .social{
         height: 20px;
-        top: 30px;
+        top: 45px;
     }
     /* FRONT SEARCH */
     /* SECTION */
