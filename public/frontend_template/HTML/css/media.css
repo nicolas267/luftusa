@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1220px) {
+@media only screen and (max-width: 1250px) {
     .cont {
         width: 970px;
     }
@@ -21,9 +21,10 @@
         line-height: 48px;
     }
     .header .header-logo {
-        width: 25%;
-        top:10px;
+        width: 26%;
+        top:-22px;
     }
+
     .header nav {
         /*width: 70%;
     float: left;
@@ -42,10 +43,9 @@
         display: block;
     }
 
-    .header .header-logo{
-        display: inline;
-        position: absolute;
-        top:1;
+    .header .header-logo .social{
+        height: 20px;
+        top:30px;
     }
     .header nav ul li {
         line-height: 100%;
@@ -245,6 +245,10 @@
     .frontsearch .frontsearch-model {
         font-size: 98px;
         top: 25%;
+    }
+    .header .header-logo .social{
+        height: 20px;
+        top: 30px;
     }
     /* FRONT SEARCH */
     /* SECTION */
@@ -747,13 +751,12 @@
     .header nav>ul>li>ul>li.active:after {
         display: none;
     }
+    .header .header-logo .social{
+        height: 20px;
+        bottom: 5px;
+    }
     .header .header-logo .social a{
         margin-left: 8%;
-    }
-    .header .header-logo .social{
-        position: absolute;
-        bottom: 1px;
-        height: 50px;
     }
     /* HEADER */
     /* FRONT CATEGORIES */
@@ -1159,9 +1162,15 @@
     .header-menutoggle:before {
         display: none;
     }
-    
+     .header .header-logo{
+        margin-top: 22px;
+    }
+    .header .header-logo .social{
+        height: 20px;
+        top: 85px;
+    }
     .header .header-logo .social a{
-        margin-left: 8%;
+        margin-left: 7%;
     }
     .header .header-logo img {
         max-width: 180px;
@@ -1192,6 +1201,11 @@
         overflow: hidden;
         width: 0;
     }
+    .header .header-logo .social{
+        height: 20px;
+        bottom: -5px;
+    }
+
     /* CART */
     /* PRODUCT */
     .prod-rating-wrap {
@@ -1464,6 +1478,13 @@
         color: #ff3100;
         overflow: hidden;
         width: 0;
+    }
+    .header .header-logo{
+        margin-top: 22px;
+    }
+    .header .header-logo .social{
+        height: 20px;
+        top: 85px;
     }
     /* CART */
 }
@@ -1779,6 +1800,9 @@
     .section-top .section-menu {
         width: 100%;
         padding: 0;
+    }
+    .header .header-logo{
+        background: purple;
     }
 }
 @media only screen and (max-width: 320px) {}
