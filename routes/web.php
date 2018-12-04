@@ -14,6 +14,10 @@ Route::get('/', function () {
     return redirect('home');
 });
 
+Route::get('/template', function () {
+    return view('templates/index');
+});
+
 Route::get('admin', 'Admin@index');
 
 Route::get('/users', 'User@index');
