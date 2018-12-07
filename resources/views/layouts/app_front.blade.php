@@ -43,7 +43,7 @@
 							<a href="{{url('cart')}}">Shopping Cart <span>5</span></a>
 						</li>
 						<li class="header-order">
-							<a href="orders.html">Order Status</a>
+							<a href="{{url('orders')}}">Order Status</a>
 						</li>
 						<li>
 							<a href="#">Settings</a>
