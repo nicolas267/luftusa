@@ -209,15 +209,16 @@
         <!-- Catalog Filter - end -->
         <!-- Catalog Items - start -->
         <div class="section-gallery">
+            @for ($i = 0; $i < count($carparts); $i++)
             <div class="sectgl">
-                <a class="sectgl-link" href="product.html">
+                <a class="sectgl-link" href="{{route('products.show',[$carparts[$i]->car_part_id])}}">
                     <p class="sectgl-img">
                         <img alt="" src="http://placehold.it/203x190">
                         </img>
                     </p>
                     <h3>
                         <span>
-                            Suspendisse lobortis
+                            {{ ucwords($carparts[$i]->part) }}
                         </span>
                     </h3>
                 </a>
@@ -226,181 +227,14 @@
                         Helmets
                     </a>
                     <span class="sectgl-price">
-                        $290
+                        ${{ number_format($carparts[$i]->price,"2",",",".") }}
                     </span>
                     <a class="sectgl-add" href="#">
                         + Add to cart
                     </a>
                 </p>
             </div>
-            <div class="sectgl">
-                <a class="sectgl-link" href="product.html">
-                    <p class="sectgl-img">
-                        <img alt="" src="http://placehold.it/189x163">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Nulla lacinia lectus
-                        </span>
-                    </h3>
-                </a>
-                <p class="sectgl-info">
-                    <a class="sectgl-categ" href="#">
-                        Filtres
-                    </a>
-                    <span class="sectgl-price">
-                        $1180
-                    </span>
-                    <a class="sectgl-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="sectgl">
-                <a class="sectgl-link" href="product.html">
-                    <p class="sectgl-img">
-                        <img alt="" src="http://placehold.it/270x187">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Praesent amet mollis
-                        </span>
-                    </h3>
-                </a>
-                <p class="sectgl-info">
-                    <a class="sectgl-categ" href="#">
-                        Batteries
-                    </a>
-                    <span class="sectgl-price">
-                        $312
-                    </span>
-                    <a class="sectgl-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="sectgl">
-                <a class="sectgl-link" href="product.html">
-                    <p class="sectgl-img">
-                        <img alt="" src="http://placehold.it/185x193">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Mauris suscipit tellus
-                        </span>
-                    </h3>
-                </a>
-                <p class="sectgl-info">
-                    <a class="sectgl-categ" href="#">
-                        Boots
-                    </a>
-                    <span class="sectgl-price">
-                        $230.50
-                    </span>
-                    <a class="sectgl-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="sectgl">
-                <a class="sectgl-link" href="product.html">
-                    <p class="sectgl-img">
-                        <img alt="" src="http://placehold.it/224x189">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Suspendisse lobortis
-                        </span>
-                    </h3>
-                </a>
-                <p class="sectgl-info">
-                    <a class="sectgl-categ" href="#">
-                        Breaks
-                    </a>
-                    <span class="sectgl-price">
-                        $1290
-                    </span>
-                    <a class="sectgl-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="sectgl">
-                <a class="sectgl-link" href="product.html">
-                    <p class="sectgl-img">
-                        <img alt="" src="http://placehold.it/193x217">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Nam iaculis risus nisi
-                        </span>
-                    </h3>
-                </a>
-                <p class="sectgl-info">
-                    <a class="sectgl-categ" href="#">
-                        Bearings
-                    </a>
-                    <span class="sectgl-price">
-                        $1180
-                    </span>
-                    <a class="sectgl-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="sectgl">
-                <a class="sectgl-link" href="product.html">
-                    <p class="sectgl-img">
-                        <img alt="" src="http://placehold.it/270x176">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Sed fermentum elit
-                        </span>
-                    </h3>
-                </a>
-                <p class="sectgl-info">
-                    <a class="sectgl-categ" href="#">
-                        Parts
-                    </a>
-                    <span class="sectgl-price">
-                        $305
-                    </span>
-                    <a class="sectgl-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
-            <div class="sectgl">
-                <a class="sectgl-link" href="product.html">
-                    <p class="sectgl-img">
-                        <img alt="" src="http://placehold.it/350x176">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            Mauris suscipit tellus
-                        </span>
-                    </h3>
-                </a>
-                <p class="sectgl-info">
-                    <a class="sectgl-categ" href="#">
-                        Lights
-                    </a>
-                    <span class="sectgl-price">
-                        $230.30
-                    </span>
-                    <a class="sectgl-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
-            </div>
+            @endfor
         </div>
         <!-- Catalog Items - end -->
         <!-- Pagination -->

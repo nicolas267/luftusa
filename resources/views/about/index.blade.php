@@ -62,33 +62,35 @@
         </div>
         <!-- Slider About us - end -->
     </div>
-    <div class="cont maincont">
-        <h1>
-            <span>
-                Gallery
+    @if(count($galleries)>0)
+        <div class="cont maincont">
+            <h1>
+                <span>
+                    Gallery
+                </span>
+            </h1>
+            <span class="maincont-line1 maincont-line12" style="margin-left: -30px;">
             </span>
-        </h1>
-        <span class="maincont-line1 maincont-line12" style="margin-left: -30px;">
-        </span>
-        <span class="maincont-line2 maincont-line22">
-        </span>
-        <!-- Gallery About us - start -->
-        <ul class="about-gallery" id="about-gallery">
-            <li class="grid-sizer">
-            </li>
-            @foreach($galleries as $gallery)
-                <li class="grid-item">
-                    <a class="fancy-img" data-fancybox-group="about" href="storage/app/public/{{ $gallery->image }}">
-                        <span>
-                            <img alt="{{ $gallery->image }}" src="storage/app/public/{{ $gallery->image }}">
-                            </img>
-                        </span>
-                    </a>
+            <span class="maincont-line2 maincont-line22">
+            </span>
+            <!-- Gallery About us - start -->
+            <ul class="about-gallery" id="about-gallery">
+                <li class="grid-sizer">
                 </li>
-            @endforeach
-        </ul>
-        <!-- Gallery About us - end -->
-    </div>
+                @foreach($galleries as $gallery)
+                    <li class="grid-item">
+                        <a class="fancy-img" data-fancybox-group="about" href="storage/app/public/{{ $gallery->image }}">
+                            <span>
+                                <img alt="{{ $gallery->image }}" src="storage/app/public/{{ $gallery->image }}">
+                                </img>
+                            </span>
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+            <!-- Gallery About us - end -->
+        </div>
+    @endif
 </main>
 <!-- Main Content - end -->
 @endsection

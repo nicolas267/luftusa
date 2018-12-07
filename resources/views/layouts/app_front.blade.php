@@ -32,27 +32,38 @@
 				<!-- Personal Menu -->
 				<div class="header-personal">
 					<a href="#" class="header-gopersonal"></a>
-					<ul>
-						<li>
-							<a href="message.html">Messages <span>12</span></a>
-						</li>
-						<li>
-							<a href="#">Bookmarks <span>6</span></a>
-						</li>
-						<li>
-							<a href="{{url('cart')}}">Shopping Cart <span>5</span></a>
-						</li>
-						<li class="header-order">
-							<a href="{{url('orders')}}">Order Status</a>
-						</li>
-						<li>
-							<a href="#">Settings</a>
-						</li>
-						<li>
-							<a href="{{ route('logout') }}">Log out</a>
-						</li>
-					</ul>
-				</div>
+					@if (!Auth::guest())
+						<ul>
+							<li>
+								<a href="message.html">Messages <span>12</span></a>
+							</li>
+							<li>
+								<a href="#">Bookmarks <span>6</span></a>
+							</li>
+							<li>
+								<a href="{{url('cart')}}">Shopping Cart <span>5</span></a>
+							</li>
+							<li class="header-order">
+								<a href="{{url('orders')}}">Order Status</a>
+							</li>
+							<li>
+								<a href="#">Settings</a>
+							</li>
+							<li>
+								<a href="{{ route('logout') }}">Log out</a>
+							</li>
+						</ul>
+	  				@else
+		  				<ul>
+							<li>
+								<a href="{{ url('login') }}">Login</a>
+							</li>
+							<li>
+								<a href="{{ url('register') }}">Register</a>
+							</li>
+						</ul>
+	  				@endif
+				</div> 
 
 				<!-- Small Cart -->
 				<a href="{{url('cart')}}" class="header-cart">
@@ -101,7 +112,7 @@
 						<a href="{{url('about')}}">About Us</a>
 					</li>
 					<li>
-						<a href="{{url('store')}}">Store</a>
+						<a href="{{url('main')}}">Store</a>
 					</li>
 					<li class="li-logo" style="width: 100px;">
 						<div class="nav-logo">

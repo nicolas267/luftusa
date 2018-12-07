@@ -14,8 +14,6 @@
         <span class="maincont-line2" style="margin-bottom: 100px;">
         </span>
         <!-- Product - start -->
-
-        @for ($i = 0; $i < count($carparts); $i++)
             <div class="prod">
                 <!-- Product Slider - start -->
                 <div class="prod-slider-wrap">
@@ -88,7 +86,7 @@
                             </span>
                         </p>
                         <p>
-                            {{ ucwords($carparts[$i]->part) }}
+                            {{ucfirst($carparts->part)}}
                         </p>
                     </div>
                     <div class="prod-props">
@@ -138,7 +136,7 @@
                                 Price
                             </p>
                             <p class="prod-price">
-                                ${{ number_format($carparts[$i]->price) }}
+                               ${{number_format($carparts->price,'2',',','.')}}
                             </p>
                         </div>
                         <div class="prod-qnt-wrap">
@@ -219,7 +217,7 @@
                     </p>
                     <div class="prod-tab prod-tab-desc" id="prod-tab-1">
                         <p>
-                            {{ strtolower($carparts[$i]->part) }}
+                            {{ucfirst($carparts->part)}}
                         </p>
                     </div>
                     <p class="prod-tab-mob" data-prodtab="#prod-tab-2" data-prodtab-num="2">
@@ -404,7 +402,6 @@
                 </div>
             </div>
             <!-- Product Tabs - end -->
-        @endfor
     </div>
 </main>
 <!-- Main Content - end -->

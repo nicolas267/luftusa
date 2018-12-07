@@ -57,7 +57,7 @@
                                                 {{ __('E-Mail Address') }}
                                             </label>
                                             <div class="col-md-6">
-                                                <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" name="email" required="" type="email" value="{{ old('email') }}"/>
+                                                <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" name="email" required="" placeholder="E-Mail Address" type="email" value="{{ old('email') }}"/>
                                                 @if ($errors->has('email'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>

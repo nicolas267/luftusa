@@ -61,7 +61,6 @@ class Carpart extends Controller
     public function edit(carpartModel $datas)
     {
         $cars = carModel::all();
-
     	return view('carparts/edit', compact('datas', 'cars'));
     }
 

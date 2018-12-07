@@ -352,6 +352,7 @@
             </div>
         </div>
         <!-- Popular Items -->
+        @if($products)
         <div class="populars-wrap">
             <div class="cont populars">
                 <h2>
@@ -360,8 +361,7 @@
                 <div class="populars-list">
                     @foreach($products as $product)
                     <div class="popular">
-                        <a class="popular-link" href="product.html">
-                            <p class="popular-img">
+                        <a class="popular-link" href="{{route('products.show',$product->car_part_id)}}">
                                 <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/pop1.jpg"/>
                             </p>
                             <h3>
@@ -396,6 +396,7 @@
             </div>
         </div>
         <!-- Main Content - end -->
+        @endif
     </div>
 </main>
 

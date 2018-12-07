@@ -148,7 +148,7 @@ Route::get('cart', 'Cart@index');
 
 Route::get('main', 'Main@index');
 
-Route::get('product', 'Products@index');
+Route::resource('products','Products');
 
 Route::get('orders', 'Orders@index');
 
