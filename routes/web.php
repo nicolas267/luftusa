@@ -82,9 +82,13 @@ Route::post('carparts/upgrade', 'Carpart@upgrade');
 
 Route::get('/blogs', 'Blog@index');
 
+Route::get('/blog', 'Blog@blog');
+
 Route::get('blogs/create', 'Blog@create')->name('blogsCreate');
 
 Route::get('blogs/edit/{data}', 'Blog@edit')->name('blogsEdit');
+
+Route::get('blogs/show/{data}', 'Blog@show')->name('blogsShow');
 
 Route::get('blogs/destroy/{data}', 'Blog@destroy')->name('blogsDestroy');
 

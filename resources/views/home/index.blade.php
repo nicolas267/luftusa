@@ -352,7 +352,7 @@
             </div>
         </div>
         <!-- Popular Items -->
-        @if($products)
+        @if(count($products)>0)
         <div class="populars-wrap">
             <div class="cont populars">
                 <h2>

@@ -208,34 +208,36 @@
         </div>
         <!-- Catalog Filter - end -->
         <!-- Catalog Items - start -->
-        <div class="section-gallery">
-            @for ($i = 0; $i < count($carparts); $i++)
-            <div class="sectgl">
-                <a class="sectgl-link" href="{{route('products.show',[$carparts[$i]->car_part_id])}}">
-                    <p class="sectgl-img">
-                        <img alt="" src="http://placehold.it/203x190">
-                        </img>
-                    </p>
-                    <h3>
-                        <span>
-                            {{ ucwords($carparts[$i]->part) }}
+        @if(count($carparts))
+            <div class="section-gallery">
+                @for ($i = 0; $i < count($carparts); $i++)
+                <div class="sectgl">
+                    <a class="sectgl-link" href="{{route('products.show',[$carparts[$i]->car_part_id])}}">
+                        <p class="sectgl-img">
+                            <img alt="" src="http://placehold.it/203x190">
+                            </img>
+                        </p>
+                        <h3>
+                            <span>
+                                {{ ucwords($carparts[$i]->part) }}
+                            </span>
+                        </h3>
+                    </a>
+                    <p class="sectgl-info">
+                        <a class="sectgl-categ" href="#">
+                            Helmets
+                        </a>
+                        <span class="sectgl-price">
+                            ${{ number_format($carparts[$i]->price,"2",",",".") }}
                         </span>
-                    </h3>
-                </a>
-                <p class="sectgl-info">
-                    <a class="sectgl-categ" href="#">
-                        Helmets
-                    </a>
-                    <span class="sectgl-price">
-                        ${{ number_format($carparts[$i]->price,"2",",",".") }}
-                    </span>
-                    <a class="sectgl-add" href="#">
-                        + Add to cart
-                    </a>
-                </p>
+                        <a class="sectgl-add" href="#">
+                            + Add to cart
+                        </a>
+                    </p>
+                </div>
+                @endfor
             </div>
-            @endfor
-        </div>
+        @endif
         <!-- Catalog Items - end -->
         <!-- Pagination -->
         <ul class="pager">

@@ -30,9 +30,6 @@
                             Title
                         </th>
                         <th>
-                            Description
-                        </th>
-                        <th>
                             Created At
                         </th>
                         <th>
@@ -47,15 +44,11 @@
                     <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
                         <td>
-                            <?php echo e($blog->names); ?>
+                            <?php echo e($blog->name); ?>
 
                         </td>
                         <td>
                             <?php echo e($blog->title); ?>
-
-                        </td>
-                        <td>
-                            <?php echo e($blog->description); ?>
 
                         </td>
                         <td>
@@ -78,21 +71,6 @@
                         </td>
                     </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <tr>
-                  <td><?php echo e($blog->name); ?></td>
-                  <td><?php echo e($blog->title); ?></td>
-                  <td><?php echo e($blog->description); ?></td>
-                  <td><?php echo e($blog->created_at); ?></td>
-                  <td><?php echo e($blog->updated_at); ?></td>
-                  <td>
-                    <a id="editar" class="btn btn-primary editar" href="<?php echo e(route('blogsEdit',[$blog->blog_id])); ?>"><i class="fa fa-edit">
-                </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="<?php echo e(route('blogsDestroy',[$blog->blog_id])); ?>"><i class="fa fa-remove">
-                </i></a>
-                  </td>
-                </tr>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
                 <tfoot>
                     <tr>

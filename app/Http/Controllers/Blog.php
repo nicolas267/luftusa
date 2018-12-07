@@ -11,6 +11,14 @@ class Blog extends Controller
     function __construct(){
         $this->middleware('auth');
     }
+    public function blog()
+    {
+        $blogs = DB::table('blogs')
+            ->select('blog_id', 'name', 'title', 'description', 'blogs.created_at', 'blogs.updated_at')
+            ->join('users', 'blogs.user_id', '=', 'users.user_id')
+            ->get();
+        return view('blogs/blog')->with('blogs', $blogs);
+    }
     public function index()
     {
         $blogs = DB::table('blogs')
@@ -44,6 +52,16 @@ class Blog extends Controller
     public function edit(blogModel $data)
     {
         return view('blogs/edit', compact('data'));
+    }
+
+     public function show($id)
+    {
+        $blogs = DB::table('blogs')
+            ->select('blog_id', 'name', 'title', 'description', 'blogs.created_at', 'blogs.updated_at')
+            ->join('users', 'blogs.user_id', '=', 'users.user_id')
+            ->where('blogs.blog_id','=',$id)
+            ->first();
+        return view('blogs/show')->with('blogs', $blogs);
     }
 
     public function upgrade()

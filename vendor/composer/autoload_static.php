@@ -93,6 +93,10 @@ class ComposerStaticInit4488430887732dde69307d8b605fc1a9
         array (
             'Illuminate\\' => 11,
         ),
+        'G' => 
+        array (
+            'Genert\\BBCode\\' => 14,
+        ),
         'F' => 
         array (
             'Fideloper\\Proxy\\' => 16,
@@ -257,6 +261,10 @@ class ComposerStaticInit4488430887732dde69307d8b605fc1a9
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
+        ),
+        'Genert\\BBCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/genert/bbcode/src',
         ),
         'Fideloper\\Proxy\\' => 
         array (
@@ -969,6 +977,12 @@ class ComposerStaticInit4488430887732dde69307d8b605fc1a9
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/ValidGenerator.php',
         'Fideloper\\Proxy\\TrustProxies' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustProxies.php',
         'Fideloper\\Proxy\\TrustedProxyServiceProvider' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustedProxyServiceProvider.php',
+        'Genert\\BBCode\\BBCode' => __DIR__ . '/..' . '/genert/bbcode/src/BBCode.php',
+        'Genert\\BBCode\\BBCodeServiceProvider' => __DIR__ . '/..' . '/genert/bbcode/src/BBCodeServiceProvider.php',
+        'Genert\\BBCode\\Facades\\BBCode' => __DIR__ . '/..' . '/genert/bbcode/src/Facades/BBCode.php',
+        'Genert\\BBCode\\Parser\\BBCodeParser' => __DIR__ . '/..' . '/genert/bbcode/src/Parser/BBCodeParser.php',
+        'Genert\\BBCode\\Parser\\HTMLParser' => __DIR__ . '/..' . '/genert/bbcode/src/Parser/HTMLParser.php',
+        'Genert\\BBCode\\Parser\\Parser' => __DIR__ . '/..' . '/genert/bbcode/src/Parser/Parser.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',

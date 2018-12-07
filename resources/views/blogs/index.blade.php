@@ -32,9 +32,6 @@
                             Title
                         </th>
                         <th>
-                            Description
-                        </th>
-                        <th>
                             Created At
                         </th>
                         <th>
@@ -49,13 +46,10 @@
                     @foreach($blogs as $blog)
                     <tr>
                         <td>
-                            {{ $blog->names }}
+                            {{ $blog->name}}
                         </td>
                         <td>
                             {{ $blog->title }}
-                        </td>
-                        <td>
-                            {{ $blog->description }}
                         </td>
                         <td>
                             {{ $blog->created_at }}
@@ -75,21 +69,6 @@
                         </td>
                     </tr>
                     @endforeach
-            @foreach($blogs as $blog)
-                <tr>
-                  <td>{{ $blog->name }}</td>
-                  <td>{{ $blog->title }}</td>
-                  <td>{{ $blog->description }}</td>
-                  <td>{{ $blog->created_at }}</td>
-                  <td>{{ $blog->updated_at }}</td>
-                  <td>
-                    <a id="editar" class="btn btn-primary editar" href="{{route('blogsEdit',[$blog->blog_id])}}"><i class="fa fa-edit">
-                </i></a>
-                    <a id="borrar" class="btn btn-danger borrar" href="{{route('blogsDestroy',[$blog->blog_id])}}"><i class="fa fa-remove">
-                </i></a>
-                  </td>
-                </tr>
-            @endforeach
                 </tbody>
                 <tfoot>
                     <tr>
