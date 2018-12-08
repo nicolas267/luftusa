@@ -163,3 +163,5 @@ Route::get('profile', 'Profile@index');
 Route::post('update', 'Profile@update');
 
 Route::get('shipping', 'Shipping@index');
+
+Route::post('contact', 'Contact@store')->name('contact.store');

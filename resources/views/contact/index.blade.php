@@ -85,10 +85,12 @@
                 <h3>
                     Send us a message
                 </h3>
-                <form action="#" class="form-validate">
-                    <input data-required="text" name="name4" placeholder="Name" type="text"/>
-                    <input data-required="text" data-required-email="email" name="email4" placeholder="Email address" type="text"/>
-                    <input data-required="text" name="phone4" placeholder="Phone number" type="text"/>
+                <form action="#" class="form-validate" method="post">
+                    @csrf
+                    <input data-required="text" name="name" placeholder="Name" type="text"/>
+                    <input data-required="text" data-required-email="email" name="email" placeholder="Email address" type="text"/>
+                    <input data-required="text" name="subject" value="Message from Contact" type="hidden"/>
+                    <textarea name="message" id="" rows="5" data-required="text" placeholder="Message"></textarea>
                     <input type="submit" value="Send"/>
                 </form>
             </div>

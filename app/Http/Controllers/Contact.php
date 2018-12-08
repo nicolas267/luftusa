@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\messageModel;
+use Illuminate\Http\Request;
 
 class Contact extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +16,7 @@ class Contact extends Controller
      */
     public function index()
     {
-       return view('contact/index');
+        return view('contact/index');
     }
 
     /**
@@ -36,7 +37,14 @@ class Contact extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $message = new messageModel();
+        $message->name = $request->name;
+        $message->email = $request->email;
+        $message->subject = $request->subject;
+        $message->message = $request->message;
+        $message->save();
+        return;
+
     }
 
     /**

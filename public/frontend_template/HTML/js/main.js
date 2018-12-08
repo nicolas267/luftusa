@@ -345,10 +345,13 @@ $(document).ready(function () {
 			var form1 = $(this);
 			$.ajax({
 				type: "POST",
-				url: 'php/email.php',
+				url: 'contact',
 				data: $(this).serialize(),
 				success: function(data) {
 					form1.append('<p class="form-result">Thank you!</p>');
+					setTimeout(() => {
+						form1.find('.form-result').remove();
+					}, 3000);
 		            $("form").trigger('reset');
 				}
 			});
