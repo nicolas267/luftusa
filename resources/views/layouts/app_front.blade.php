@@ -94,13 +94,13 @@
 			<!-- Navmenu - start -->
 			<nav id="top-menu">
 				<ul>
-					<li class="active"> 
+					<li class="{{ Request::is('home') ? 'active' : '' }}"> 
 						<a href="{{url('home')}}">Home</a>
 					</li>
-					<li>
+					<li class="{{ Request::is('about') ? 'active' : '' }}"">
 						<a href="{{url('about')}}">About Us</a>
 					</li>
-					<li>
+					<li class="{{ Request::is('store') ? 'active' : '' }}"">
 						<a href="{{url('store')}}">Store</a>
 					</li>
 					<li class="li-logo" style="width: 100px;">
@@ -110,13 +110,13 @@
 							</a>
 						</div>
 					</li>
-					<li>
+					<li class="{{ Request::is('service') ? 'active' : '' }}"">
 						<a href="{{url('service')}}">Services</a>
 					</li>
-					<li>
+					<li class="{{ Request::is('blog') ? 'active' : '' }}"">
 						<a href="{{url('blog')}}">Blogs</a>
 					</li>
-					<li>
+					<li class="{{ Request::is('contact') ? 'active' : '' }}"">
 						<a href="{{url('contact')}}">Contact</a>
 					</li>
 				</ul>
@@ -193,7 +193,7 @@
 
 			</div>
 			<div class="copyright">
-				<p class="cont">© 2018 Luft technik All Rights Received. Design By Ushuaia Creative</p>
+				<p class="cont">© 2018 Luft technik All Rights Received. Design By <strong>Ushuaia Creative</strong></p>
 			</div>
 		</footer>
 		<!-- Footer - end -->
