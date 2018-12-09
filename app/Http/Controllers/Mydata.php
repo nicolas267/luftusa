@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Hash;
 
 class Mydata extends Controller
 {
-    function __construct(){
-        $this->middleware('auth');
-    }
     
     public function edit()
     {

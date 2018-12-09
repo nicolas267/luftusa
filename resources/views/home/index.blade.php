@@ -352,43 +352,49 @@
             </div>
         </div>
         <!-- Popular Items -->
-        @if(count($products)>0)
         <div class="populars-wrap">
             <div class="cont populars">
                 <h2>
                     Popular
                 </h2>
                 <div class="populars-list">
-                    @foreach($products as $product)
-                    <form action="{{route('cart.store')}}" method="post">
-                        <div class="popular">
-                            <a class="popular-link" href="{{route('products.show',$product->car_part_id)}}">
-                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-slider/2.png"/>
-                                <h3>
-                                    <span>
-                                        {{ucwords($product->part)}}
-                                    </span>
-                                </h3>
-                            </a>
-                                @csrf
-                                <p class="popular-info">
-                                    <a class="popular-categ" href="#">
-                                        Helmets
-                                    </a>
-                                    <span class="popular-price">
-                                        ${{number_format($product->price,'2',',','.')}}
-                                    </span>
-                                    <input type="hidden" name="id" value="{{$product->car_part_id}}">
-                                    <input type="hidden" name="name" value="{{$product->part}}">
-                                    <input type="hidden" name="price" value="{{$product->price}}">
-                                    <input type="hidden" name="qty" value="1">
-                                    <button type="submit" class="popular-add">
-                                        + Add to cart
-                                    </button>
-                                </p>
-                        </div>
-                    </form>
-                    @endforeach
+                    @if(count($products)>0)
+                        @foreach($products as $product)
+                        <form action="{{route('cart.store')}}" method="post">
+                            <div class="popular">
+                                <a class="popular-link" href="{{route('products.show',$product->car_part_id)}}">
+                                    <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-slider/2.png"/>
+                                    <h3>
+                                        <span>
+                                            {{ucwords($product->part)}}
+                                        </span>
+                                    </h3>
+                                </a>
+                                    @csrf
+                                    <p class="popular-info">
+                                        <a class="popular-categ" href="#">
+                                            Helmets
+                                        </a>
+                                        <span class="popular-price">
+                                            ${{number_format($product->price,'2',',','.')}}
+                                        </span>
+                                        <input type="hidden" name="id" value="{{$product->car_part_id}}">
+                                        <input type="hidden" name="name" value="{{$product->part}}">
+                                        <input type="hidden" name="price" value="{{$product->price}}">
+                                        <input type="hidden" name="qty" value="1">
+                                        <button type="submit" class="popular-add">
+                                            + Add to cart
+                                        </button>
+                                    </p>
+                            </div>
+                        </form>
+                        @endforeach
+
+                    @else
+                    <div class="popular" style="width: 100%; height: 200px; min-height:0px;">
+                        <h1 style="text-align: center; margin-top: 5%;">No data found</h1>
+                    </div>
+                    @endif
                 </div>
                 <p class="popular-more">
                     <a href="#">
@@ -402,7 +408,6 @@
             </div>
         </div>
         <!-- Main Content - end -->
-        @endif
     </div>
 </main>
 

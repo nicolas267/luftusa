@@ -10,9 +10,6 @@ use Illuminate\Support\Facades\Hash;
 
 class User extends Controller
 {
-    function __construct(){
-        $this->middleware('auth');
-    }
     public function index()
     {
     	$users =   DB::table('users')

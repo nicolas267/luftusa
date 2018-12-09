@@ -62,7 +62,6 @@
         </div>
         <!-- Slider About us - end -->
     </div>
-    @if(count($galleries)>0)
         <div class="cont maincont">
             <h1>
                 <span>
@@ -74,6 +73,7 @@
             <span class="maincont-line2 maincont-line22">
             </span>
             <!-- Gallery About us - start -->
+        @if(count($galleries)>0)
             <ul class="about-gallery" id="about-gallery">
                 <li class="grid-sizer">
                 </li>
@@ -88,9 +88,16 @@
                     </li>
                 @endforeach
             </ul>
-            <!-- Gallery About us - end -->
+        @else
+            <div class="sectls" style="height: 150px; background: white; margin-top: 20px; position: relative; z-index: 1">
+                <div style="padding: 30px; width: 100%;">
+                    <h1 style="margin-left: 40%; margin-top: 3%;">
+                        No data found
+                    </h1>
+                </div>
+            </div>
+        @endif
         </div>
-    @endif
 </main>
 <!-- Main Content - end -->
 @endsection

@@ -11,9 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class Car extends Controller
 {
-    function __construct(){
-        $this->middleware('auth');
-    }
+   
     public function index()
     {
         $cars = DB::table('cars')

@@ -41,9 +41,9 @@
             </li>
         </ul>
         <!-- Orders List - start -->
-        @if($orders)
-            @foreach($orders as $order)
-                <div class="section-list orders-list">
+        <div class="section-list orders-list">
+            @if(count($orders)>0)
+                @foreach($orders as $order)
                     <div class="sectls">
                         <a class="sectls-img" href="product.html">
                             <img alt="" src="http://placehold.it/203x190">
@@ -107,9 +107,15 @@
                             </p>
                         </div>
                     </div>
+                @endforeach
+            @else
+                <div class="sectls" style="padding: 20px; height: 150px;">
+                    <div class="sectls-cont">
+                        <h1 style="text-align: center; margin-top: 1%;">No data found</h1>
+                    </div>
                 </div>
-            @endforeach
-        @endif
+            @endif
+        </div>
         <!-- Orders List - end -->
         <!-- Pagination -->
         <div class="pager">

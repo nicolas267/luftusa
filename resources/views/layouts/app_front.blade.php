@@ -7,8 +7,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
 
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/zabuto_calendar.css">
@@ -148,8 +148,8 @@
 				<div class="footer-menu">
 					<p>Company</p>
 					<ul>
-						<li><a href="#">Shipping</a></li>
-						<li><a href="#">About us</a></li>
+						<li><a href="{{url('main')}}">Shipping</a></li>
+						<li><a href="{{url('about')}}">About us</a></li>
 						<li><a href="#">Services</a></li>
 					</ul>
 				</div>
@@ -157,17 +157,17 @@
 					<p>Information</p>
 					<ul>
 						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Site Map</a></li>
+						<li><a href="{{url('contact')}}">Site Map</a></li>
 
 					</ul>
 				</div>
 				<div class="footer-menu">
 					<p>Account & Orders</p>
 					<ul>
-						<li><a href="#">My Account</a></li>
+						<li><a href="{{url('profile')}}">My Account</a></li>
 						<li><a href="#">My Garage</a></li>
-						<li><a href="#">Shopping Cart</a></li>
-						<li><a href="#">Order Status</a></li>
+						<li><a href="{{url('cart')}}">Shopping Cart</a></li>
+						<li><a href="{{url('orders')}}">Order Status</a></li>
 					</ul>
 				</div>
 
@@ -233,7 +233,7 @@
 		<script src="{{Request::root()}}/public/frontend_template/HTML/js/ion.rangeSlider.min.js"></script>
 
 		<script src="{{Request::root()}}/public/frontend_template/HTML/js/main.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<!--<script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script>
 			"use strict";
 			// Range Slider
@@ -270,7 +270,7 @@
 				    $('#range_year_ttl').html(value[0] + " - " + value[1]);
 				});
 			});
-		</script>
+		</script>-->
 		<script>
 			$.ajaxSetup({
 		        headers: {

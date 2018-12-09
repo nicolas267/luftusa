@@ -7,10 +7,6 @@ use App\Http\Controllers\Controller;
 
 class Admin extends Controller
 {
-    function __construct(){
-        $this->middleware('auth');
-    }
-
     public function index()
     {
         return view('home');

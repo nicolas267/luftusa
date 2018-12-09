@@ -10,7 +10,7 @@
         </h1>
         <span class="maincont-line1 maincont-line12" style="margin-left: 32px;">
         </span>
-        <span class="maincont-line2 maincont-line22" style="margin-bottom:500px;">
+        <span class="maincont-line2 maincont-line22" style="margin-bottom:40px;">
         </span>
         <div class="section-top">
             <a class="section-menu-btn" href="#" id="section-menu-btn">
@@ -208,8 +208,8 @@
         </div>
         <!-- Catalog Filter - end -->
         <!-- Catalog Items - start -->
-        @if(count($carparts))
-            <div class="section-gallery">
+        <div class="section-gallery">
+            @if(count($carparts)>0)
                 @for ($i = 0; $i < count($carparts); $i++)
                 <div class="sectgl">
                     <a class="sectgl-link" href="{{route('products.show',[$carparts[$i]->car_part_id])}}">
@@ -243,8 +243,16 @@
                     </form>
                 </div>
                 @endfor
-            </div>
-        @endif
+            @else
+                <div class="sectls" style="height: 150px; background: white; margin-top: 20px; position: relative; z-index: 1">
+                    <div style="padding: 30px; width: 100%;">
+                        <h1 style="margin-left: 40%; margin-top: 3%;">
+                            No data found
+                        </h1>
+                    </div>
+                </div>
+            @endif
+        </div>
         <!-- Catalog Items - end -->
         <!-- Pagination -->
         <div class="pager">

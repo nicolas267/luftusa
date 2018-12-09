@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class Cartype extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     public function index()
     {
         $carstype = cartypeModel::all();
