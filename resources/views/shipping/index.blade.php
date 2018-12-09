@@ -199,7 +199,7 @@
         </div>
     </div>
     <div class="pucharse">
-        <a href="#">Pucharse</a>
+        <a href="{{url('orders')}}">Pucharse</a>
     </div>
 </main>
 @endsection

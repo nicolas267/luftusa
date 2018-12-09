@@ -7,7 +7,7 @@ use App\models\cartypeModel;
 use App\models\carmodelModel;
 use App\models\carversionModel;
 use App\models\ordersModel;
-use App\models\Orders_products;
+use App\models\Orders_productsModel;
 use App\Http\Controllers\Controller;
 use DB;
 

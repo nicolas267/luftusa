@@ -24,10 +24,10 @@
                 </a>
             </li>
             <li>
-                <a href="cart.html">
+                <a href="{{url('cart')}}">
                     Shopping Cart
                     <span>
-                        5
+                        {{ count( Cart::getContent())}}
                     </span>
                 </a>
             </li>
@@ -35,126 +35,86 @@
                 <a href="orders.html">
                     Order Status
                     <span>
-                        12
+                        {{count($orders)}}
                     </span>
                 </a>
             </li>
         </ul>
         <!-- Orders List - start -->
-        <div class="section-list orders-list">
-            <div class="sectls">
-                <a class="sectls-img" href="product.html">
-                    <img alt="" src="http://placehold.it/203x190">
-                    </img>
-                </a>
-                <div class="sectls-cont">
-                    <div class="sectls-ttl-wrap">
-                        <p>
-                            <a href="#">
-                                Suspensions
-                            </a>
-                        </p>
-                        <h3>
-                            <a href="product.html">
-                                Quisque rutrum nunc eget nisl auctor
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="sectls-price-wrap">
-                        <p>
-                            Purchased
-                        </p>
-                        <p class="sectls-price">
-                            2 items
-                        </p>
-                    </div>
-                    <div class="sectls-col2-wrap">
-                        <p>
-                            Destination
-                        </p>
-                        <p class="sectls-col2">
-                            IA - US
-                        </p>
-                    </div>
-                    <div class="sectls-col3-wrap">
-                        <p>
-                            Status
-                        </p>
-                        <p class="sectls-col3">
-                            Shipping
-                        </p>
-                    </div>
-                    <div class="sectls-total-wrap">
-                        <p>
-                            Order amount
-                        </p>
-                        <p class="sectls-total">
-                            $200
-                        </p>
+        @if($orders)
+            @foreach($orders as $order)
+                <div class="section-list orders-list">
+                    <div class="sectls">
+                        <a class="sectls-img" href="product.html">
+                            <img alt="" src="http://placehold.it/203x190">
+                            </img>
+                        </a>
+                        <div class="sectls-cont">
+                            <div class="sectls-ttl-wrap">
+                                <p>
+                                    <a href="#">
+                                        Suspensions
+                                    </a>
+                                </p>
+                                <h3>
+                                    <a href="product.html">
+                                        {{ucwords($order->part)}}
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="sectls-price-wrap">
+                                <p>
+                                    Purchased
+                                </p>
+                                <p class="sectls-price">
+                                    {{$order->quantity}} items
+                                </p>
+                            </div>
+                            <div class="sectls-col2-wrap">
+                                <p>
+                                    Destination
+                                </p>
+                                <p class="sectls-col2">
+                                    IA - US
+                                </p>
+                            </div>
+                            <div class="sectls-col3-wrap">
+                                <p>
+                                    Status
+                                </p>
+                                <p class="sectls-col3">
+                                    Shipping
+                                </p>
+                            </div>
+                            <div class="sectls-total-wrap">
+                                <p>
+                                    Order amount
+                                </p>
+                                <p class="sectls-total">
+                                    ${{number_format($order->subtotal,'2',',','.')}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sectls-info">
+                            <p class="sectls-add">
+                                <a href="{{route('orderDestroy',$order->order_product_id)}}">
+                                    Cancel the order
+                                </a>
+                            </p>
+                            <p class="sectls-favorites">
+                                <a href="#">
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="sectls-info">
-                    <p class="sectls-add">
-                        <a href="#">
-                            Cancel the order
-                        </a>
-                    </p>
-                    <p class="sectls-favorites">
-                        <a href="#">
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
+            @endforeach
+        @endif
         <!-- Orders List - end -->
         <!-- Pagination -->
-        <ul class="pager">
-            <li>
-                <a href="#">
-                    1
-                </a>
-            </li>
-            <li class="dots">
-                <a href="#">
-                    ...
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    1
-                </a>
-            </li>
-            <li class="active">
-                <a href="#">
-                    2
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    3
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    4
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    5
-                </a>
-            </li>
-            <li class="dots">
-                <a href="#">
-                    ...
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    12
-                </a>
-            </li>
-        </ul>
+        <div class="pager">
+            {{ $orders->links()}}
+        </div>
     </div>
 </main>
 <!-- Main Content - end -->

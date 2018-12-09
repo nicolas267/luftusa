@@ -360,28 +360,34 @@
                 </h2>
                 <div class="populars-list">
                     @foreach($products as $product)
-                    <div class="popular">
-                        <a class="popular-link" href="{{route('products.show',$product->car_part_id)}}">
-                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/pop1.jpg"/>
-                            </p>
-                            <h3>
-                                <span>
-                                    {{ucwords($product->part)}}
-                                </span>
-                            </h3>
-                        </a>
-                        <p class="popular-info">
-                            <a class="popular-categ" href="#">
-                                Helmets
+                    <form action="{{route('cart.store')}}" method="post">
+                        <div class="popular">
+                            <a class="popular-link" href="{{route('products.show',$product->car_part_id)}}">
+                                <img alt="" src="{{Request::root()}}/public/frontend_template/HTML/img/front-slider/2.png"/>
+                                <h3>
+                                    <span>
+                                        {{ucwords($product->part)}}
+                                    </span>
+                                </h3>
                             </a>
-                            <span class="popular-price">
-                                ${{number_format($product->price,'2',',','.')}}
-                            </span>
-                            <a class="popular-add" href="#">
-                                + Add to cart
-                            </a>
-                        </p>
-                    </div>
+                                @csrf
+                                <p class="popular-info">
+                                    <a class="popular-categ" href="#">
+                                        Helmets
+                                    </a>
+                                    <span class="popular-price">
+                                        ${{number_format($product->price,'2',',','.')}}
+                                    </span>
+                                    <input type="hidden" name="id" value="{{$product->car_part_id}}">
+                                    <input type="hidden" name="name" value="{{$product->part}}">
+                                    <input type="hidden" name="price" value="{{$product->price}}">
+                                    <input type="hidden" name="qty" value="1">
+                                    <button type="submit" class="popular-add">
+                                        + Add to cart
+                                    </button>
+                                </p>
+                        </div>
+                    </form>
                     @endforeach
                 </div>
                 <p class="popular-more">

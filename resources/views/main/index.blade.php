@@ -223,70 +223,33 @@
                             </span>
                         </h3>
                     </a>
-                    <p class="sectgl-info">
-                        <a class="sectgl-categ" href="#">
-                            Helmets
-                        </a>
-                        <span class="sectgl-price">
-                            ${{ number_format($carparts[$i]->price,"2",",",".") }}
-                        </span>
-                        <a class="sectgl-add" href="#">
-                            + Add to cart
-                        </a>
-                    </p>
+                    <form action="{{route('cart.store')}}" method="post">
+                        @csrf
+                        <p class="sectgl-info">
+                            <a class="sectgl-categ" href="#">
+                                Helmets
+                            </a>
+                            <span class="sectgl-price">
+                                ${{ number_format($carparts[$i]->price,"2",",",".") }}
+                            </span>
+                            <input type="hidden" name="id" value="{{$carparts[$i]->car_part_id}}">
+                            <input type="hidden" name="name" value="{{$carparts[$i]->part}}">
+                            <input type="hidden" name="price" value="{{$carparts[$i]->price}}">
+                            <input type="hidden" name="qty" value="1">
+                            <button type="submit" class="sectgl-add">
+                                + Add to cart
+                            </button>
+                        </p>
+                    </form>
                 </div>
                 @endfor
             </div>
         @endif
         <!-- Catalog Items - end -->
         <!-- Pagination -->
-        <ul class="pager">
-            <li>
-                <a href="#">
-                    1
-                </a>
-            </li>
-            <li class="dots">
-                <a href="#">
-                    ...
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    1
-                </a>
-            </li>
-            <li class="active">
-                <a href="#">
-                    2
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    3
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    4
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    5
-                </a>
-            </li>
-            <li class="dots">
-                <a href="#">
-                    ...
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    12
-                </a>
-            </li>
-        </ul>
+        <div class="pager">
+            {{ $carparts->links()}}
+        </div>
     </div>
 </main>
 @endsection

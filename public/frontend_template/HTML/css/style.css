@@ -114,9 +114,24 @@ input:focus {
 }
 
 
+.alert{
+	position: relative;
+	padding:.75rem 1.25rem;
+	margin-bottom:1rem;
+	border:1px solid transparent;
+	border-radius:.25rem
+}
 
-
-
+.alert-success{
+	color:#135d23;
+	background-color:#d3f0d9;
+	border-color:#c2eaca
+}
+.alert-danger{
+	color:#7d2c38;
+	background-color:#fcdde2;
+	border-color:#fbcfd6
+}
 
 .cont {
 	width: 1200px;
@@ -498,7 +513,7 @@ input:focus {
     position: absolute;
     height: 100%;
     padding: 0;
-    width: 10%;
+    width: 11%;
     left: 20px;
     display: inline;
     top: 30px;
@@ -1644,7 +1659,7 @@ input:focus {
 	content: '';
 	display: block;
 }
-.populars .popular {
+.populars form .popular {
 	border-radius: 4px;
 	background: #fff;
 	float: left;
@@ -1749,19 +1764,28 @@ input:focus {
 	font-weight: 600;
 	margin: 0 0 3px;
 }
-.populars .popular .popular-info .popular-add {
+.populars .popular .popular-info button{
 	transition: all 0.3s; 
 	text-transform: uppercase;
 	position: absolute;
 	color: #ff0302;
 	font-weight: 700;
 	border-bottom: 2px solid #ff0302;
+	border-top: 0px solid transparent;
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
 	font-size: 14px;
 	top: 0;
 	right: 0;
 	/*display: none;*/
 	opacity: 0;
+	background: transparent;
 }
+.populars .popular .popular-info button:hover{
+	cursor: pointer;
+}
+
+
 /*.populars .popular .popular-info .popular-add:hover {
 	border-bottom: 2px solid transparent;
 }*/
@@ -2187,17 +2211,17 @@ input:focus {
 
 /* PAGINATION */
 
-ul.pager {
+.pager {
 	clear: both;
 	text-align: right;
 	padding: 10px 8px;
 }
-ul.pager li {
+.pager li {
 	display: inline-block;
-	margin: 0 0 10px;
 	vertical-align: top;
 	font-size: 12px;
 	font-weight: 700;
+	padding: 2px 15px;
 }
 ul.pager li a {
 	transition: all 0.2s;
@@ -2234,18 +2258,19 @@ ul.pager li form input{
 	left: 50%;
 	margin: 0 0 0 -6px;
 }*/
-ul.pager li a:hover {
+div.pager li a:hover {
 	color: #ff0302;
 }
 /*ul.pager li a:hover:after {
 	opacity: 1;
 }*/
-ul.pager li.active a {
+div.pager li.active{
 	border-radius: 30px;
 	background: rgba(0,0,0,0.5);
 	color: #fff;
+	padding: 2px 15px;
 }
-ul.pager li.dots a {
+div.pager li.dots{
 	color: black;
 }
 
@@ -2943,6 +2968,32 @@ ul.pager li.dots a {
     text-transform: uppercase;
     position: relative;
 }
+.section-list .sectls-update button{
+    float: right;
+    width: 195px;
+    text-align: center;
+    padding: 17px 0 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #868ca7;
+    text-transform: uppercase;
+    position: relative;
+}
+.section-list .sectls-update button:hover{
+	cursor: pointer;
+	color: red;
+}
+.section-list .sectls-update button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1px;
+    background:  #c2c2c2;
+    height: 36px;
+    margin: 0 0 0;
+    top: 9px;
+    left: 0;
+}
 .section-list .sectls-add:after {
     position: absolute;
     content: '';
@@ -3159,12 +3210,20 @@ ul.pager li.dots a {
 	color: #ff0302;
 	font-weight: 700;
 	border-bottom: 2px solid #ff0302;
+	border-top: 0px solid transparent;
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
 	font-size: 14px;
 	top: 0;
 	right: 0;
 	/*display: none;*/
 	opacity: 0;
+	background: transparent;
 }
+.section-gallery .sectgl .sectgl-info .sectgl-add:hover {
+	cursor: pointer;
+}
+
 /*.section-gallery .sectgl .sectgl-info .sectgl-add:hover {
 	border-bottom: 2px solid transparent;
 }*/
@@ -5082,7 +5141,7 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
 	position: relative;
 	font-weight: bold;
 }
-.mmenu .payment,.reset,.addresses{
+.mmenu .payment2,.reset,.addresses{
 	width: 10%;
 	float: left;
 	position: relative;
@@ -5113,6 +5172,7 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
 }
 .contacts a:hover {
 	border-bottom: 1px solid #ff0302;
+	cursor: pointer;
 }
 .contacts-col1 {
     float: left;

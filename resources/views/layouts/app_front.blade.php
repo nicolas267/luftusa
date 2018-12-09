@@ -31,7 +31,7 @@
 			<div class="header-info">
 				<!-- Personal Menu -->
 				<div class="header-personal">
-					<a href="#" class="header-gopersonal"></a>
+					<a href="{{url('profile')}}" class="header-gopersonal"></a>
 					@if (!Auth::guest())
 						<ul>
 							<li>
@@ -41,7 +41,7 @@
 								<a href="#">Bookmarks <span>6</span></a>
 							</li>
 							<li>
-								<a href="{{url('cart')}}">Shopping Cart <span>5</span></a>
+								<a href="{{url('cart')}}">Shopping Cart <span>{{ count( Cart::getContent())}}</span></a>
 							</li>
 							<li class="header-order">
 								<a href="{{url('orders')}}">Order Status</a>
@@ -70,6 +70,7 @@
 					<div class="header-cart-inner">
 						<p class="header-cart-count">
 							<img src="{{Request::root()}}/public/frontend_template/HTML/img/cart.png" alt="">
+							<span>{{ count( Cart::getContent())}}</span>
 						</p>
 					</div>
 				</a>
@@ -284,7 +285,7 @@
 		           url:'{{action('Newsletter@store')}}',
 		           data:{email:email},
 		           success:function(data){
-		              $('.alert_success').html('<div class="alert alert-success alert-dismissible fade show" role="alert">'+
+		              $('.alert_success').html('<div class="alert alert-success">'+
 						  ''+data.success+'</div>');
 		           }
 		        });

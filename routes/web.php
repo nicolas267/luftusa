@@ -150,11 +150,17 @@ Route::post('galleries/upgrade/{data}', 'Gallery@upgrade')->name('galleriesUpdat
 
 Route::get('cart', 'Cart@index');
 
+Route::get('cartController/destroy/{id}', 'CartController@destroy')->name('cartDestroy');
+
+Route::resource('cart','CartController');
+
 Route::get('main', 'Main@index');
 
 Route::resource('products','Products');
 
 Route::get('orders', 'Orders@index');
+
+Route::get('orders/destroy/{id}', 'Orders@destroy')->name('orderDestroy');
 
 Auth::routes();
 

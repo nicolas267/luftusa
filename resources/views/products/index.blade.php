@@ -130,58 +130,64 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="prod-info">
-                        <div class="prod-price-wrap">
-                            <p>
-                                Price
-                            </p>
-                            <p class="prod-price">
-                               ${{number_format($carparts->price,'2',',','.')}}
-                            </p>
-                        </div>
-                        <div class="prod-qnt-wrap">
-                            <p>
-                                Quantity
-                            </p>
-                            <p class="qnt-wrap prod-qnt">
-                                <a class="qnt-minus prod-minus" href="#">
-                                    -
-                                </a>
-                                <input type="text" value="1">
+                    <form action="{{route('cart.store')}}" method="post">
+                        @csrf
+                        <div class="prod-info">
+                            <div class="prod-price-wrap">
+                                <p>
+                                    Price
+                                </p>
+                                <p class="prod-price">
+                                   ${{number_format($carparts->price,'2',',','.')}}
+                                </p>
+                            </div>
+                            <div class="prod-qnt-wrap">
+                                <p>
+                                    Quantity
+                                </p>
+                                <p class="qnt-wrap prod-qnt">
+
+                                    <a class="qnt-minus prod-minus" href="#">
+                                        -
+                                    </a>
+                                    <input type="text" value="1" name="qty">
                                     <a class="qnt-plus prod-plus" href="#">
                                         +
                                     </a>
-                                </input>
+                                </p>
+                            </div>
+                            <div class="prod-total-wrap">
+                                <p>
+                                    Total
+                                </p>
+                                <p class="prod-total">
+                                    $3900
+                                </p>
+                            </div>
+                            <div class="prod-shipping-wrap">
+                                <p>
+                                    Shipping
+                                </p>
+                                <p class="prod-shipping">
+                                    Free
+                                </p>
+                            </div>
+                        </div>
+                        <div class="prod-actions" >
+                            <p class="prod-favorites">
+                                <a href="#">
+                                </a>
+                            </p>
+                            <p class="prod-add">
+                            <input type="hidden" name="id" value="{{$carparts->car_part_id}}">
+                            <input type="hidden" name="name" value="{{$carparts->part}}">
+                            <input type="hidden" name="price" value="{{$carparts->price}}">
+                            <button type="submit" class="popular-add">
+                                + Add to cart
+                            </button>
                             </p>
                         </div>
-                        <div class="prod-total-wrap">
-                            <p>
-                                Total
-                            </p>
-                            <p class="prod-total">
-                                $3900
-                            </p>
-                        </div>
-                        <div class="prod-shipping-wrap">
-                            <p>
-                                Shipping
-                            </p>
-                            <p class="prod-shipping">
-                                Free
-                            </p>
-                        </div>
-                    </div>
-                    <div class="prod-actions" >
-                        <p class="prod-favorites">
-                            <a href="#">
-                            </a>
-                        </p>
-                        <p class="prod-add">
-                            <a href="#">
-                                Add to cart
-                            </a>
-                        </p>
-                    </div>
+                    </form>
                 </div>
                 <!-- Product Content - end -->
             </div>

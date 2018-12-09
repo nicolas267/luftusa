@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Illuminate\Support\Facades\Session;
 class LoginController extends Controller
 {
     /*
@@ -48,7 +48,8 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect()->route('home');
         } else {
-            return back()->withErrors(['email' => trans('auth.failed')]);
+            Session::flash('message',trans('auth.failed'));
+            return redirect('login');
         }
     }
 

@@ -14,11 +14,11 @@
         </span>
         <!-- Contacts - start -->
         <div class="pagecont contacts">
-            <div class="mmenu" >
+            <div class="mmenu">
                 <div class="profile"><a href="" title="">Profile</a></div>
                 <div class="reset"><a href="" title="">Reset</a></div>
                 <div class="addresses"><a href="" title="">Addresses</a></div>
-                <div class="payment"><a href="" title="">Payment</a></div>
+                <div class="payment2"><a shref="" title="">Payment</a></div>
             </div>
             <div class="img-profile">
                 <img src="{{Request::root()}}/public/frontend_template/HTML/img/logo.png" alt="">

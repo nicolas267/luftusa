@@ -79,43 +79,9 @@
 		            		@endforeach
 		                </div>
 		                <!-- Pagination -->
-		                <ul class="pager">
-		                    <li>
-		                        <a href="#">
-		                            1
-		                        </a>
-		                    </li>
-		                    <li class="active">
-		                        <a href="#">
-		                            2
-		                        </a>
-		                    </li>
-		                    <li>
-		                        <a href="#">
-		                            3
-		                        </a>
-		                    </li>
-		                    <li>
-		                        <a href="#">
-		                            4
-		                        </a>
-		                    </li>
-		                    <li>
-		                        <a href="#">
-		                            5
-		                        </a>
-		                    </li>
-		                    <li class="dots">
-		                        <a href="#">
-		                            ...
-		                        </a>
-		                    </li>
-		                    <li>
-		                        <a href="#">
-		                            12
-		                        </a>
-		                    </li>
-		                </ul>
+		                <div class="pager">
+				            {{ $blogs->links()}}
+				        </div>
 		            </div>
 	            <!-- Blog Posts List - end -->
 	        </div>

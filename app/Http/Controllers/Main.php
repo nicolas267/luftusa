@@ -20,7 +20,7 @@ class Main extends Controller
     	$carparts = DB::table('car_parts')
             ->select('car_part_id', 'part', 'car_model_id', 'car_version_id', 'year', 'price', 'stock', 'car_parts.created_at', 'car_parts.updated_at')
             ->join('cars','car_parts.car_id','=','cars.car_id')
-            ->get();
+            ->orderBy('car_part_id','desc')->paginate(8);
             foreach ($carparts as $carpart) {
 
                 array_push($versions, CarversionModel::where('car_version_id', $carpart->car_version_id)
