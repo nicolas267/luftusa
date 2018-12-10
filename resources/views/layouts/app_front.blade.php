@@ -206,7 +206,7 @@
 
 			</div>
 			<div class="copyright">
-				<p class="cont">© 2018 Luft technik All Rights Received. Design By <strong>Ushuaia Creative</strong></p>
+				<p class="cont">© 2018 Luft technik All Rights Received. Design By <strong><a href="http://ushuaiacreative.com" target="_blank">Ushuaia Creative</a></strong></p>
 			</div>
 		</footer>
 		<!-- Footer - end -->
