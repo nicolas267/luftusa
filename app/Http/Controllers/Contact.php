@@ -39,7 +39,7 @@ class Contact extends Controller
     {
         $message = new messageModel();
         $message->name = $request->name;
-        $message->email = $request->email;
+        $message->email = $request->email2;
         $message->subject = $request->subject;
         $message->message = $request->message;
         $message->save();
