@@ -177,3 +177,5 @@ Route::get('logout', 'Auth\LoginController@logout');
 
 
 Route::get('shipping', 'Shipping@index');
+
+Route::post('contact', 'Contact@store')->name('contact.store');
