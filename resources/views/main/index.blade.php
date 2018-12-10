@@ -17,7 +17,7 @@
                 Catalog
             </a>
             <div class="section-shipping" style="height: 15px;">
-            </div>
+            </div>s
             <div class="section-menu-wrap" id="section-menu-wrap">
                 <div class="section-menu">
                     <p class="section-menu-ttl">

@@ -7,8 +7,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{Request::root()}}/public/frontend_template/HTML/css/zabuto_calendar.css">
@@ -233,7 +233,7 @@
 		<script src="{{Request::root()}}/public/frontend_template/HTML/js/ion.rangeSlider.min.js"></script>
 
 		<script src="{{Request::root()}}/public/frontend_template/HTML/js/main.js"></script>
-		<!--<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script>
 			"use strict";
 			// Range Slider
@@ -270,7 +270,7 @@
 				    $('#range_year_ttl').html(value[0] + " - " + value[1]);
 				});
 			});
-		</script>-->
+		</script>
 		<script>
 			$.ajaxSetup({
 		        headers: {

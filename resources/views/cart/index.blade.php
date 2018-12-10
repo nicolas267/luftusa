@@ -22,8 +22,8 @@
                         12
                     </span>
                 </a>
-                <li>
-                    <a href="{{url('main')}}">
+                <li class="active">
+                    <a href="{{url('cart')}}">
                         Shopping Cart
                         <span>
                             {{$data->count()}}
@@ -35,7 +35,7 @@
                 <a href="{{url('orders')}}">
                     Order Status
                     <span>
-                        12
+                        
                     </span>
                 </a>
             </li>
@@ -55,8 +55,8 @@
                         </img>
                     </a>
                     <form action="{{route('cart.update',$data->id)}}" method="POST">
-    	                @method('PUT')
                         @csrf
+                        @method('PUT')
     	                <div class="sectls-cont">
     	                    <div class="sectls-ttl-wrap">
     	                        <p>

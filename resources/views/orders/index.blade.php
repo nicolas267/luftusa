@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li class="active">
-                <a href="orders.html">
+                <a href="{{url('orders')}}">
                     Order Status
                     <span>
                         {{count($orders)}}

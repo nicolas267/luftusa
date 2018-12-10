@@ -10,6 +10,7 @@ use App\models\carversionModel;
 use App\models\ordersModel;
 use App\models\orders_productsModel;
 use DB;
+use Session;
 class Orders extends Controller
 {
     /**
@@ -30,7 +31,7 @@ class Orders extends Controller
         ->paginate(5);
         $carstype    = cartypeModel::all();
         $carmodel    = carmodelModel::all();
-        $carversions = carversionModel::all();  
+        $carversions = carversionModel::all(); 
         return view('orders/index',compact('carstype','carmodel','carversions','orders'));
     }
 
