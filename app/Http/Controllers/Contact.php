@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\messageModel;
+use App\models\messageModel;
 use Illuminate\Http\Request;
 
 class Contact extends Controller
