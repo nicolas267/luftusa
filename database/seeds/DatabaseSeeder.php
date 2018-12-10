@@ -13,11 +13,11 @@ class DatabaseSeeder extends Seeder
     {
         //$this->call(usertypeSeeder::class);
         //$this->call(userSeeder::class);
-        factory(App\Models\usersModels::class, 2)->create();
+        factory(App\models\usersModels::class, 2)->create();
        // factory(App\Models\carModel::class, 5)->create();
-        factory(App\Models\carpartModel::class, 5)->create();
+        factory(App\models\carpartModel::class, 5)->create();
         // factory(App\Models\caryearModel::class, 5)->create();
-        factory(App\Models\cartypeModel::class, 5)->create();
+        factory(App\models\cartypeModel::class, 5)->create();
 
 
 
