@@ -35,7 +35,7 @@
                 <a href="{{url('orders')}}">
                     Order Status
                     <span>
-                        
+                        {{count($orders)}}
                     </span>
                 </a>
             </li>
