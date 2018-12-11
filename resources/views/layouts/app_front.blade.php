@@ -173,7 +173,7 @@
 				</div>
 
 				<div class="footer-info">
-					<p class="footer-msg">Our online support is available <a class="callback" href="#">Send us a message</a></p>
+					<p class="footer-msg">Our online support is available <a class="callbac" href="{{url('contact')}}">Send us a message</a></p>
 					<ul class="footer-social">
 						<li>
 							<a rel="nofollow" target="_blank" href="http://facebook.com">
