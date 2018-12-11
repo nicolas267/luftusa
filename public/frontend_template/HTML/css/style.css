@@ -844,6 +844,10 @@ input:focus {
 
 /* WRAPPER */
 
+.main-blogs{
+	min-height: 70vh;
+}
+
 
 
 
@@ -6130,7 +6134,7 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
     border-radius: 2px;
     color: #fff;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 14px;
     position: absolute;
     height: 34px;
@@ -6162,7 +6166,7 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
 	margin-bottom: 0;
 	padding-top: 0;
 	padding-bottom: 0;
-	font-weight: bold;
+	font-weight: 400;
 }
 /* FOOTER -- end */
 

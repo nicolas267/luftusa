@@ -1,7 +1,7 @@
 @extends('layouts.app_front')
 
 @section('content')
-<main>
+<main class="main-blogs">
     <!-- Breadcrumbs -->
     @if(count($blogs)>0)
 	    <div class="cont maincont">
@@ -86,6 +86,22 @@
 	            <!-- Blog Posts List - end -->
 	        </div>
 	    </div>
+	 @else
+     	<div class="cont maincont">
+     		<h1>
+	            <span>
+	                Blog
+	            </span>
+	        </h1>
+     	</div>
+     	<div class="blog blog-full">
+        <!-- Blog Posts List - start -->
+            <div class="blog-cont">
+				 <div style="text-align: center; font-size: 18px;" class="blog-info">
+					Sorry at the moment we do not have content to show
+				 </div>
+            </div>
+		</div>
     @endif
 </main>
 <!-- Main Content - end -->

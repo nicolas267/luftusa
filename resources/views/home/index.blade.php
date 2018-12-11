@@ -340,11 +340,7 @@
                         </p>
                     </div>
                 </div>
-                <p class="special-more">
-                    <a href="#">
-                        show more
-                    </a>
-                </p>
+               
                 <span class="special-line1">
                 </span>
                 <span class="special-line2">
@@ -396,11 +392,7 @@
                     </div>
                     @endif
                 </div>
-                <p class="popular-more">
-                    <a href="#">
-                        show more
-                    </a>
-                </p>
+                
                 <span class="popular-line1">
                 </span>
                 <span class="popular-line2">
