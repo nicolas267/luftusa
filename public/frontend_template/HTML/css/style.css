@@ -1501,19 +1501,29 @@ input:focus {
 	font-weight: 600;
 	margin: 0 0 3px;
 }
-.specials .special .special-info .special-add {
+.specials .special .special-info button{
 	transition: all 0.3s;
-	text-transform: uppercase;
-	position: absolute;
-	color: #ff0302;
-	font-weight: 700;
-	border-bottom: 2px solid #ff0302;
-	font-size: 14px;
-	top: 0;
-	right: 0;
-	/*display: none;*/
-	opacity: 0;
+    text-transform: uppercase;
+    position: absolute;
+    color: #ff0302;
+    font-weight: 700;
+    border-bottom: 2px solid #ff0302;
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    font-size: 14px;
+    top: 0;
+    right: 0;
+    /* display: none; */
+    opacity: 0;
+    background: transparent;
 }
+
+.specials .special .special-info button:hover{
+	cursor:pointer;
+}
+
+
 /*.specials .special .special-info .special-add:hover {
 	border-bottom: 2px solid transparent;
 }*/
