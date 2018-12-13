@@ -144,6 +144,13 @@ Route::middleware(['auth','web'])->group(function () {
 	Route::get('profile', 'Profile@index');
 
 	Route::post('update', 'Profile@update');
+
+	Route::get('message', 'Message@index');
+
+	Route::get('message/destroy/{data}', 'Message@destroy')->name('messageDestroy');
+
+	Route::post('message/show', 'Message@show');
+
 });
 
 
@@ -175,5 +182,8 @@ Route::get('/home', 'Home@index')->name('home');
 
 Route::get('logout', 'Auth\LoginController@logout');
 
-
 Route::get('shipping', 'Shipping@index');
+
+Route::post('message/store', 'Message@store');
+
+

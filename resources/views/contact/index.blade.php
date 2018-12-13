@@ -85,11 +85,13 @@
                 <h3>
                     Send us a message
                 </h3>
-                <form action="#" class="form-validate">
-                    <input data-required="text" name="name4" placeholder="Name" type="text"/>
-                    <input data-required="text" data-required-email="email" name="email4" placeholder="Email address" type="text"/>
-                    <input data-required="text" name="phone4" placeholder="Phone number" type="text"/>
-                    <input type="submit" value="Send"/>
+                <form action="{{action('Message@store')}}" method="post">
+                    @csrf
+                    <input data-required="text" type="text" placeholder="Name" name="name">
+                    <input data-required="text" type="hidden" placeholder="Subject" value="Sent from contact" name="subject">
+                    <input data-required="text" data-required-email="email" type="text" placeholder="Email" name="email">
+                    <textarea placeholder="Your message" name="message"></textarea>
+                    <input type="submit" value="Send"> 
                 </form>
             </div>
         </div>

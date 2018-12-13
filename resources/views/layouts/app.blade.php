@@ -20,6 +20,9 @@
         <link href="{{Request::root()}}/public/dist/css/AdminLTE.min.css" rel="stylesheet"/>
         <link href="{{Request::root()}}/public/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
+          <script src="{{Request::root()}}/public/bower_components/jquery/dist/jquery.min.js">
+        </script>
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper" style="overflow-y: hidden;">
@@ -217,7 +220,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/../#">
+                            <a href="{{Request::root()}}/message">
                                 <i class="fa fa-envelope-o">
                                 </i>
                                 <span>
@@ -516,8 +519,7 @@
         </div>
         <!-- ./wrapper -->
         <!-- jQuery 3 -->
-        <script src="{{Request::root()}}/public/bower_components/jquery/dist/jquery.min.js">
-        </script>
+      
         <!-- Bootstrap 3.3.7 -->
         <script src="{{Request::root()}}/public/bower_components/bootstrap/dist/js/bootstrap.min.js">
         </script>
