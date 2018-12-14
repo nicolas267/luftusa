@@ -34,7 +34,7 @@
                 <label >Cars</label>
                 <select class="form-control " style="width: 100%;" name="cars" tabindex="-1" aria-hidden="true">
                         @foreach($cars as $car)
-                          <option value="{{$car->car_id}}">{{$car->car_id}}</option>
+                          <option value="{{$car->car_id}}">{{$car->car_model}} {{$car->car_version}} {{$car->year}}</option>
                         @endforeach
                       </select>
                 <div class="form-group">

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Gallery extends Controller
 {
+    
     public function index()
     {
     	$galleries = galleryModel::all();

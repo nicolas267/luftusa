@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class Car extends Controller
 {
+   
     public function index()
     {
         $cars = DB::table('cars')

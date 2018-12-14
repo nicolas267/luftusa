@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Clover PHP Example</title>
+        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                padding: 0;
+                width: 100%;
+                margin: 50px auto;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                text-align: center;
+                color: #aaa;
+                font-size: 18px;
+            }
+
+            h1 {
+                color: #719e40;
+                letter-spacing: -3px;
+                font-family: 'Lato', sans-serif;
+                font-size: 100px;
+                font-weight: 200;
+                margin-bottom: 0;
+            }
+
+            iframe {
+              margin: 50px;
+              width: 500px;
+              height: 500px;
+              overflow: scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Clover PHP Example</h1>
+        <button onClick="handleOnclick(this)" id="orders">Get Orders</button>
+        <button onClick="handleOnclick(this)" id="items">Get Items</button>
+        <button onClick="handleOnclick(this)" id="employees">Get Employees</button>
+        <button onClick="handleOnclick(this)" id="customers">Get Customers</button>
+
+
+        <form action="/orders" method="post" target="myiFrame">
+          <input type="submit" value="Create Order!"/>
+        </form>
+
+        <form action="/items" method="post" target="myiFrame">
+          <input type="text" name="name" placeholder="burger"/>
+          <input type="number" name="price" placeholder="10"/>
+          <input type="submit" value="Create Item!"/>
+        </form>
+
+        <form action="/customers" method="post" target="myiFrame">
+          <input type="text" name="fname" placeholder="John"/>
+          <input type="text" name="lname" placeholder="Smith"/>
+          <input type="submit" value="Create Customers!"/>
+        </form>
+
+        <form action="/employees" method="post" target="myiFrame">
+          <input type="text" name="name" placeholder="Jane Smith"/>
+          <input type="submit" value="Create Employees!"/>
+        </form>
+
+        <iframe name="myiFrame" id="showWindow" src="">
+        </iframe>
+
+        <script>
+          const showWindow = document.getElementById("showWindow");
+          function handleOnclick(e) {
+            showWindow.src = '/' + e.id;
+          }
+
+          function handleOnPost(e) {
+
+          }
+        </script>
+
+    </body>
+</html>

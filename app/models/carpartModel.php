@@ -17,4 +17,9 @@ class carpartModel extends Model
     	return 'car_part_id'; // db column name
 
 	}
+
+	public function Orders_products()
+    {
+        return $this->belongsTo('App\models\Orders_products');
+    }
 }

@@ -7,6 +7,7 @@ use App\models\carmodelModel;
 
 class Carmodel extends Controller
 {
+   
     public function index()
     {
     	$carmodels = carmodelModel::all();

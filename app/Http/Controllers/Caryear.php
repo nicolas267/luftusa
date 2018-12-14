@@ -7,6 +7,7 @@ use App\models\caryearModel;
 
 class Caryear extends Controller
 {
+
     public function index()
     {
     	$caryears = caryearModel::all();

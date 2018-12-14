@@ -8,7 +8,6 @@
         </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-        <!-- Bootstrap 3.3.7 -->
         <link href="{{Request::root()}}/public/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
         <!-- daterange picker -->
         <link href="{{Request::root()}}/public/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"/>
@@ -16,12 +15,14 @@
         <link href="{{Request::root()}}/public/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
         <!-- Ionicons -->
         <link href="{{Request::root()}}/public/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet"/>
-        <link href="{{Request::root()}}/public/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-            <!-- Theme style -->
-            <link href="{{Request::root()}}/public/dist/css/AdminLTE.min.css" rel="stylesheet"/>
-            <link href="{{Request::root()}}/public/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
-            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
-        </link>
+        <link href="{{Request::root()}}/public/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+        <!-- Theme style -->
+        <link href="{{Request::root()}}/public/dist/css/AdminLTE.min.css" rel="stylesheet"/>
+        <link href="{{Request::root()}}/public/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
+          <script src="{{Request::root()}}/public/bower_components/jquery/dist/jquery.min.js">
+        </script>
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper" style="overflow-y: hidden;">
@@ -63,7 +64,7 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/public/#">
                                     <img alt="User Image" class="user-image" src="{{Request::root()}}/public/dist/img/user2-160x160.jpg">
                                         <span class="hidden-xs">
-                                            Alexander Pierce
+                                           {{ucwords(auth()->user()->name." ". auth()->user()->lastname)}}
                                         </span>
                                     </img>
                                 </a>
@@ -72,7 +73,7 @@
                                     <li class="user-header">
                                         <img alt="User Image" class="img-circle" src="{{Request::root()}}/public/dist/img/user2-160x160.jpg">
                                             <p>
-                                                Alexander Pierce - Web Developer
+                                                {{ucwords(auth()->user()->name." ". auth()->user()->lastname)}} - Web Developer
                                                 <small>
                                                     Member since Nov. 2012
                                                 </small>
@@ -108,7 +109,7 @@
                                             </a>
                                         </div>
                                         <div class="pull-right">
-                                            <a class="btn btn-default btn-flat" href="{{Request::root()}}/public/#">
+                                            <a class="btn btn-default btn-flat" href="{{ route('logout') }}">
                                                 Sign out
                                             </a>
                                         </div>
@@ -129,29 +130,11 @@
                             MAIN NAVIGATION
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/">
+                            <a href="{{Request::root()}}/admin">
                                 <i class="fa fa-home">
                                 </i>
                                 <span>
                                     Home
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{Request::root()}}/users">
-                                <i class="fa fa-user">
-                                </i>
-                                <span>
-                                   Users
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{Request::root()}}/userstype">
-                                <i class="fa fa-group">
-                                </i>
-                                <span>
-                                    User Types
                                 </span>
                             </a>
                         </li>
@@ -219,7 +202,25 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/../#">
+                            <a href="{{Request::root()}}/users">
+                                <i class="fa fa-user">
+                                </i>
+                                <span>
+                                    Users
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{Request::root()}}/userstype">
+                                <i class="fa fa-user-times">
+                                </i>
+                                <span>
+                                    Users Types
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{Request::root()}}/message">
                                 <i class="fa fa-envelope-o">
                                 </i>
                                 <span>
@@ -228,7 +229,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/../#">
+                            <a href="{{Request::root()}}/newsletters">
                                 <i class="fa fa-group">
                                 </i>
                                 <span>
@@ -237,8 +238,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/mydata/1">
-                                <i class="fa fa-user">
+                            <a href="{{Request::root()}}/mydata/">
+                                <i class="fa fa-info">
                                 </i>
                                 <span>
                                     My Data
@@ -255,7 +256,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/../#">
+                            <a href="{{ route('logout') }}">
                                 <i class="fa fa-sign-out">
                                 </i>
                                 <span>
@@ -518,8 +519,7 @@
         </div>
         <!-- ./wrapper -->
         <!-- jQuery 3 -->
-        <script src="{{Request::root()}}/public/bower_components/jquery/dist/jquery.min.js">
-        </script>
+      
         <!-- Bootstrap 3.3.7 -->
         <script src="{{Request::root()}}/public/bower_components/bootstrap/dist/js/bootstrap.min.js">
         </script>
@@ -529,18 +529,20 @@
         </script>
         <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.date.extensions.js">
         </script>
-        <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.extensions.js">
+        <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+        </script>
+        <script src="{{Request::root()}}/public/public/plugins/input-mask/jquery.inputmask.extensions.js">
         </script>
         <!-- FastClick -->
-        <script src="{{Request::root()}}/public/bower_components/fastclick/lib/fastclick.js">
+        <script src="{{Request::root()}}/public/public/bower_components/fastclick/lib/fastclick.js">
         </script>
-        <!-- CK Editor -->
         <script src="{{Request::root()}}/public/bower_components/ckeditor/ckeditor.js">
         </script>
         <!--Data Tables -->
         <script src="{{Request::root()}}/public/bower_components/datatables.net/js/jquery.dataTables.min.js">
         </script>
-        <script src="{{Request::root()}}/public/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js">
+        <script src="{{Request::root()}}/public/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <!--Data Tables -->
         </script>
         <!-- AdminLTE App -->
         <script src="{{Request::root()}}/public/dist/js/adminlte.min.js">
@@ -550,18 +552,18 @@
         </script>
         <script>
             $(function () {
-    $('.datemask').inputmask('yyyy/mm/dd', { 'placeholder': 'yyyy/mm/dd' })
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-    CKEDITOR.replace('editor1')
-  })
+                $('.datemask').inputmask('yyyy/mm/dd', { 'placeholder': 'yyyy/mm/dd' })
+                $('#example1').DataTable()
+                $('#example2').DataTable({
+                  'paging'      : true,
+                  'lengthChange': false,
+                  'searching'   : false,
+                  'ordering'    : true,
+                  'info'        : true,
+                  'autoWidth'   : false
+                })
+                CKEDITOR.replace('editor1')
+              })
         </script>
     </body>
 </html>

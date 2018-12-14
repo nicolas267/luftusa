@@ -40,7 +40,7 @@
                <textarea id="editor1" name="description" rows="10" cols="80"></textarea>
             </div>
           </div>
-          <input type="hidden" name="userid" value="1">
+          <input type="hidden" name="userid" value="{{auth()->user()->user_id}}">
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Create</button>
               </div>

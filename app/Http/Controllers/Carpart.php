@@ -12,6 +12,7 @@ use Illuminate\Support\Collection as Collection;
 
 class Carpart extends Controller
 {
+   
     public function index()
     {
         $versions = array();
@@ -36,7 +37,12 @@ class Carpart extends Controller
 
     public function create()
     {
-        $cars = carModel::all();
+        $cars = DB::table('cars')
+            ->select('car_id', 'car_model', 'car_version', 'year', 'cars.created_at', 'cars.updated_at')
+            ->join('car_models', 'cars.car_model_id', '=', 'car_models.car_model_id')
+            ->join('car_versions', 'cars.car_version_id', '=', 'car_versions.car_version_id')
+            ->get();
+
     	return view('carparts/create', compact('cars'));
     }
 
@@ -57,8 +63,12 @@ class Carpart extends Controller
 
     public function edit(carpartModel $datas)
     {
-        $cars = carModel::all();
-
+        $cars = DB::table('cars')
+            ->select('car_id', 'car_model', 'car_version', 'year', 'cars.created_at', 'cars.updated_at')
+            ->join('car_models', 'cars.car_model_id', '=', 'car_models.car_model_id')
+            ->join('car_versions', 'cars.car_version_id', '=', 'car_versions.car_version_id')
+            ->get();
+            
     	return view('carparts/edit', compact('datas', 'cars'));
     }
 

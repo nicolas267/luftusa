@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\models\usersModels;
 use App\models\usertypeModel;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Controller
 {
@@ -33,7 +34,7 @@ class User extends Controller
     			'name' => $data['name'],
     			'lastname' => $data['lastname'],
     			'email' => $data['email'],
-    			'password' => $data['password'],
+    			'password' => Hash::make($data['password']),
     			'user_type_id' => $data['usertype']
     	]);
 
