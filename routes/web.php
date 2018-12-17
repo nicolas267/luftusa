@@ -51,6 +51,7 @@ Route::middleware(['auth','web'])->group(function () {
 	Route::get('carstype/create', 'Cartype@create')->name('cartypeCreate');
 
 	Route::get('carstype/edit/{data}', 'Cartype@edit')->name('cartypeEdit');
+
 	Route::get('carstype/destroy/{data}', 'Cartype@destroy')->name('cartypeDestroy');
 
 	Route::post('carstype/store', 'Cartype@store');
@@ -171,6 +172,8 @@ Route::get('cart', 'Cart@index');
 Route::get('cartController/destroy/{id}', 'CartController@destroy')->name('cartDestroy');
 
 Route::resource('cart','CartController');
+
+Route::get('favorites/{data}', 'Favorite@favorite')->name('favorite');
 
 Route::get('main', 'Main@index');
 

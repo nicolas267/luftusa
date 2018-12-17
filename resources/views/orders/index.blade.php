@@ -101,10 +101,21 @@
                                     Cancel the order
                                 </a>
                             </p>
-                            <p class="sectls-favorites">
-                                <a href="#">
-                                </a>
-                            </p>
+                            @if (!Auth::guest())
+                                @if($favorite)
+                                    <p class="sectls-favorites">
+                                        <span>
+                                            <a href="{{route('favorite', $order->car_part_id)}}">
+                                            </a>
+                                        </span>
+                                    </p>
+                                    @else
+                                    <p class="sectls-favorites">
+                                        <a href="{{route('favorite', $order->car_part_id)}}">
+                                        </a>
+                                    </p>
+                                @endif    
+                            @endif
                         </div>
                     </div>
                 @endforeach

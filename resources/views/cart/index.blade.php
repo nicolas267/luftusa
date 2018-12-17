@@ -122,7 +122,7 @@
                 <div class="sectls" style="height: 150px;">
                     <div style="padding: 30px; width: 100%;">
                         <h1 style="margin-left: 20%; margin-top: 3%;">
-                            No data found
+                            Empty Cart
                         </h1>
                     </div>
                 </div>

@@ -99,7 +99,8 @@
 </main>
 <!-- Contacts - end -->
 <!-- Map -->
-<div class="contacts-map" id="contacts-map">
+<div class="contacts-map">
+<iframe src="https://maps.google.com/maps?q=2367%20Coral%20Way%2C%20Mami%20FL33145%20Dominican&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="420" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 <!-- Main Content - end -->
 @endsection

@@ -210,15 +210,10 @@
                             @endforeach
                         @else
                             <div class="special" style="width: 100%; height: 200px; min-height:0px;">
-                                <h1 style="text-align: center; margin-top: 5%;">No data found</h1>
+                                <h1 style="text-align: center; margin-top: 5%;">Sorry at the moment we do not have content to show</h1>
                             </div>
                         @endif
                 </div>
-                <p class="special-more">
-                    <a href="#">
-                        show more
-                    </a>
-                </p>
                 <span class="special-line1">
                 </span>
                 <span class="special-line2">
@@ -265,15 +260,10 @@
                         @endforeach
                     @else
                     <div class="popular" style="width: 100%; height: 200px; min-height:0px;">
-                        <h1 style="text-align: center; margin-top: 5%;">No data found</h1>
+                        <h1 style="text-align: center; margin-top: 5%;">Sorry at the moment we do not have content to show</h1>
                     </div>
                     @endif
                 </div>
-                <p class="popular-more">
-                    <a href="#">
-                        show more
-                    </a>
-                </p>
                 <span class="popular-line1">
                 </span>
                 <span class="popular-line2">
