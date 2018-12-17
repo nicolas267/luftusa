@@ -155,6 +155,8 @@ Route::middleware(['auth','web'])->group(function () {
 	Route::get('favorites/{data}', 'Favorite@favorite')->name('favorite');
 
 	Route::get('favorites', 'Favorite@index')->name('favorites');
+
+	Route::get('shipping', 'Shipping@index');
 });
 
 
@@ -176,7 +178,6 @@ Route::get('cartController/destroy/{id}', 'CartController@destroy')->name('cartD
 
 Route::resource('cart','CartController');
 
-
 Route::get('main', 'Main@index');
 
 Route::resource('products','Products');
@@ -186,8 +187,6 @@ Auth::routes();
 Route::get('/home', 'Home@index')->name('home');
 
 Route::get('logout', 'Auth\LoginController@logout');
-
-Route::get('shipping', 'Shipping@index');
 
 Route::post('contact', 'Contact@store')->name('contact.store');
 

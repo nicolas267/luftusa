@@ -35,19 +35,10 @@
 					@if (!Auth::guest())
 						<ul>
 							<li>
-								<a href="message.html">Messages <span>12</span></a>
-							</li>
-							<li>
-								<a href="#">Bookmarks <span>6</span></a>
-							</li>
-							<li>
 								<a href="{{url('cart')}}">Shopping Cart <span>{{ count( Cart::getContent())}}</span></a>
 							</li>
 							<li class="header-order">
 								<a href="{{url('orders')}}">Order Status</a>
-							</li>
-							<li>
-								<a href="#">Settings</a>
 							</li>
 							<li>
 								<a href="{{ route('logout') }}">Log out</a>
