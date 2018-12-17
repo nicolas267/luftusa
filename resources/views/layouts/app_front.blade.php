@@ -76,7 +76,7 @@
 				</a>
 
 				<a href="#" class="header-compare"></a>
-				<a href="#" class="header-favorites"></a>
+				<a href="{{url('favorites')}}" class="header-favorites"></a>
 
 				<!-- Search Form -->
 				<a href="#" class="header-searchbtn" id="header-searchbtn"></a>
@@ -214,11 +214,12 @@
 		<!-- Modal Form -->
 		<div id="modal-form" class="modal-form">
 			<p class="modal-form-ttl">Contact Us</p>
-			<form action="#" class="form-validate">
-				<input data-required="text" type="text" placeholder="Name" name="name2">
-				<input data-required="text" type="text" placeholder="Phone" name="phone2">
-				<input data-required="text" data-required-email="email" type="text" placeholder="Email" name="email2">
-				<textarea placeholder="Your message" name="mess2"></textarea>
+			<form action="{{action('Message@store')}}" method="post">
+				 @csrf
+				<input data-required="text" type="text" placeholder="Name" name="name">
+				<input data-required="text" type="text" placeholder="Subject" name="subject">
+				<input data-required="text" data-required-email="email" type="text" placeholder="Email" name="email">
+				<textarea placeholder="Your message" name="message"></textarea>
 				<input type="submit" value="Send"> 
 			</form>
 		</div>

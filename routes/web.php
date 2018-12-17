@@ -51,6 +51,7 @@ Route::middleware(['auth','web'])->group(function () {
 	Route::get('carstype/create', 'Cartype@create')->name('cartypeCreate');
 
 	Route::get('carstype/edit/{data}', 'Cartype@edit')->name('cartypeEdit');
+
 	Route::get('carstype/destroy/{data}', 'Cartype@destroy')->name('cartypeDestroy');
 
 	Route::post('carstype/store', 'Cartype@store');
@@ -144,6 +145,16 @@ Route::middleware(['auth','web'])->group(function () {
 	Route::get('profile', 'Profile@index');
 
 	Route::post('update', 'Profile@update');
+
+	Route::get('message', 'Message@index');
+
+	Route::get('message/destroy/{data}', 'Message@destroy')->name('messageDestroy');
+
+	Route::post('message/show', 'Message@show');
+
+	Route::get('favorites/{data}', 'Favorite@favorite')->name('favorite');
+
+	Route::get('favorites', 'Favorite@index')->name('favorites');
 });
 
 
@@ -165,6 +176,7 @@ Route::get('cartController/destroy/{id}', 'CartController@destroy')->name('cartD
 
 Route::resource('cart','CartController');
 
+
 Route::get('main', 'Main@index');
 
 Route::resource('products','Products');
@@ -175,7 +187,9 @@ Route::get('/home', 'Home@index')->name('home');
 
 Route::get('logout', 'Auth\LoginController@logout');
 
-
 Route::get('shipping', 'Shipping@index');
 
 Route::post('contact', 'Contact@store')->name('contact.store');
+
+Route::post('message/store', 'Message@store');
+

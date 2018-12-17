@@ -19,8 +19,16 @@ class Products extends Controller
             ->join('cars', 'car_parts.car_id', '=', 'cars.car_id')
             ->where('car_part_id', '=', $id)
             ->first();
-       
+            
+            if (isset(auth()->user()->user_id)) {
+                $favorite = DB::table('favorites')
+            ->where('car_part_id', $id)
+            ->where('user_id', auth()->user()->user_id)
+            ->first();
+            }else{
+                $favorite = null;
+            }
 
-        return view('products.index', compact('carparts', 'models', 'versions'));
+        return view('products.index', compact('carparts', 'models', 'versions', 'favorite'));
     }
 }

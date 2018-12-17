@@ -15,7 +15,8 @@ class Message extends Controller
      */
     public function index()
     {
-        //
+        $message = messageModel::all();
+        return view('message.index',compact('message'));
     }
 
     /**
@@ -36,7 +37,13 @@ class Message extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $message = new messageModel();
+        $message->name = $request->input('name');
+        $message->email = $request->input('email');
+        $message->subject = $request->input('subject');
+        $message->message = $request->input('message');
+        $message->save();
+        return redirect('home');
     }
 
     /**
@@ -45,9 +52,10 @@ class Message extends Controller
      * @param  \App\messageModel  $messageModel
      * @return \Illuminate\Http\Response
      */
-    public function show(messageModel $messageModel)
+    public function show(Request $request)
     {
-        //
+        $message = messageModel::where('message_id', $request->id_message)->get();
+        return json_encode($message);
     }
 
     /**
@@ -79,8 +87,9 @@ class Message extends Controller
      * @param  \App\messageModel  $messageModel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(messageModel $messageModel)
+    public function destroy($id)
     {
-        //
+        $message = messageModel::where('message_id', $id)->delete();
+        return redirect('message');
     }
 }
