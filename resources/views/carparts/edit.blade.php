@@ -35,12 +35,18 @@
                             Cars
                         </label>
                         <select aria-hidden="true" class="form-control " name="cars" style="width: 100%;" tabindex="-1">
+<<<<<<< HEAD
                             <option value="{{$datas->car_id}}">
                                 {{$datas->car_id}}
                             </option>
                             @foreach($cars as $car)
                             <option value="{{$car->car_id}}">
                                 {{$car->car_id}}
+=======
+                            @foreach($cars as $car)
+                            <option value="{{$car->car_id}}">
+                                {{$car->car_model}} {{$car->car_version}} {{$car->year}}
+>>>>>>> 2762b6c1a8106119c5a54b03cfab1073548b3b6f
                             </option>
                             @endforeach
                         </select>

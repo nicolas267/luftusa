@@ -1505,19 +1505,29 @@ input:focus {
 	font-weight: 600;
 	margin: 0 0 3px;
 }
-.specials .special .special-info .special-add {
+.specials .special .special-info button{
 	transition: all 0.3s;
-	text-transform: uppercase;
-	position: absolute;
-	color: #ff0302;
-	font-weight: 700;
-	border-bottom: 2px solid #ff0302;
-	font-size: 14px;
-	top: 0;
-	right: 0;
-	/*display: none;*/
-	opacity: 0;
+    text-transform: uppercase;
+    position: absolute;
+    color: #ff0302;
+    font-weight: 700;
+    border-bottom: 2px solid #ff0302;
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    font-size: 14px;
+    top: 0;
+    right: 0;
+    /* display: none; */
+    opacity: 0;
+    background: transparent;
 }
+
+.specials .special .special-info button:hover{
+	cursor:pointer;
+}
+
+
 /*.specials .special .special-info .special-add:hover {
 	border-bottom: 2px solid transparent;
 }*/
@@ -3060,6 +3070,17 @@ div.pager li.dots{
 	display: inline-block;
 	background: url(../img/icofav1.png) no-repeat left top;
 }
+.section-list .sectls-favoritese span a {
+	width: 16px;
+	height: 15px;
+	overflow: hidden;
+	display: inline-block;
+	background: url(../img/icofav1.png) no-repeat left bottom;
+}
+.prod .prod-favorites span:hover a {
+	background-position: left top;
+}
+
 .section-list .sectls-favorites a:hover {
 	background-position: left bottom;
 }
@@ -3680,7 +3701,7 @@ div.pager li.dots{
     float: left;
     width: 235px;
     text-align: center;
-    padding: 17px 0 0;
+    padding: 17px 0 0 17px;
     font-size: 15px;
     font-weight: 700;
     color: black;
@@ -3698,26 +3719,31 @@ div.pager li.dots{
     top: 9px;
     left: 0;
 }
-.prod .prod-add a {
+.prod .prod-add button {
 	position: relative;
 	display: inline-block;
 	padding: 0 0 0 35px;
+	background: transparent;
+	border:0px solid transparent;
 }
-.prod .prod-add a:hover {
+.prod .prod-add button:hover {
 	color: #ff0302;
+	cursor: pointer;
+
 }
-.prod .prod-add a:after {
+.prod .prod-add button:after {
 	width: 19px;
 	height: 15px;
 	display: block;
 	content: '';
 	overflow: hidden;
 	top: 3px;
-	left: 0;
+	left: 20;
 	position: absolute;
 	background: url(../img/icocart1.png) no-repeat top left;
+
 }
-.prod .prod-add a:hover:after {
+.prod .prod-add button:hover:after {
 	background-position: left bottom;
 }
 .prod .prod-favorites {
@@ -3745,8 +3771,19 @@ div.pager li.dots{
 	display: inline-block;
 	background: url(../img/icofav1.png) no-repeat left top;
 }
+
 .prod .prod-favorites a:hover {
 	background-position: left bottom;
+}
+.prod .prod-favorites span a {
+	width: 16px;
+	height: 15px;
+	overflow: hidden;
+	display: inline-block;
+	background: url(../img/icofav1.png) no-repeat left bottom;
+}
+.prod .prod-favorites span:hover a {
+	background-position: left top;
 }
 .prod .prod-compare {
 	width: 74px;
@@ -5222,6 +5259,8 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
 
 }
 
+
+
 .contacts-form .date_name{
 	width: 100%;
 }
@@ -5314,6 +5353,22 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
 	padding: 0 15px 0 15px;
 	margin: 0 0 26px;
 }
+<<<<<<< HEAD
+=======
+.contacts-form form textarea{
+	border: 1px solid  #c2c2c2;
+    border-radius: 3px;
+    background: #f4f5fb;
+    font-size: 15px;
+    color: #9fa4bb;
+    transition: all 0.2s;
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 5px 15px 0 15px;
+    margin: 0 0 26px;
+}
+>>>>>>> f791ca3736a494505a37ffdd69df4fc9afff5137
 
 .pucharse{
 	width: 10%;

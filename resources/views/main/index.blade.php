@@ -17,7 +17,7 @@
                 Catalog
             </a>
             <div class="section-shipping" style="height: 15px;">
-            </div>s
+            </div>
             <div class="section-menu-wrap" id="section-menu-wrap">
                 <div class="section-menu">
                     <p class="section-menu-ttl">
@@ -247,7 +247,7 @@
                 <div class="sectls" style="height: 150px; background: white; margin-top: 20px; position: relative; z-index: 1">
                     <div style="padding: 30px; width: 100%;">
                         <h1 style="margin-left: 40%; margin-top: 3%;">
-                            No data found
+                            Sorry at the moment we do not have content to show
                         </h1>
                     </div>
                 </div>

@@ -32,7 +32,16 @@ class Orders extends Controller
         $carstype    = cartypeModel::all();
         $carmodel    = carmodelModel::all();
         $carversions = carversionModel::all(); 
-        return view('orders/index',compact('carstype','carmodel','carversions','orders'));
+
+        if (isset(auth()->user()->user_id)) {
+            $favorite = DB::table('favorites')
+        ->where('car_part_id', 'car_part_id')
+        ->where('user_id', auth()->user()->user_id)
+        ->first();
+        }else{
+            $favorite = null;
+        }
+        return view('orders/index',compact('carstype','carmodel','carversions','orders','favorite'));
     }
 
     /**

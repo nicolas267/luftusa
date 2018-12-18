@@ -8,11 +8,13 @@ class messageModel extends Model
 {
     protected $table = 'messages';
 
-    protected $fillable = ['name', 'email', 'subject', 'message', 'created_at', 'updated_at'];
+    protected $fillable = ['message'];
+
+    protected $guarded = ['message_id','name','email','subject','message','create_at','update_at'];
 
     public function getRouteKeyName()
-    {
-        return 'message_id'; // db column name
+	{
+    	return 'message_id'; // db column name
 
-    }
+	}
 }

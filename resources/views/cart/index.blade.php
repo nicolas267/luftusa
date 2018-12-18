@@ -50,7 +50,7 @@
             @if(count($data)>0)
                 @foreach($data as $data)
                 <div class="sectls">
-                    <a class="sectls-img" href="product.html">
+                    <a class="sectls-img" href="{{route('products.show',$data->id)}}">
                         <img alt="" src="http://placehold.it/203x190">
                         </img>
                     </a>
@@ -65,7 +65,7 @@
     	                            </a>
     	                        </p>
     	                        <h3>
-    	                            <a href="#">
+    	                            <a href="{{route('products.show',$data->id)}}">
     	                                {{ucwords($data->name)}}
     	                            </a>
     	                        </h3>
@@ -122,7 +122,7 @@
                 <div class="sectls" style="height: 150px;">
                     <div style="padding: 30px; width: 100%;">
                         <h1 style="margin-left: 20%; margin-top: 3%;">
-                            No data found
+                            Empty Cart
                         </h1>
                     </div>
                 </div>

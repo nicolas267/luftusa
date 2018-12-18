@@ -21,19 +21,27 @@ class Home extends Controller
     public function index()
     {
         $products = DB::table('car_parts')
-            ->join('orders_products', 'car_parts.car_part_id', '=', 'orders_products.car_part_id')
-            ->join('orders', 'orders.order_id', '=', 'orders_products.order_id')
-            ->selectRaw('count(orders_products.car_part_id) as user_count,orders_products.car_part_id,part,price')
-            ->orderBy('user_count','desc')
-            ->groupBy('orders_products.car_part_id')
-            ->groupBy('car_parts.car_part_id')
-            ->limit(8)
-            ->get();
+        ->join('orders_products', 'car_parts.car_part_id', '=', 'orders_products.car_part_id')
+        ->join('orders', 'orders.order_id', '=', 'orders_products.order_id')
+        ->selectRaw('count(orders_products.car_part_id) as user_count,orders_products.car_part_id,part,price')
+        ->orderBy('user_count','desc')
+        ->groupBy('orders_products.car_part_id')
+        ->groupBy('car_parts.car_part_id')
+        ->limit(8)
+        ->get();
+
+        $favorite = DB::table('favorites')
+        ->join('car_parts','favorites.car_part_id','=','car_parts.car_part_id')
+        ->selectRaw('count(favorites.favorite_id) as favorite,car_parts.car_part_id,car_parts.price,car_parts.part')
+        ->orderBy('favorite','desc')
+        ->groupBy('favorite_id')
+        ->where('favorites.user_id','=',auth()->user()->user_id)
+        ->get();
 
         $carstype    = cartypeModel::all();
         $carmodel    = carmodelModel::all();
         $carversions = carversionModel::all();
-        return view('home/index',compact('carstype','carmodel','carversions','products'));
+        return view('home/index',compact('carstype','carmodel','carversions','products','favorite'));
     }
 
     /**

@@ -44,7 +44,7 @@
                <textarea id="editor1" name="description" rows="10" cols="80">{{$data->description}}</textarea>
             </div>
           </div>
-          <input type="hidden" name="userid" value="2">
+          <input type="hidden" name="userid" value="{{auth()->user()->user_id}}">
           <input type="hidden" name="blogid" value="{{$data->blog_id}}">
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Edit</button>

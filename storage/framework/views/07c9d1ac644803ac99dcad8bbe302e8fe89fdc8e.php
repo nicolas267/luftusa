@@ -8,27 +8,27 @@
         </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-        <link href="{{Request::root()}}/public/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/public/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
         <!-- daterange picker -->
-        <link href="{{Request::root()}}/public/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/public/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"/>
         <!-- Font Awesome -->
-        <link href="{{Request::root()}}/public/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/public/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
         <!-- Ionicons -->
-        <link href="{{Request::root()}}/public/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet"/>
-        <link href="{{Request::root()}}/public/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/public/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/public/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
         <!-- Theme style -->
-        <link href="{{Request::root()}}/public/dist/css/AdminLTE.min.css" rel="stylesheet"/>
-        <link href="{{Request::root()}}/public/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/public/dist/css/AdminLTE.min.css" rel="stylesheet"/>
+        <link href="<?php echo e(Request::root()); ?>/public/dist/css/skins/_all-skins.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
-          <script src="{{Request::root()}}/public/bower_components/jquery/dist/jquery.min.js">
+          <script src="<?php echo e(Request::root()); ?>/public/bower_components/jquery/dist/jquery.min.js">
         </script>
-        <meta name="csrf-token" content="{{ csrf_token() }}" />
+        <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>" />
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper" style="overflow-y: hidden;">
             <header class="main-header">
                 <!-- Logo -->
-                <a class="logo" href="{{Request::root()}}/public/index2.html">
+                <a class="logo" href="<?php echo e(Request::root()); ?>/public/index2.html">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini">
                         <b>
@@ -47,7 +47,7 @@
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
                     <!-- Sidebar toggle button-->
-                    <a class="sidebar-toggle" data-toggle="push-menu" href="{{Request::root()}}/public/#" role="button">
+                    <a class="sidebar-toggle" data-toggle="push-menu" href="<?php echo e(Request::root()); ?>/public/#" role="button">
                         <span class="sr-only">
                             Toggle navigation
                         </span>
@@ -61,19 +61,20 @@
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
                             <li class="dropdown user user-menu">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{Request::root()}}/public/#">
-                                    <img alt="User Image" class="user-image" src="{{Request::root()}}/public/dist/img/user2-160x160.jpg">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo e(Request::root()); ?>/public/#">
+                                    <img alt="User Image" class="user-image" src="<?php echo e(Request::root()); ?>/public/dist/img/user2-160x160.jpg">
                                         <span class="hidden-xs">
-                                           {{ucwords(auth()->user()->name." ". auth()->user()->lastname)}}
+                                           <?php echo e(ucwords(auth()->user()->name." ". auth()->user()->lastname)); ?>
+
                                         </span>
                                     </img>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img alt="User Image" class="img-circle" src="{{Request::root()}}/public/dist/img/user2-160x160.jpg">
+                                        <img alt="User Image" class="img-circle" src="<?php echo e(Request::root()); ?>/public/dist/img/user2-160x160.jpg">
                                             <p>
-                                                {{ucwords(auth()->user()->name." ". auth()->user()->lastname)}} - Web Developer
+                                                <?php echo e(ucwords(auth()->user()->name." ". auth()->user()->lastname)); ?> - Web Developer
                                                 <small>
                                                     Member since Nov. 2012
                                                 </small>
@@ -84,17 +85,17 @@
                                     <li class="user-body">
                                         <div class="row">
                                             <div class="col-xs-4 text-center">
-                                                <a href="{{Request::root()}}/public/#">
+                                                <a href="<?php echo e(Request::root()); ?>/public/#">
                                                     Followers
                                                 </a>
                                             </div>
                                             <div class="col-xs-4 text-center">
-                                                <a href="{{Request::root()}}/public/#">
+                                                <a href="<?php echo e(Request::root()); ?>/public/#">
                                                     Sales
                                                 </a>
                                             </div>
                                             <div class="col-xs-4 text-center">
-                                                <a href="{{Request::root()}}/public/#">
+                                                <a href="<?php echo e(Request::root()); ?>/public/#">
                                                     Friends
                                                 </a>
                                             </div>
@@ -104,12 +105,12 @@
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                         <div class="pull-left">
-                                            <a class="btn btn-default btn-flat" href="{{Request::root()}}/public/#">
+                                            <a class="btn btn-default btn-flat" href="<?php echo e(Request::root()); ?>/public/#">
                                                 Profile
                                             </a>
                                         </div>
                                         <div class="pull-right">
-                                            <a class="btn btn-default btn-flat" href="{{ route('logout') }}">
+                                            <a class="btn btn-default btn-flat" href="<?php echo e(route('logout')); ?>">
                                                 Sign out
                                             </a>
                                         </div>
@@ -130,7 +131,7 @@
                             MAIN NAVIGATION
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/admin">
+                            <a href="<?php echo e(Request::root()); ?>/admin">
                                 <i class="fa fa-home">
                                 </i>
                                 <span>
@@ -139,7 +140,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/cars">
+                            <a href="<?php echo e(Request::root()); ?>/cars">
                                 <i class="fa fa-car">
                                 </i>
                                 <span>
@@ -148,7 +149,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/carstype">
+                            <a href="<?php echo e(Request::root()); ?>/carstype">
                                 <i class="fa fa-archive">
                                 </i>
                                 <span>
@@ -157,7 +158,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/carmodels">
+                            <a href="<?php echo e(Request::root()); ?>/carmodels">
                                 <i class="fa fa-clone">
                                 </i>
                                 <span>
@@ -166,7 +167,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/carversions">
+                            <a href="<?php echo e(Request::root()); ?>/carversions">
                                 <i class="fa fa-vimeo">
                                 </i>
                                 <span>
@@ -175,7 +176,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/carparts">
+                            <a href="<?php echo e(Request::root()); ?>/carparts">
                                 <i class="fa fa-gears">
                                 </i>
                                 <span>
@@ -184,7 +185,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/blogs">
+                            <a href="<?php echo e(Request::root()); ?>/blogs">
                                 <i class="fa fa-book">
                                 </i>
                                 <span>
@@ -193,7 +194,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/galleries">
+                            <a href="<?php echo e(Request::root()); ?>/galleries">
                                 <i class="fa fa-image">
                                 </i>
                                 <span>
@@ -202,7 +203,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/users">
+                            <a href="<?php echo e(Request::root()); ?>/users">
                                 <i class="fa fa-user">
                                 </i>
                                 <span>
@@ -211,7 +212,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/userstype">
+                            <a href="<?php echo e(Request::root()); ?>/userstype">
                                 <i class="fa fa-user-times">
                                 </i>
                                 <span>
@@ -220,7 +221,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/message">
+                            <a href="<?php echo e(Request::root()); ?>/message">
                                 <i class="fa fa-envelope-o">
                                 </i>
                                 <span>
@@ -229,7 +230,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/newsletters">
+                            <a href="<?php echo e(Request::root()); ?>/newsletters">
                                 <i class="fa fa-group">
                                 </i>
                                 <span>
@@ -238,7 +239,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/mydata/">
+                            <a href="<?php echo e(Request::root()); ?>/mydata/">
                                 <i class="fa fa-info">
                                 </i>
                                 <span>
@@ -247,7 +248,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{Request::root()}}/../#">
+                            <a href="<?php echo e(Request::root()); ?>/../#">
                                 <i class="fa fa-gear">
                                 </i>
                                 <span>
@@ -256,7 +257,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('logout') }}">
+                            <a href="<?php echo e(route('logout')); ?>">
                                 <i class="fa fa-sign-out">
                                 </i>
                                 <span>
@@ -270,7 +271,7 @@
             </aside>
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-                @yield('content')
+                <?php echo $__env->yieldContent('content'); ?>
             </div>
             <footer class="main-footer">
                 <div class="pull-right hidden-xs">
@@ -281,7 +282,7 @@
                 </div>
                 <strong>
                     Copyright © 2014-2016
-                    <a href="{{Request::root()}}/public/https://adminlte.io">
+                    <a href="<?php echo e(Request::root()); ?>/public/https://adminlte.io">
                         Almsaeed Studio
                     </a>
                     .
@@ -294,13 +295,13 @@
                 <!-- Create the tabs -->
                 <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
                     <li>
-                        <a data-toggle="tab" href="{{Request::root()}}/public/#control-sidebar-home-tab">
+                        <a data-toggle="tab" href="<?php echo e(Request::root()); ?>/public/#control-sidebar-home-tab">
                             <i class="fa fa-home">
                             </i>
                         </a>
                     </li>
                     <li>
-                        <a data-toggle="tab" href="{{Request::root()}}/public/#control-sidebar-settings-tab">
+                        <a data-toggle="tab" href="<?php echo e(Request::root()); ?>/public/#control-sidebar-settings-tab">
                             <i class="fa fa-gears">
                             </i>
                         </a>
@@ -315,7 +316,7 @@
                         </h3>
                         <ul class="control-sidebar-menu">
                             <li>
-                                <a href="{{Request::root()}}/public/javascript:void(0)">
+                                <a href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                     <i class="menu-icon fa fa-birthday-cake bg-red">
                                     </i>
                                     <div class="menu-info">
@@ -329,7 +330,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/public/javascript:void(0)">
+                                <a href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                     <i class="menu-icon fa fa-user bg-yellow">
                                     </i>
                                     <div class="menu-info">
@@ -343,7 +344,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/public/javascript:void(0)">
+                                <a href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                     <i class="menu-icon fa fa-envelope-o bg-light-blue">
                                     </i>
                                     <div class="menu-info">
@@ -357,7 +358,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/public/javascript:void(0)">
+                                <a href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                     <i class="menu-icon fa fa-file-code-o bg-green">
                                     </i>
                                     <div class="menu-info">
@@ -377,7 +378,7 @@
                         </h3>
                         <ul class="control-sidebar-menu">
                             <li>
-                                <a href="{{Request::root()}}/public/javascript:void(0)">
+                                <a href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                     <h4 class="control-sidebar-subheading">
                                         Custom Template Design
                                         <span class="label label-danger pull-right">
@@ -391,7 +392,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/public/javascript:void(0)">
+                                <a href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                     <h4 class="control-sidebar-subheading">
                                         Update Resume
                                         <span class="label label-success pull-right">
@@ -405,7 +406,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/public/javascript:void(0)">
+                                <a href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                     <h4 class="control-sidebar-subheading">
                                         Laravel Integration
                                         <span class="label label-warning pull-right">
@@ -419,7 +420,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{Request::root()}}/public/javascript:void(0)">
+                                <a href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                     <h4 class="control-sidebar-subheading">
                                         Back End Framework
                                         <span class="label label-primary pull-right">
@@ -502,7 +503,7 @@
                             <div class="form-group">
                                 <label class="control-sidebar-subheading">
                                     Delete chat history
-                                    <a class="text-red pull-right" href="{{Request::root()}}/public/javascript:void(0)">
+                                    <a class="text-red pull-right" href="<?php echo e(Request::root()); ?>/public/javascript:void(0)">
                                         <i class="fa fa-trash-o">
                                         </i>
                                     </a>
@@ -521,34 +522,34 @@
         <!-- jQuery 3 -->
       
         <!-- Bootstrap 3.3.7 -->
-        <script src="{{Request::root()}}/public/bower_components/bootstrap/dist/js/bootstrap.min.js">
+        <script src="<?php echo e(Request::root()); ?>/public/bower_components/bootstrap/dist/js/bootstrap.min.js">
         </script>
         <!-- bootstrap datepicker -->
         <!-- InputMask -->
-        <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.js">
+        <script src="<?php echo e(Request::root()); ?>/public/plugins/input-mask/jquery.inputmask.js">
         </script>
-        <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.date.extensions.js">
+        <script src="<?php echo e(Request::root()); ?>/public/plugins/input-mask/jquery.inputmask.date.extensions.js">
         </script>
-        <script src="{{Request::root()}}/public/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+        <script src="<?php echo e(Request::root()); ?>/public/plugins/input-mask/jquery.inputmask.extensions.js"></script>
         </script>
-        <script src="{{Request::root()}}/public/public/plugins/input-mask/jquery.inputmask.extensions.js">
+        <script src="<?php echo e(Request::root()); ?>/public/public/plugins/input-mask/jquery.inputmask.extensions.js">
         </script>
         <!-- FastClick -->
-        <script src="{{Request::root()}}/public/public/bower_components/fastclick/lib/fastclick.js">
+        <script src="<?php echo e(Request::root()); ?>/public/public/bower_components/fastclick/lib/fastclick.js">
         </script>
-        <script src="{{Request::root()}}/public/bower_components/ckeditor/ckeditor.js">
+        <script src="<?php echo e(Request::root()); ?>/public/bower_components/ckeditor/ckeditor.js">
         </script>
         <!--Data Tables -->
-        <script src="{{Request::root()}}/public/bower_components/datatables.net/js/jquery.dataTables.min.js">
+        <script src="<?php echo e(Request::root()); ?>/public/bower_components/datatables.net/js/jquery.dataTables.min.js">
         </script>
-        <script src="{{Request::root()}}/public/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="<?php echo e(Request::root()); ?>/public/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
         <!--Data Tables -->
         </script>
         <!-- AdminLTE App -->
-        <script src="{{Request::root()}}/public/dist/js/adminlte.min.js">
+        <script src="<?php echo e(Request::root()); ?>/public/dist/js/adminlte.min.js">
         </script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{Request::root()}}/public/dist/js/demo.js">
+        <script src="<?php echo e(Request::root()); ?>/public/dist/js/demo.js">
         </script>
         <script>
             $(function () {

@@ -73,30 +73,30 @@
             <span class="maincont-line2 maincont-line22">
             </span>
             <!-- Gallery About us - start -->
-        @if(count($galleries)>0)
-            <ul class="about-gallery" id="about-gallery">
-                <li class="grid-sizer">
-                </li>
-                @foreach($galleries as $gallery)
-                    <li class="grid-item">
-                        <a class="fancy-img" data-fancybox-group="about" href="storage/app/public/{{ $gallery->image }}">
-                            <span>
-                                <img alt="{{ $gallery->image }}" src="storage/app/public/{{ $gallery->image }}">
-                                </img>
-                            </span>
-                        </a>
+            @if(count($galleries)>0)
+                <ul class="about-gallery" id="about-gallery">
+                    <li class="grid-sizer">
                     </li>
-                @endforeach
-            </ul>
-        @else
-            <div class="sectls" style="height: 150px; background: white; margin-top: 20px; position: relative; z-index: 1">
-                <div style="padding: 30px; width: 100%;">
-                    <h1 style="margin-left: 40%; margin-top: 3%;">
-                        No data found
-                    </h1>
+                    @foreach($galleries as $gallery)
+                        <li class="grid-item">
+                            <a class="fancy-img" data-fancybox-group="about" href="storage/app/public/{{ $gallery->image }}">
+                                <span>
+                                    <img alt="{{ $gallery->image }}" src="storage/app/public/{{ $gallery->image }}">
+                                    </img>
+                                </span>
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            @else
+                <div class="sectls" style="height: 150px; background: white; margin-top: 20px; position: relative; z-index: 1">
+                    <div style="padding: 30px; width: 100%; ">
+                        <h2 style="margin-left:15%; margin-top: 3%; font-size: 25px;">
+                            Sorry at the moment we do not have content to show
+                        </h2>
+                    </div>
                 </div>
-            </div>
-        @endif
+            @endif
         </div>
 </main>
 <!-- Main Content - end -->
