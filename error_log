@@ -1,0 +1,96 @@
+[19-Dec-2018 00:29:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 00:29:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 00:29:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 00:29:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 00:29:32 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 00:29:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 00:52:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 00:52:21 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 00:58:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 01:03:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 01:03:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 01:03:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 01:03:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 01:03:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 01:03:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30
+[19-Dec-2018 01:03:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit4488430887732dde69307d8b605fc1a9' not found in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php:30
+Stack trace:
+#0 /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/autoload.php(7): ComposerAutoloaderInit4488430887732dde69307d8b605fc1a9::getLoader()
+#1 /home/ushuaiac/public_html/luft.ushuaiacreative.com/index.php(24): require('/home/ushuaiac/...')
+#2 {main}
+  thrown in /home/ushuaiac/public_html/luft.ushuaiacreative.com/vendor/composer/autoload_real.php on line 30

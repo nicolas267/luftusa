@@ -10,6 +10,7 @@ use App\models\ordersModel;
 use App\models\Orders_productsModel;
 use App\Http\Controllers\Controller;
 use DB;
+use Auth;
 
 class Home extends Controller
 {
@@ -30,6 +31,13 @@ class Home extends Controller
         ->limit(8)
         ->get();
 
+        if(Auth::guest()){
+            $favorite = [];
+        }
+        else{
+
+
+
         $favorite = DB::table('favorites')
         ->join('car_parts','favorites.car_part_id','=','car_parts.car_part_id')
         ->selectRaw('count(favorites.favorite_id) as favorite,car_parts.car_part_id,car_parts.price,car_parts.part')
@@ -37,6 +45,8 @@ class Home extends Controller
         ->groupBy('favorite_id')
         ->where('favorites.user_id','=',auth()->user()->user_id)
         ->get();
+
+        }
 
         $carstype    = cartypeModel::all();
         $carmodel    = carmodelModel::all();

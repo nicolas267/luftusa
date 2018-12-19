@@ -481,8 +481,6 @@
             "time": "2018-10-20T15:53:05+00:00"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "guzzlehttp/guzzle",
             "version": "6.3.3",
             "source": {
@@ -666,7 +664,6 @@
             "time": "2018-12-04T20:46:45+00:00"
         },
         {
->>>>>>> 2762b6c1a8106119c5a54b03cfab1073548b3b6f
             "name": "jakub-onderka/php-console-color",
             "version": "v0.2",
             "source": {
