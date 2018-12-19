@@ -157,6 +157,10 @@ Route::middleware(['auth','web'])->group(function () {
 	Route::get('favorites', 'Favorite@index')->name('favorites');
 
 	Route::get('shipping', 'Shipping@index');
+
+	Route::get('shipping2', 'Shipping@index2')->name('shipping');
+
+	Route::post('payment', 'Shipping@store')->name('payment');
 });
 
 

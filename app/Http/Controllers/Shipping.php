@@ -11,4 +11,8 @@ class Shipping extends Controller
    {
 		return view('shipping.index');
    }
+
+   public function index2(){
+      return view('shipping.index2');
+   }
 }
