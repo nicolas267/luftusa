@@ -194,5 +194,7 @@ class Payment extends Controller
            $order_product->save();
         }
 
+        $cart->destroy();
+
     }
 }
