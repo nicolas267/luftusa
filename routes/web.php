@@ -160,7 +160,9 @@ Route::middleware(['auth','web'])->group(function () {
 
 	Route::get('shipping2', 'Shipping@index2')->name('shipping');
 
-	Route::post('payment', 'Shipping@store')->name('payment');
+	Route::post('shipping2', 'Payment@payWithPaypal')->name('payment');
+
+	Route::get('payment/status', 'Payment@getPaymentStatus')->name('status');
 });
 
 

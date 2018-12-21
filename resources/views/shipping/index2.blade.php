@@ -31,64 +31,8 @@
                     <div class="row justify-content-center">
                         <form action="{{ route('payment') }}" method="POST">
                             @csrf
-                            <div class="date_name">
-                                <div class="col-md-6">
-                                    <input autofocus="" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="name" name="name" placeholder="Name" required="" type="text" value="{{ old('name') }}">
-                                        @if ($errors->has('name'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>
-                                                {{ $errors->first('name') }}
-                                            </strong>
-                                        </span>
-                                        @endif
-                                    </input>
-                                </div>
-                                <div class="col-md-6 lastname">
-	                                    <input autofocus="" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" id="lastname" name="lastname" placeholder="Last Name" required="" type="text" value="{{ old('lastname') }}"/>
-	                                    @if ($errors->has('lastname'))
-	                                    <span class="invalid-feedback" role="alert">
-	                                        <strong>
-	                                            {{ $errors->first('lastname') }}
-	                                        </strong>
-	                                    </span>
-	                                    @endif
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6">
-                                    <input class="form-control{{ $errors->has('card_type') ? ' is-invalid' : '' }}" id="email" name="card_type" required="" type="text" value="{{ old('card_type') }}" placeholder="Card Type" />
-                                    @if ($errors->has('card_type'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>
-                                            {{ $errors->first('card_type') }}
-                                        </strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6">
-                                    <input class="form-control{{ $errors->has('card_number') ? ' is-invalid' : '' }}" id="card_number" name="card_number" placeholder="Card Number" required="" type="text"/>
-                                    @if ($errors->has('card_number'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>
-                                            {{ $errors->first('card_number') }}
-                                        </strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="date-direction">
-                                <div class="col-md-6 city">
-                                    <input class="form-control" id="password-confirm" name="exp" placeholder="Exp." type="text"/>
-                                </div>
-                                <div class="col-md-6 zip-code">
-                                    <input class="form-control" id="cvv" name="cvv" placeholder="CVV" required="" type="text"/>
-                                </div>
-                                <div class="col-md-6 state">
-                                    <input class="form-control" id="zip-code" name="z_code" placeholder="Zip Code" required="" type="text"/>
-                                </div>
-                            </div>
+                           
+                            
                             <div class="form-group row mb-0" style="width: 25%; float: right; margin-top: -30px">
                                 <div class="col-md-6 offset-md-4">
                                     <input type="submit" value="Save"/>

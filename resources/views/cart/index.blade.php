@@ -2,6 +2,27 @@
 
 @section('content')
 
+<style>
+    .button-red {
+        background: #ff0302;
+        transition: all 0.2s;
+        border-radius: 2px;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        height: 30px;
+        top: 3px;
+        right: 3px;
+        display: block;
+        border: none;
+        letter-spacing: 0.03em;
+        margin: 0;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+</style>
+
 <main>
     <div class="cont maincont">
         <h1>
@@ -41,7 +62,8 @@
             </li>
             <li>
                 <form action="#" class="form-validate" style="margin-left: 40px;">
-                    <input class="btn-submit" id="sub" type="button" value="Check Out" />
+                    
+                    <a href="{{url('shipping')}}"><button class="button-red" id="sub" type="button">Check Out</button><a>
                 </form>
             </li>
         </ul>
@@ -133,8 +155,8 @@
         <ul class="pager">
             <li>
                 <form action="#" class="form-validate">
-                    <input class="btn-submit" id="sub" type="button" value="Check Out">
-                    </input>
+                   <!--  <input class="btn-submit" id="sub" type="button" value="Check Out">
+                    </input> -->
                 </form>
             </li>
         </ul>

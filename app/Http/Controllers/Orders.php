@@ -29,9 +29,12 @@ class Orders extends Controller
         ->groupBy('orders_products.car_part_id')
         ->groupBy('car_parts.car_part_id')
         ->paginate(5);
+
+        $orders = ordersModel::all();
         $carstype    = cartypeModel::all();
         $carmodel    = carmodelModel::all();
         $carversions = carversionModel::all(); 
+
 
         if (isset(auth()->user()->user_id)) {
             $favorite = DB::table('favorites')

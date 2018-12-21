@@ -45,45 +45,46 @@
             @if(count($orders)>0)
                 @foreach($orders as $order)
                     <div class="sectls">
-                        <a class="sectls-img" href="product.html">
-                            <img alt="" src="http://placehold.it/203x190">
-                            </img>
-                        </a>
+                       
                         <div class="sectls-cont">
                             <div class="sectls-ttl-wrap">
                                 <p>
                                     <a href="#">
-                                        Suspensions
+                                       Order #
                                     </a>
                                 </p>
                                 <h3>
                                     <a href="product.html">
-                                        {{ucwords($order->part)}}
+                                        {{ucwords($order->order_id)}}
                                     </a>
                                 </h3>
                             </div>
                             <div class="sectls-price-wrap">
                                 <p>
-                                    Purchased
+                                    Subtotal
                                 </p>
                                 <p class="sectls-price">
-                                    {{$order->quantity}} items
+                                    ${{number_format($order->total,'2',',','.')}}
                                 </p>
                             </div>
-                            <div class="sectls-col2-wrap">
+                          <!--   <div class="sectls-col2-wrap">
                                 <p>
                                     Destination
                                 </p>
                                 <p class="sectls-col2">
                                     IA - US
                                 </p>
-                            </div>
+                            </div> -->
                             <div class="sectls-col3-wrap">
                                 <p>
                                     Status
                                 </p>
                                 <p class="sectls-col3">
-                                    Shipping
+                                    @if($order->status == 1)
+                                        In progress
+                                    @else
+                                        Send
+                                    @endif
                                 </p>
                             </div>
                             <div class="sectls-total-wrap">
@@ -91,32 +92,18 @@
                                     Order amount
                                 </p>
                                 <p class="sectls-total">
-                                    ${{number_format($order->subtotal,'2',',','.')}}
+                                    ${{number_format($order->total,'2',',','.')}}
                                 </p>
                             </div>
                         </div>
-                        <div class="sectls-info">
+                       <!--  <div class="sectls-info">
                             <p class="sectls-add">
-                                <a href="{{route('orderDestroy',$order->order_product_id)}}">
+                                <a href="{{route('orderDestroy',$order->order_id)}}">
                                     Cancel the order
                                 </a>
                             </p>
-                            @if (!Auth::guest())
-                                @if($favorite)
-                                    <p class="sectls-favorites">
-                                        <span>
-                                            <a href="{{route('favorite', $order->car_part_id)}}">
-                                            </a>
-                                        </span>
-                                    </p>
-                                    @else
-                                    <p class="sectls-favorites">
-                                        <a href="{{route('favorite', $order->car_part_id)}}">
-                                        </a>
-                                    </p>
-                                @endif    
-                            @endif
-                        </div>
+                           
+                        </div> -->
                     </div>
                 @endforeach
             @else
@@ -130,7 +117,7 @@
         <!-- Orders List - end -->
         <!-- Pagination -->
         <div class="pager">
-            {{ $orders->links()}}
+          
         </div>
     </div>
 </main>
