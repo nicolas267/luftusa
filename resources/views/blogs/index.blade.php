@@ -79,12 +79,6 @@
                             Title
                         </th>
                         <th>
-<<<<<<< HEAD
-                            Description
-                        </th>
-                        <th>
-=======
->>>>>>> 2762b6c1a8106119c5a54b03cfab1073548b3b6f
                             Created At
                         </th>
                         <th>

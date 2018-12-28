@@ -28,6 +28,8 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/home';
 
+    private const ADMIN = 1;
+
     /**
      * Create a new controller instance.
      *
@@ -46,7 +48,12 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('home');
+            if (auth()->user()->user_type_id === SELF::ADMIN) {
+                return redirect()->route('admin');     
+            } else {
+                return redirect()->route('home');
+            }
+            
         } else {
             Session::flash('message',trans('auth.failed'));
             return redirect('login');

@@ -20,7 +20,7 @@ Route::get('/template', function () {
 
 Route::middleware(['auth','web'])->group(function () {
    
-	Route::get('admin', 'Admin@index');
+	Route::get('admin', 'Admin@index')->name('admin');
 
 	Route::get('/users', 'User@index');
 

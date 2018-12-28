@@ -37,6 +37,7 @@ class Cartype extends Controller
 
     public function upgrade()
     {
+
         $data = Request()->all();
 
         cartypeModel::where('car_type_id', $data['cartypeid'])
